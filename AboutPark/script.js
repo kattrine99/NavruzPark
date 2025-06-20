@@ -1,42 +1,6 @@
 // ======================= //
-// Главный основной слайдер
-// ======================= //
-
-const mainSlidesCount = 4;
-const mainWrapper = document.getElementById('swiper-wrapper');
-mainWrapper.innerHTML = '';
-
-for (let i = 1; i <= mainSlidesCount; i++) {
-    const slide = document.createElement('div');
-    slide.className = 'swiper-slide';
-    slide.id = `slide-${i}`;
-    slide.innerHTML = `
-        <div class="slide-container" style="
-            background-image: 
-                linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-                url('/images/Navruz_main.png');
-            background-size: cover; 
-            background-position: center;">
-            <div class="Swiper_text">
-                <h1>Navruz Park</h1>
-                <p class="Swiper_subtitle">12 регионов Узбекистана в сердце Ташкента</p>
-            </div>
-        </div>`;
-    mainWrapper.appendChild(slide);
-}
-
-const mainSwiper = new Swiper('.Main_Heading_Swiper', {
-    loop: true,
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
-});
-
-// ======================= //
 // Бургер 
 // ======================= //
-
 const burger = document.getElementById("burger");
 const mobileMenu = document.getElementById("mobileMenu");
 const closeMenu = document.getElementById("closeMenu");
@@ -51,99 +15,11 @@ closeMenu.addEventListener("click", () => {
     mobileMenu.classList.remove("active");
 });
 // ======================= //
-// События свайпер 
-// ======================= //
-const eventCount = 3;
-const eventWrapper = document.getElementById('swiper-eventWrapper');
-eventWrapper.innerHTML = ''
-for (let i = 1; i <= eventCount; i++) {
-    const slide = document.createElement('div');
-    slide.className = 'swiper-slide';
-    slide.innerHTML = `
-       <div class="card">
-                            <div class="cardImg">
-                                <img src="/images/event.jpg" />
-                            </div>
-                            <div class="cardText">
-                            <h3>Фестиваль национальной кухни</h3>
-                            <p>В эти выходные парк «Навруз» приглашает гостей на атмосферный фестиваль: народные мастера, локальн...</p>
-                            </div>
-                            <div class="cardData">
-                            <p><img src="/images/icons/Calender.svg"/> 19 мая, начало в 10:00</p></div>
-                            <div class="cardButton">
-                            <button>Подробнее</button></div>
-                        </div>`
-    eventWrapper.appendChild(slide);
-}
-const eventsSwiper = new Swiper('.eventsSwiper', {
-    slidesPerView: 3,
-    spaceBetween: 20,
-    loop: true,
-    navigation: {
-        nextEl: '.swiper-button-next-events',
-        prevEl: '.swiper-button-prev-events',
-    },
-    breakpoints: {
-        320: { // от 320px и выше
-            slidesPerView: 1,
-            spaceBetween: 10,
-        },
-        768: { // от 768px и выше
-            slidesPerView: 2,
-            spaceBetween: 15,
-        },
-        1024: { // от 1024px и выше
-            slidesPerView: 3,
-            spaceBetween: 20,
-        },
-    }
-});
-// ======================= //
-// Уникальность парка свайпер 
-// ======================= //
-const uniqueParkSwiper = new Swiper('.uniqueParkSwiper', {
-    slidesPerView: 4,
-    spaceBetween: 20,
-    loop: false,
-    navigation: {
-        nextEl: '.swiper-button-next-unique',
-        prevEl: '.swiper-button-prev-unique',
-    },
-    breakpoints: {
-        1300: {
-            slidesPerView: 4,
-            spaceBetween: 20,
-            loop: true,
-        },
-        1024: {
-            slidesPerView: 3,
-            spaceBetween: 20,
-            loop: true,
-        },
-        560: {
-            slidesPerView: 2,
-            spaceBetween: 15,
-            loop: true,
-        },
-        320: {
-            slidesPerView: 1,
-            spaceBetween: 10,
-            loop: true,
-        },
-    }
-});
-// ======================= //
-// Уникальные уголки парка свайпер 
+// Уголки парка карта свайпер 
 // ======================= //
 const swiperText = new Swiper('.cornerswiper-text', {
     slidesPerView: 1,
     spaceBetween: 30,
-    loop: false,
-    allowTouchMove: false,
-});
-
-const swiperImage = new Swiper('.cornerswiper-image', {
-    slidesPerView: 1,
     loop: false,
     allowTouchMove: false,
     navigation: {
@@ -152,78 +28,49 @@ const swiperImage = new Swiper('.cornerswiper-image', {
     },
     on: {
         slideChange: function () {
-            swiperText.slideToLoop(this.realIndex);
+            const activeId = swiper.slides[swiper.activeIndex].dataset.id;
+            zoomToMarker(activeId);
         }
     }
-});// ======================= //
-// Ремесла свайпер 
-// ======================= //
-const crafts = [
-    { category: 'embroidery', title: 'Вышивка', img: '/images/craft.jpg' },
-    { category: 'woodwork', title: 'Резьба по дереву', img: '/images/craft1.jpg' },
-    { category: 'ceramics', title: 'Керамика', img: '/images/craft2.jpg' },
-    { category: 'textile', title: 'Ткачество', img: '/images/craft3.jpg' },
-    { category: 'jewelry', title: 'Ювелирные изделия', img: '/images/craft4.jpg' },
-    { category: 'embroidery', title: 'Вышивка', img: '/images/craft.jpg' },
-    { category: 'woodwork', title: 'Резьба по дереву', img: '/images/craft1.jpg' },
-    { category: 'ceramics', title: 'Керамика', img: '/images/craft2.jpg' },
-    { category: 'textile', title: 'Ткачество', img: '/images/craft3.jpg' },
-    { category: 'jewelry', title: 'Ювелирные изделия', img: '/images/craft4.jpg' }
-];
-
-const craftWrapper1 = document.getElementById('crafts-wrapper1');
-const craftWrapper2 = document.getElementById('crafts-wrapper2');
-
-crafts.forEach(craft => {
-    const slide = document.createElement('div');
-    slide.className = 'swiper-slide craft-slide';
-    slide.setAttribute('data-category', craft.category);
-    slide.innerHTML = `
-            <img src="${craft.img}" alt="${craft.title}" />
-                     <div class="craft-photo-gradient"></div>
-            <div class="craft-title">${craft.title}</div>
-        `;
-    craftWrapper1.appendChild(slide);
 });
-crafts.forEach(craft => {
-    const slide = document.createElement('div');
-    slide.className = 'swiper-slide craft-slide';
-    slide.setAttribute('data-category', craft.category);
-    slide.innerHTML = `
-            <img src="${craft.img}" alt="${craft.title}" />
-                     <div class="craft-photo-gradient"></div>
-            <div class="craft-title">${craft.title}</div>
-        `;
-    craftWrapper2.appendChild(slide);
-});
+const markers = document.querySelectorAll('.map-marker');
+const parkMap = document.getElementById('parkMap');
+let currentZoomId = null;
 
-const craftsSwiper1 = new Swiper('.crafts-slider1', {
-    slidesPerView: 4,
-    spaceBetween: 16,
-    loop: true,
-    breakpoints: {
-        320: { slidesPerView: 2 },
-        600: { slidesPerView: 3 },
-        900: { slidesPerView: 4 }
-    }
-});
-const craftsSwiper2 = new Swiper('.crafts-slider2', {
-    slidesPerView: 4,
-    spaceBetween: 16,
-    loop: true,
-    breakpoints: {
-        320: { slidesPerView: 2 },
-        600: { slidesPerView: 3 },
-        900: { slidesPerView: 4 }
-    }
-});
+markers.forEach(marker => {
+    marker.addEventListener('click', () => {
+        const id = marker.dataset.id;
 
-document.querySelectorAll('.craft-slide').forEach(slide => {
-    slide.addEventListener('click', () => {
-        const category = slide.getAttribute('data-category');
-        window.location.href = `/catalog.html?category=${category}`;
+        if (currentZoomId === id) {
+            // zoom out
+            parkMap.style.transform = 'scale(1)';
+            markers.forEach(m => m.classList.remove('active'));
+            currentZoomId = null;
+        } else {
+            // zoom in + sync slide
+            swiper.slideTo(id - 1);
+            zoomToMarker(id);
+            currentZoomId = id;
+        }
     });
 });
+
+function zoomToMarker(id) {
+    const marker = document.querySelector(`.map-marker[data-id="${id}"]`);
+    const mapRect = parkMap.getBoundingClientRect();
+    const markerRect = marker.getBoundingClientRect();
+
+    const offsetX = (markerRect.left + markerRect.width / 2) - (mapRect.left + mapRect.width / 2);
+    const offsetY = (markerRect.top + markerRect.height / 2) - (mapRect.top + mapRect.height / 2);
+
+    const translateX = -offsetX;
+    const translateY = -offsetY;
+
+    parkMap.style.transform = `scale(1.5) translate(${translateX}px, ${translateY}px)`;
+
+    markers.forEach(m => m.classList.remove('active'));
+    marker.classList.add('active');
+}
 // ======================= //
 // Галлерея
 // ======================= //
@@ -407,31 +254,29 @@ document.addEventListener('DOMContentLoaded', function () {
     applyFilter('all');
 });
 // ======================= //
-// Новости свайпер 
+// Сертификаты свайпер 
 // ======================= //
 const newsCount = 4;
-const newsWrapper = document.getElementById('swiper-newsWrapper');
-newsWrapper.innerHTML = ''
+const certificateWrapper = document.getElementById('swiper-certificateWrapper');
+certificateWrapper.innerHTML = ''
 for (let i = 1; i <= newsCount; i++) {
     const slide = document.createElement('div');
     slide.className = 'swiper-slide';
     slide.innerHTML = `
        <div class="card">
                             <div class="cardImg">
-                                <img src="/images/craft2.jpg" />
+                                <img src="/images/certificate.jpg" />
                             </div>
                             <div class="cardText">
-                            <h3>Фестиваль национальной кухни</h3>
-                            <p>В эти выходные парк «Навруз» приглашает гостей на атмосферный фестиваль: народные мастера, локальн...</p>
+                            <h3>Лучший культурный объект года</h3>
+                            <p>Получен за вклад и в развитие этнокультурного туризма и популяризацию традиционного наследия Узбекистана</p>
                             </div>
                             <div class="cardData">
-                            <p><img src="/images/icons/Calender.svg"/> 19 мая, начало в 10:00</p></div>
-                            <div class="cardButton">
-                            <button>Подробнее</button></div>
+                            <p><img src="/images/icons/Calender.svg"/> от 19.05.2024</p></div>
                         </div>`
-    newsWrapper.appendChild(slide);
+    certificateWrapper.appendChild(slide);
 }
-const newsSwiper = new Swiper('.newsSwiper', {
+const certificateSwiper = new Swiper('.certificateSwiper', {
     slidesPerView: 3,
     spaceBetween: 20,
     loop: true,
