@@ -1285,7 +1285,7 @@ footer {
 
     .Navigations {
         margin-top: 20px;
-        justify-content: start;
+        justify-content: center;
         gap: calc(30px + (140 - 30) * ((100vw - 350px) / (1920 - 350)));
         display: flex;
     }
