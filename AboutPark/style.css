@@ -60,6 +60,16 @@ body {
 
 }
 
+.Text_nav a,
+.Text_info a {
+    text-decoration: none;
+    color: #6B2B00;
+}
+
+.Text_info a {
+    font-weight: 700;
+}
+
 .lower_header {
     padding: 32px calc(20px + (100 - 20) * ((100vw - 350px) / (1920 - 350)));
     gap: calc(5px + (150 - 5) * ((100vw - 350px) / (1920 - 350)));
