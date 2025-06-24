@@ -1153,6 +1153,12 @@ footer {
     gap: 40px 0;
 }
 
+.ContactsAndAddress a {
+    text-decoration: none;
+    color: #FFFDF9;
+    cursor: pointer;
+}
+
 .lowerFooter {
     display: flex;
     padding: 40px 0;

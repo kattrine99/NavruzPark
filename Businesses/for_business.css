@@ -1,0 +1,2034 @@
+@font-face {
+    font-family: "AA Stetica Regular";
+    src: url(/fonts/AA-Stetica-Regular-BF6749235ad0084.otf);
+}
+
+@font-face {
+    font-family: "Cormorant SC";
+    src: url(/fonts//Cormorant_SC/CormorantSC-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Czizh";
+    src: url(/fonts/czizh/Czizh\ Body.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: auto;
+}
+
+/*----------Хэдер----------*/
+.upper_header {
+    padding: 17px calc(20px + (100 - 20) * ((100vw - 350px) / (1920 - 350)));
+    gap: calc(5px + (76 - 5) * ((100vw - 350px) / (1920 - 350)));
+    font-family: "AA Stetica Regular";
+    display: flex;
+    justify-content: center;
+}
+
+.Logo img {
+    width: 124px;
+    height: 46px;
+}
+
+.Text_nav,
+.Text_info {
+    display: flex;
+    gap: calc(5px + (76 - 5) * ((100vw - 350px) / (1920 - 350)));
+    color: #6B2B00;
+}
+
+.Text_nav h2,
+.Text_info p {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 130%;
+    letter-spacing: 1%;
+}
+
+.Text_nav p,
+.Text_info h2 {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 130%;
+    letter-spacing: 1%;
+
+}
+
+.Text_nav a,
+.Text_info a {
+    text-decoration: none;
+    color: #6B2B00;
+}
+
+.Text_info a {
+    font-weight: 700;
+}
+
+.lower_header {
+    padding: 32px calc(20px + (100 - 20) * ((100vw - 350px) / (1920 - 350)));
+    gap: calc(5px + (150 - 5) * ((100vw - 350px) / (1920 - 350)));
+    display: flex;
+    justify-content: center;
+    background-color: #6B2B00;
+    font-family: "AA Stetica Regular";
+}
+
+.lower_header nav {
+    display: flex;
+    gap: calc(5px + (140 - 5) * ((100vw - 350px) / (1920 - 350)));
+
+}
+
+.lower_header nav a {
+    text-decoration: none;
+    white-space: nowrap;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 130%;
+    letter-spacing: 1%;
+    transition: all 300ms ease;
+
+}
+
+.lower_header nav a:hover {
+    text-shadow: 0 0 4px rgba(255, 255, 255, 0.8);
+    color: #fff;
+}
+
+.Language {
+    display: flex;
+    gap: 10px;
+}
+
+#Choose_language {
+    background-color: #6B2B00;
+    color: #fff;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 130%;
+    letter-spacing: 1%;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.main_header {
+    display: flex;
+    flex-direction: column;
+}
+
+.burger_header {
+    display: none;
+}
+
+.selectAndBurger {
+    display: flex;
+    gap: 16px;
+}
+
+.breadcrumbs {
+    font-family: "AA Stetica Regular";
+    font-size: 18px;
+    color: #6B2B00;
+}
+
+/* ------ Главная Хэдинг картинка ------ */
+.breadcrumbs a {
+    color: #382D2D;
+    text-decoration: none;
+    font-family: "AA Stetica Regular";
+    font-size: 16px;
+    line-height: 130%;
+    letter-spacing: 1%;
+
+}
+
+.breadcrumbs span {
+    color: #382D2D80;
+}
+
+main {
+    background-image: url('/images/stars_main_aboutPark.png');
+    background-repeat: no-repeat;
+    background-position: right top;
+}
+
+.HeadingforBusiness .for_businessText {
+    padding: calc(48px + (80 - 48) * ((100vw - 350px) / (1920 - 350))) calc(17px + (100 - 17) * ((100vw - 350px) / (1920 - 350)));
+}
+
+.HeadingforBusiness h1 {
+    font-family: "Cormorant SC";
+    font-weight: 700;
+    font-size: calc(64px + (180 - 64) * ((100vw - 350px) / (1920 - 350)));
+    line-height: 100%;
+    text-transform: uppercase;
+    color: #81332F;
+    margin-top: calc(24px + (56 - 24) * ((100vw - 350px) / (1920 - 350)));
+
+}
+
+.HeadingforBusiness img {
+    object-fit: cover;
+    object-position: 100% 80%;
+    width: 100%;
+    max-height: calc(200px + (534 - 200) * ((100vw - 350px) / (1920 - 350)));
+    margin-top: calc(24px + (100 - 24) * ((100vw - 350px) / (1920 - 350)));
+}
+
+/* ------ Локации для мероприфятий ------ */
+.events {
+    background-image: url('/images/topLeftcorner_star.png');
+    background-repeat: no-repeat;
+    background-position: top left;
+}
+
+.eventsLocations {
+    padding: calc(64px + (200 - 64) * ((100vw - 350px) / (1920 - 350))) calc(20px + (100 - 20) * ((100vw - 350px) / (1920 - 350)));
+}
+
+.eventsLocations h2 {
+    max-width: 970px;
+    font-family: "Cormorant SC";
+    font-weight: 700;
+    line-height: 110%;
+    text-indent: 167.5px;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+    font-size: calc(30px + (48 - 30) * ((100vw - 350px) / (1920 - 350)));
+    color: #6B2B00;
+    text-align: start;
+    margin-bottom: calc(24px + (48 - 24) * ((100vw - 350px) / (1920 - 350)));
+}
+
+.sliderLocations {
+    display: flex;
+    gap: 20px;
+    align-items: stretch;
+
+}
+
+.locationsswiper-image {
+    flex: 1.5 1 0;
+}
+
+.locationsswiper-text {
+    flex: 0.8 1 0;
+    display: flex;
+    flex-direction: column;
+    border-radius: 16px;
+    background-color: #fff;
+}
+
+.locationsswiper-text .swiper-wrapper {
+    flex: 1;
+}
+
+.locationsswiper-text .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    height: 100%;
+    gap: calc(8px + (16 - 8) * ((100vw - 350px) / (1920 - 350)));
+
+}
+
+.locationsswiper-text h3 {
+    font-family: "AA Stetica Regular";
+    font-weight: 700;
+    font-size: calc(18px + (22 - 18) * ((100vw - 350px) / (1920 - 350)));
+    line-height: 130%;
+    letter-spacing: 1%;
+    color: #382D2D;
+}
+
+.locationsswiper-text p {
+    font-family: "AA Stetica Regular";
+    font-size: 20px;
+    line-height: 130%;
+    letter-spacing: 1%;
+    color: #382D2D;
+
+}
+
+.sliderLocations .locationsswiper-image .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+
+.locationsswiper-text .swiper-nav-buttons {
+    display: flex;
+    justify-content: start;
+    gap: 16px;
+}
+
+.locationsswiper-text .swiper-nav-buttons button {
+    border: 1px solid #6B2B00;
+    border-radius: 16px;
+    width: 53px;
+    height: 53px;
+    background-color: #FFFDF9;
+    overflow: hidden;
+    color: #6B2B00;
+    cursor: pointer;
+}
+
+.locationsswiper-text .swiper-nav-buttons button:hover {
+    background-color: #6B2B00;
+    color: #FFFDF9;
+}
+
+.rentplace button {
+    padding: 16px 56px;
+    width: 100%;
+    background-color: #6B2B00;
+    border-radius: 16px;
+    color: #FFFDF9;
+    font-family: "AA Stetica Regular";
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 130%;
+    letter-spacing: 1%;
+    margin-top: 80px;
+    cursor: pointer;
+}
+
+.rentplace_mobile button {
+    display: none;
+}
+
+/* Затемнение */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Открытый попап */
+.popup-overlay.active {
+    display: flex;
+}
+
+/* Сам попап */
+.popup-content {
+    position: relative;
+    background-color: #fff;
+    background-image: url('/images/about_park_starsText.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 16px;
+    padding: 60px;
+    width: calc(250px + (600 - 250) * ((100vw - 350px) / (1920 - 350)));
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    animation: popupFadeIn 0.3s ease;
+}
+
+.popup-content p {
+    font-family: "AA Stetica Regular";
+    font-weight: 400;
+    font-size: calc(16px + (20 - 16) * ((100vw - 350px) / (1920 - 350)));
+    line-height: 130%;
+    letter-spacing: 1%;
+    text-align: center;
+
+}
+
+/* Анимация */
+@keyframes popupFadeIn {
+    from {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Кнопка закрытия (крестик) */
+.popup-close {
+    position: absolute;
+    display: flex;
+    top: 16px;
+    right: 16px;
+    color: #333;
+    background: none;
+    cursor: pointer;
+    justify-content: center;
+    z-index: 10;
+    border: 1px solid #6B2B00;
+    padding: 5px;
+    border-radius: 8px;
+}
+
+.popup-close img {
+    width: 20px;
+    transform: rotate(45deg);
+
+}
+
+.popup-close:hover {
+    box-shadow: 0px 1px 2px #6B2B00;
+}
+
+.contact-form {
+    padding: calc(5px + (20 - 5) * ((100vw - 350px) / (1920 - 350)));
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    font-family: "AA Stetica Regular";
+
+}
+
+.form-group {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    width: 100%;
+    overflow: hidden;
+
+}
+
+.form-group input,
+.full-width textarea {
+    outline: none;
+    border: 1px solid #6B2B00;
+    padding: 10px;
+    border-radius: 16px;
+    font-weight: 400;
+    font-size: calc(16px + (18 - 16) * ((100vw - 350px) / (1920 - 350)));
+    line-height: 130%;
+    letter-spacing: 1%;
+
+}
+
+.full-width textarea {
+    height: 100px;
+    resize: none;
+    font-family: "AA Stetica Regular";
+
+}
+
+.contact-form .submit-btn {
+    margin: 20px 0;
+    padding: 16px 56px;
+    width: 100%;
+    font-family: "AA Stetica Regular";
+    border-radius: 16px;
+    font-weight: 400;
+    font-size: calc(16px + (18 - 16) * ((100vw - 350px) / (1920 - 350)));
+    line-height: 130%;
+    letter-spacing: 1%;
+    color: #FFFDF9;
+    background-color: #6B2B00;
+    cursor: pointer;
+}
+
+
+/* ------ Где побывать галлерея ------ */
+.All_events {
+    padding: 0 calc(20px + (100 - 20) * ((100vw - 350px) / (1920 - 350)));
+}
+
+.All_events h2 {
+    font-family: "Cormorant SC";
+    font-weight: 700;
+    font-size: calc(30px + (48 - 30) * ((100vw - 350px) / (1920 - 350)));
+    line-height: 110%;
+    text-transform: uppercase;
+    color: #6B2B00;
+    margin: calc(24px + (56 - 24) * ((100vw - 350px) / (1920 - 350)));
+    text-align: center;
+}
+
+.All_events-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 300px;
+    gap: 16px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05);
+}
+
+.gallery-item .photo-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.5) 100%);
+    pointer-events: none;
+}
+
+.gallery-item p {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+    font-family: "AA Stetica Regular";
+    font-weight: 400;
+    font-size: calc(18px + (22 - 18) * ((100vw - 350px) / (1920 - 350)));
+    line-height: 130%;
+    letter-spacing: 1%;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+.gallery-item.medium {
+    grid-column: span 2;
+}
+
+.gallery-item.medium-vertical {
+    grid-row: span 2;
+}
+
+/* ------ Возможности ------ */
+.comfortable_conditions {
+    margin: calc(64px + (200 - 64) * ((100vw - 350px) / (1920 - 350))) calc(20px + (100 - 20) * ((100vw - 350px) / (1920 - 350))) 0;
+}
+
+.conditions-header {
+    display: flex;
+    justify-content: center;
+}
+
+.conditions-header h2 {
+    font-family: "Cormorant SC";
+    font-weight: 700;
+    font-size: calc(30px + (48 - 30) * ((100vw - 350px) / (1920 - 350)));
+    line-height: 110%;
+    text-indent: 167.5px;
+    text-transform: uppercase;
+    color: #6B2B00;
+}
+
+.conditions-header .swiper-button-next-conditions,
+.conditions-header .swiper-button-prev-conditions {
+    display: none;
+}
+
+.conditionsSwiper .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    min-height: 100%;
+}
+
+.conditions-cards {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    border: 1px solid #6B2B00;
+    border-radius: 16px;
+    padding: calc(16px + (24 - 16) * ((100vw - 350px) / (1920 - 350)));
+    margin-top: calc(32px + (48 - 32) * ((100vw - 350px) / (1920 - 350)));
+}
+
+.conditionsImg img {
+    width: 100%;
+    max-height: 220px;
+    border-radius: 16px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.conditionsText {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 8px;
+    margin-top: calc(16px + (24 - 16) * ((100vw - 350px) / (1920 - 350)));
+    color: #382D2D;
+    text-align: center;
+}
+
+.conditionsText h3 {
+    font-family: "AA Stetica Regular";
+    font-weight: 700;
+    font-size: calc(18px + (22 - 18) * ((100vw - 350px) / (1920 - 350)));
+    line-height: 130%;
+    letter-spacing: 1%;
+    text-align: center;
+}
+
+.conditionsText p {
+    font-family: "AA Stetica Regular";
+    font-size: calc(16px + (20 - 16) * ((100vw - 350px) / (1920 - 350)));
+    line-height: 130%;
+    letter-spacing: 1%;
+    text-align: center;
+
+}
+
+.swiper-nav-buttons {
+    justify-content: center;
+    margin-top: 24px;
+}
+
+/*Форма для отправки площадка*/
+.planningFormForAreaRent h2,
+.planningFormForEvent h2 {
+    font-family: "Cormorant SC";
+    font-weight: 700;
+    font-size: calc(30px + (48 - 30) * ((100vw - 350px) / (1920 - 350)));
+    line-height: 110%;
+    text-transform: uppercase;
+    text-align: center;
+    color: #6B2B00;
+
+}
+
+.planningFormForAreaRent p,
+.planningFormForEvent p {
+    font-family: "AA Stetica Regular";
+    font-size: 20px;
+    line-height: 130%;
+    letter-spacing: 1%;
+    text-align: center;
+    margin: 16px 0 48px 0;
+}
+
+.planningFormForAreaRent,
+.planningFormForEvent {
+    margin: calc(64px + (200 - 64) * ((100vw - 350px) / (1920 - 350))) 0;
+    background: url('/images/starsForm.png');
+    background-repeat: no-repeat;
+    background-position: left;
+}
+
+.planningFormForAreaRent .Form,
+.planningFormForEvent .Form {
+    margin: 0 calc(20px + (100 - 20) * ((100vw - 350px) / (1920 - 350)));
+}
+
+.planningFormForAreaRent .contact-form,
+.planningFormForEvent .contact-form {
+    width: 100%;
+}
+
+.planningFormForAreaRent .form-row,
+.planningFormForEvent .form-row {
+    display: flex;
+    gap: 16px;
+    width: 100%;
+}
+
+.planningFormForAreaRent .form-group,
+.planningFormForEvent .form-group {
+    position: relative;
+    width: 100%;
+}
+
+.planningFormForAreaRent .form-group input,
+.planningFormForEvent .form-group input {
+    width: 100%;
+    padding: 16px;
+    border: 1px solid #6B2B00;
+    border-radius: 16px;
+    font-family: "AA Stetica Regular";
+    font-size: 20px;
+    line-height: 130%;
+    letter-spacing: 1%;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.planningFormForAreaRent .form-group textarea,
+.planningFormForEvent .form-group textarea {
+    width: 100%;
+    height: 180px;
+    padding: 16px;
+    border: 1px solid #6B2B00;
+    border-radius: 16px;
+    font-family: "AA Stetica Regular";
+    font-size: 20px;
+    line-height: 130%;
+    letter-spacing: 1%;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.form-group svg {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.comments svg {
+    position: absolute;
+    top: 8%;
+    right: 20px;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.planningFormForAreaRent .submit-btn,
+.planningFormForEvent .submit-btn {
+    display: block;
+    width: 100%;
+    background-color: #6B2B00;
+    color: #fff;
+    font-size: 16px;
+    padding: 16px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 8px;
+    transition: background 0.3s;
+}
+
+.planningFormForAreaRent .submit-btn:hover,
+.planningFormForEvent .submit-btn:hover {
+    background-color: #8a3c00;
+}
+
+.planningFormForAreaRent .form-policy,
+.planningFormForEvent .form-policy {
+    font-family: "AA Stetica Regular";
+    font-weight: 400;
+    font-size: calc(12px + (16 - 12) * ((100vw - 350px) / (1920 - 350)));
+    line-height: 130%;
+    letter-spacing: 1%;
+
+}
+
+/* ------ Произошедшие события ------ */
+.happenedEvents {
+    margin: 0 calc(20px + (100 - 20) * ((100vw - 350px) / (1920 - 350)));
+}
+
+.happenedEvents h2 {
+    font-family: "Cormorant SC";
+    font-weight: 700;
+    font-size: calc(30px + (48 - 30) * ((100vw - 350px) / (1920 - 350)));
+    line-height: 110%;
+    text-transform: uppercase;
+    color: #6B2B00;
+}
+
+.happenedEvents-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.swiper-nav-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.swiper-nav-buttons button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: #6B2B00;
+    border: 1px solid #6B2B00;
+    border-radius: 16px;
+    width: 56px;
+    height: 56px;
+    cursor: pointer;
+
+}
+
+.swiper-nav-buttons button:hover {
+    background-color: #7a4000;
+    color: white;
+}
+
+.happenedEvents .swiper-slide .card {
+    border: 1px, solid, #6B2B00;
+    padding: calc(16px + (24 - 16) * ((100vw - 350px) / (1920 - 350)));
+    border-radius: 16px;
+
+}
+
+.happenedEvents .swiper-slide .card .cardImg img {
+    width: 100%;
+    border-radius: 16px;
+}
+
+.happenedEvents .swiper-slide .card .cardText {
+    margin-top: calc(16px + (24 - 16) * ((100vw - 350px) / (1920 - 350)));
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.happenedEvents .swiper-slide .card .cardText h3 {
+    font-family: "AA Stetica Regular";
+    color: #382D2D;
+    font-weight: 700;
+    font-size: calc(18px + (22 - 18) * ((100vw - 350px) / (1920 - 350)));
+    line-height: 130%;
+    letter-spacing: 1%;
+}
+
+.happenedEvents .swiper-slide .card .cardText p {
+    font-family: "AA Stetica Regular";
+    color: #382D2D;
+    font-size: calc(16px + (20 - 16) * ((100vw - 350px) / (1920 - 350)));
+    line-height: 130%;
+    letter-spacing: 1%;
+}
+
+.happenedEvents .swiper-slide .card .cardData p {
+    margin-top: calc(24px + (32 - 24) * ((100vw - 350px) / (1920 - 350)));
+    display: flex;
+    gap: 11px;
+    font-family: "AA Stetica Regular";
+    color: #382D2D;
+    font-size: calc(16px + (20 - 16) * ((100vw - 350px) / (1920 - 350)));
+    line-height: 130%;
+    letter-spacing: 1%;
+}
+
+.happenedEvents .swiper-slide .card .cardButton button {
+    margin-top: calc(24px + (32 - 24) * ((100vw - 350px) / (1920 - 350)));
+    width: 100%;
+    padding: 16px 56px;
+    border-radius: 16px;
+    border: none;
+    background-color: #6B2B00;
+    cursor: pointer;
+    font-family: "AA Stetica Regular";
+    font-size: calc(16px + (20 - 16) * ((100vw - 350px) / (1920 - 350)));
+    line-height: 130%;
+    letter-spacing: 1%;
+    color: #FFFDF9;
+}
+
+/* ------ Видео галлерея ------ */
+.video-gallery {
+    margin: calc(64px + (200 - 64) * ((100vw - 350px) / (1920 - 350))) calc(20px + (100 - 20) * ((100vw - 350px) / (1920 - 350)));
+}
+
+.gallery-title {
+    font-family: "Cormorant SC";
+    font-weight: 700;
+    font-size: calc(30px + (48 - 30) * ((100vw - 350px) / (1920 - 350)));
+    line-height: 110%;
+    text-transform: uppercase;
+    color: #6B2B00;
+    margin-bottom: calc(24px + (48 - 24) * ((100vw - 350px) / (1920 - 350)));
+}
+
+.video-gallery-swiper {
+    padding-bottom: 30px;
+}
+
+.video-card {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.video-card img {
+    width: 100%;
+    height: auto;
+    background: #00000066;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.video-card:hover img {
+    transform: scale(1.05);
+}
+
+.video-play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-play-button img {
+    width: 40px;
+    height: 40px;
+}
+
+/* Popup */
+.video-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.video-popup-content {
+    position: relative;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #000;
+}
+
+.video-popup-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-size: 28px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.video-popup-content iframe {
+    width: 100%;
+    height: 400px;
+}
+
+.video-thumbnail {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    transition: transform 0.4s ease;
+}
+
+.video-card:hover .video-thumbnail {
+    transform: scale(1.05);
+}
+
+.video-gallery-swiper .swiper-nav-buttons button {
+    display: none;
+
+}
+
+.video-gallery-swiper .swiper-nav-buttons button:hover {
+    background-color: #7a4000;
+    color: white;
+}
+
+/* ------ договор на проведение мероприятий ------ */
+.agreement {
+    background-color: #6B2B00;
+    background-image: url('/images/howtorent_stars.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.agreement_text {
+    padding: calc(40px + (72 - 40) * ((100vw - 350px) / (1920 - 350))) calc(20px + (100 - 20) * ((100vw - 350px) / (1920 - 350)));
+
+}
+
+.agreement_text h2 {
+    font-family: "Cormorant SC";
+    font-weight: 700;
+    font-size: calc(30px + (48 - 30) * ((100vw - 350px) / (1920 - 350)));
+    line-height: 110%;
+    text-indent: 167.5px;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+    color: #FFFDF9;
+}
+
+.agreement_paragraphs {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    margin-left: auto;
+    text-align: start;
+    gap: 16px;
+    max-width: 927px;
+    margin-top: calc(24px + (32 - 24) * ((100vw - 350px) / (1920 - 350)));
+    border-bottom: 1px solid #FFFDF9;
+}
+
+.agreement_paragraphs p,
+.agreement_paragraphs ol {
+    max-width: 671px;
+    font-family: "AA Stetica Regular";
+    font-weight: 300;
+    font-size: calc(16px + (20 - 16) * ((100vw - 350px) / (1920 - 350)));
+    line-height: 130%;
+    letter-spacing: 1%;
+    color: #FFFDF9;
+
+}
+
+.agreement_paragraphs ol {
+    padding-left: 20px;
+    margin-bottom: 40px;
+}
+
+.agreement_button {
+    display: flex;
+    justify-content: center;
+    margin-top: 48px;
+}
+
+.agreement_button button {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 24px;
+    border-radius: 16px;
+    border: 1px solid #FFFDF9;
+    background-color: #FFFDF9;
+    color: #6B2B00;
+    font-family: "AA Stetica Regular";
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 130%;
+    letter-spacing: 1%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.agreement_button button:hover {
+    background-color: #f0eae4;
+}
+
+.agreement_button svg {
+    flex-shrink: 0;
+}
+
+/*----- Сертификаты -----*/
+.Certificates {
+    padding: calc(120px + (200 - 120) * ((100vw - 350px) / (1920 - 350))) calc(20px + (100 - 20) * ((100vw - 350px) / (1920 - 350))) 0
+}
+
+.Certificates-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.Certificates-heading h2 {
+    font-family: "Cormorant SC";
+    font-weight: 700;
+    font-size: calc(30px + (48 - 30) * ((100vw - 350px) / (1920 - 350)));
+    line-height: 110%;
+    text-transform: uppercase;
+    color: #6B2B00;
+}
+
+.swiper-nav-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.swiper-nav-buttons button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: #6B2B00;
+    border: 1px solid #6B2B00;
+    border-radius: 16px;
+    width: 56px;
+    height: 56px;
+    cursor: pointer;
+
+}
+
+.certificateSwiper {
+    margin-top: 20px;
+}
+
+.swiper-nav-buttons button:hover {
+    background-color: #7a4000;
+    color: white;
+}
+
+.certificateSwiper .swiper-slide .card {
+    border: 1px, solid, #6B2B00;
+    padding: calc(16px + (24 - 16) * ((100vw - 350px) / (1920 - 350)));
+    border-radius: 16px;
+
+}
+
+.certificateSwiper .swiper-slide .card .cardImg img {
+    width: 100%;
+    border-radius: 16px;
+}
+
+.certificateSwiper .swiper-slide .card .cardText {
+    margin-top: calc(16px + (24 - 16) * ((100vw - 350px) / (1920 - 350)));
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.certificateSwiper .swiper-slide .card .cardText h3 {
+    font-family: "AA Stetica Regular";
+    color: #382D2D;
+    font-weight: 700;
+    font-size: calc(18px + (22 - 18) * ((100vw - 350px) / (1920 - 350)));
+    line-height: 130%;
+    letter-spacing: 1%;
+}
+
+.certificateSwiper .swiper-slide .card .cardText p {
+    font-family: "AA Stetica Regular";
+    color: #382D2D;
+    font-size: calc(16px + (20 - 16) * ((100vw - 350px) / (1920 - 350)));
+    line-height: 130%;
+    letter-spacing: 1%;
+}
+
+.certificateSwiper .swiper-slide .card .cardData p {
+    margin-top: calc(24px + (32 - 24) * ((100vw - 350px) / (1920 - 350)));
+    display: flex;
+    gap: 11px;
+    font-family: "AA Stetica Regular";
+    color: #382D2D;
+    font-size: calc(16px + (20 - 16) * ((100vw - 350px) / (1920 - 350)));
+    line-height: 130%;
+    letter-spacing: 1%;
+}
+
+
+/* Спонсоры*/
+
+.sponsors {
+    padding: calc(120px + (200 - 120) * ((100vw - 350px) / (1920 - 350))) 0;
+}
+
+.sponsors h2 {
+    font-family: "Cormorant SC";
+    font-weight: 700;
+    font-size: calc(30px + (48 - 30) * ((100vw - 350px) / (1920 - 350)));
+    line-height: 110%;
+    text-transform: uppercase;
+    color: #6B2B00;
+    text-align: center;
+
+}
+
+.partnersSwiper .swiper-slide {
+    width: auto;
+}
+
+.partner-card {
+    margin-top: calc(24px + (48 - 24) * ((100vw - 350px) / (1920 - 350)));
+    padding: 16px 24px;
+    border: 1px solid #6B2B00;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.partner-card img {
+    max-height: 60px;
+}
+
+/* Вопросы*/
+.faq-block {
+    padding: 0 calc(20px + (100 - 20) * ((100vw - 350px) / (1920 - 350)));
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.faq-block h2 {
+    font-family: "Cormorant SC";
+    font-weight: 700;
+    font-size: calc(30px + (48 - 30) * ((100vw - 350px) / (1920 - 350)));
+    line-height: 110%;
+    text-transform: uppercase;
+    color: #6B2B00;
+    margin-bottom: calc(24px + (48 - 24) * ((100vw - 350px) / (1920 - 350)));
+}
+
+.faq-item {
+    border: 1px solid #6B2B00;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    background: transparent;
+    color: #6B2B00;
+    font-family: "AA Stetica Regular";
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    width: 100%;
+    text-align: left;
+    transition: all 0.3s ease;
+}
+
+.faq-icon {
+    display: inline-block;
+    font-size: 24px;
+    transition: transform 0.3s ease;
+}
+
+.faq-answer {
+    max-height: 0;
+    padding: 0 20px;
+    color: #382D2D;
+    font-family: "AA Stetica Regular";
+    font-size: 16px;
+    line-height: 1.5;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 300px;
+    padding: 16px 20px 20px;
+}
+
+
+.faq-item.active .faq-icon {
+    transform: rotate(45deg);
+}
+
+/* ------ Контакты ------ */
+
+.contactsInfo {
+    margin: calc(64px + (200 - 64) * ((100vw - 350px) / (1920 - 350))) calc(20px + (100 - 20) * ((100vw - 350px) / (1920 - 350)));
+    display: flex;
+    gap: 20px;
+}
+
+.contacts {
+    flex: 1;
+}
+
+.address {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    background-color: #6B2B00;
+    color: #fff;
+    border-radius: 16px;
+}
+
+.address h4 {
+    margin-bottom: calc(24px + (40 - 24) * ((100vw - 350px) / (1920 - 350)));
+    font-family: "AA Stetica Regular";
+    font-weight: 400;
+    font-size: calc(16px + (20 - 16) * ((100vw - 350px) / (1920 - 350)));
+    line-height: 130%;
+    letter-spacing: 1%;
+
+}
+
+.address p {
+    font-family: "AA Stetica Regular";
+    font-weight: 700;
+    font-size: calc(18px + (22 - 18) * ((100vw - 350px) / (1920 - 350)));
+    line-height: 130%;
+}
+
+.map {
+    flex: 1;
+}
+
+.map iframe {
+    border-radius: 16px;
+    width: 100%;
+}
+
+.contact-data {
+    display: flex;
+    margin-top: 20px;
+    gap: calc(16px + (20 - 16) * ((100vw - 350px) / (1920 - 350)));
+}
+
+.contact-data .phone {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: calc(24px + (40 - 24) * ((100vw - 350px) / (1920 - 350)));
+    border: 1px solid #6B2B00;
+    border-radius: 16px;
+    width: 100%;
+}
+
+.contact-data .phone h4,
+.time h4,
+.howToReach h4 {
+    font-family: "AA Stetica Regular";
+    font-weight: 300;
+    font-size: calc(16px + (20 - 16) * ((100vw - 350px) / (1920 - 350)));
+    line-height: 130%;
+    letter-spacing: 1%;
+    color: #382D2D;
+}
+
+.contact-data .phone p,
+.time p {
+    font-family: "AA Stetica Regular";
+    font-weight: 700;
+    font-size: calc(18px + (22 - 18) * ((100vw - 350px) / (1920 - 350)));
+    line-height: 130%;
+    letter-spacing: 1%;
+
+    color: #382D2D;
+}
+
+.contact-data .time {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: calc(24px + (40 - 24) * ((100vw - 350px) / (1920 - 350)));
+
+    border: 1px solid #6B2B00;
+    border-radius: 16px;
+    width: 100%;
+}
+
+.howToReach {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #6B2B00;
+    border-radius: 16px;
+    padding: 24px;
+    margin-top: calc(16px + (24 - 16) * ((100vw - 350px) / (1920 - 350)));
+    gap: calc(24px + (40 - 24) * ((100vw - 350px) / (1920 - 350)));
+}
+
+.howToReach .Bus h4,
+.subway h4 {
+    font-weight: 700;
+    font-size: calc(16px + (20 - 16) * ((100vw - 350px) / (1920 - 350)));
+    line-height: 130%;
+    letter-spacing: 1%;
+    margin-bottom: 8px;
+}
+
+.howToReach .Bus p {
+    font-family: "AA Stetica Regular";
+    font-weight: 300;
+    font-size: calc(16px + (20 - 16) * ((100vw - 350px) / (1920 - 350)));
+    line-height: 130%;
+    letter-spacing: 1%;
+
+}
+
+.subway-stations {
+    display: flex;
+    gap: 8px 24px;
+    flex-wrap: wrap;
+}
+
+.metro {
+    display: flex;
+    gap: 10px;
+    font-family: "AA Stetica Regular";
+    font-weight: 300;
+    font-size: calc(16px + (20 - 16) * ((100vw - 350px) / (1920 - 350)));
+    line-height: 130%;
+    letter-spacing: 1%;
+
+}
+
+/* ------ Футер ------ */
+footer {
+    background-color: #6B2B00;
+    background-image: url('/images/starsforFooter.png');
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    padding: calc(32px + (64 - 32) * ((100vw - 350px) / (1920 - 350))) 100px 0;
+}
+
+.upperFooter {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: calc(32px + (64 - 32) * ((100vw - 350px) / (1920 - 350)));
+}
+
+.Navigation h4,
+.SocialMedia h4,
+.ContactsAndAddress h4,
+.SocialMediaIcons h4 {
+    font-family: "AA Stetica Regular";
+    font-weight: 700;
+    font-size: calc(16px + (20 - 16) * ((100vw - 350px) / (1920 - 350)));
+    line-height: 130%;
+    letter-spacing: 1%;
+    color: #FFFDF9;
+    margin-bottom: 16px;
+}
+
+.Navigation nav,
+.ContactsAndAddress p {
+    display: flex;
+    flex-direction: column;
+    gap: 8px 0;
+    font-family: "AA Stetica Regular";
+    font-weight: 300;
+    font-size: calc(16px + (20 - 16) * ((100vw - 350px) / (1920 - 350)));
+    line-height: 130%;
+    letter-spacing: 1%;
+    color: #FFFDF9;
+}
+
+.Navigation nav a {
+    text-decoration: none;
+    color: #FFFDF9;
+}
+
+.SocialMedia {
+    gap: 8px 0;
+    font-family: "AA Stetica Regular";
+    font-weight: 300;
+    font-size: calc(16px + (20 - 16) * ((100vw - 350px) / (1920 - 350)));
+    line-height: 130%;
+    letter-spacing: 1%;
+}
+
+.SocialMedia a {
+    text-decoration: underline;
+    color: #FFFDF9;
+}
+
+.ContactsAndAddress {
+    display: flex;
+    flex-direction: column;
+    gap: 40px 0;
+}
+
+.ContactsAndAddress a {
+    text-decoration: none;
+}
+
+.lowerFooter {
+    display: flex;
+    padding: 40px 0;
+    justify-content: space-between;
+    border-top: 1px solid #FFFDF980;
+    font-family: "AA Stetica Regular";
+    font-weight: 400;
+    font-size: calc(16px + (20 - 16) * ((100vw - 350px) / (1920 - 350)));
+    line-height: 130%;
+    letter-spacing: 1%;
+    color: #FFFDF9;
+    flex-wrap: wrap;
+}
+
+.lowerFooter a {
+    text-decoration: none;
+    color: #FFFDF9;
+    cursor: pointer;
+}
+
+@media (min-width: 1024px) {
+    .filters-buttons {
+        display: flex;
+        position: relative;
+        margin-top: 40px;
+        justify-content: center;
+        flex-wrap: nowrap;
+        gap: 20px;
+    }
+
+    .filters-buttons-swiper {
+        display: none;
+    }
+
+    .SocialMedia {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .SocialMediaIcons {
+        display: none;
+    }
+}
+
+@media (max-width:1024px) {
+    .main_header {
+        display: none;
+    }
+
+    .burger_header {
+        display: flex;
+        align-items: center;
+        padding: 16px;
+    }
+
+    .burger_top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .burger-logo {
+        width: 123px;
+        height: 46px;
+    }
+
+    .burger-button {
+        width: 46px;
+        height: 46px;
+        background-color: #6B2B00;
+        border-radius: 8px;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        position: relative;
+    }
+
+    #burger-language {
+        padding: 11px 12px;
+        border-radius: 8px;
+        border: 1px, solid, #6B2B00;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .burgerSelect {
+        border: none;
+        outline: none;
+        font-size: 16px;
+        line-height: 130%;
+        letter-spacing: 1%;
+        color: #6B2B00;
+    }
+
+    .close-button {
+        align-self: flex-end;
+        width: 40px;
+        height: 40px;
+        background-color: white;
+        border-radius: 8px;
+        border: 1px, solid, #6B2B00;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        color: #6B2B00;
+    }
+
+    .mobile-menu {
+        position: fixed;
+        box-sizing: border-box;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: white;
+        display: none;
+        flex-direction: column;
+        padding: 24px;
+        z-index: 999;
+        background-image: url('/images/starsCornerbottom.png');
+        background-repeat: no-repeat;
+        background-position: bottom;
+    }
+
+    .mobile-menu.active {
+        display: flex;
+    }
+
+    .moblebuttonAndText {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .moblebuttonAndText h2 {
+        font-family: "AA Stetica Regular";
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 110%;
+        letter-spacing: 0%;
+        text-align: center;
+        text-transform: uppercase;
+        color: #6B2B00;
+
+    }
+
+    .Navigations {
+        margin-top: 20px;
+        justify-content: center;
+        gap: calc(30px + (140 - 30) * ((100vw - 350px) / (1920 - 350)));
+        display: flex;
+    }
+
+    .mobile-nav {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-top: 20px;
+    }
+
+    .mobile-nav a {
+        display: flex;
+        gap: 8px;
+        justify-content: start;
+        align-items: center;
+        opacity: 0;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+    }
+
+    .mobile-nav a img {
+        max-width: 15px;
+        max-height: 15px;
+        border: 1px solid #6b2b00a2;
+        border-radius: 8px;
+        padding: 5px;
+    }
+
+    .mobile-menu.active .mobile-nav:first-child a {
+        animation-name: slidein-left;
+        animation-duration: 0.8s;
+        animation-fill-mode: forwards;
+    }
+
+    .mobile-menu.active .mobile-nav:last-child a {
+        animation-name: slidein-right;
+        animation-duration: 0.8s;
+        animation-fill-mode: forwards;
+    }
+
+    /* Для всех ссылок по порядку */
+    .mobile-menu.active .mobile-nav a:nth-child(1) {
+        animation-delay: 0.2s;
+    }
+
+    .mobile-menu.active .mobile-nav a:nth-child(2) {
+        animation-delay: 0.4s;
+    }
+
+    .mobile-menu.active .mobile-nav a:nth-child(3) {
+        animation-delay: 0.6s;
+    }
+
+    .mobile-menu.active .mobile-nav a:nth-child(4) {
+        animation-delay: 0.8s;
+    }
+
+    @keyframes slidein-left {
+        from {
+            margin-left: -100%;
+            opacity: 0;
+        }
+
+        to {
+            margin-left: 0;
+            opacity: 1;
+        }
+    }
+
+    @keyframes slidein-right {
+        from {
+            margin-left: 100%;
+            opacity: 0;
+        }
+
+        to {
+            margin-left: 0;
+            opacity: 1;
+        }
+    }
+
+    .mobile-nav a {
+        color: #6B2B00;
+        text-decoration: none;
+        font-family: "AA Stetica Regular";
+        font-weight: 400;
+        font-size: calc(16px + (40 - 16) * ((100vw - 350px) / (1920 - 350)));
+        line-height: 130%;
+        letter-spacing: 1%;
+    }
+
+    .mobileContacts {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        align-items: center;
+        margin-top: 64px;
+        background-color: #fffdf991;
+    }
+
+    .mobileContacts .Address,
+    .social-media {
+        grid-column: 1/3;
+        border: 1px solid #6B2B00;
+        border-radius: 16px;
+        padding: 20px;
+    }
+
+    .social-media {
+        border: none;
+        text-align: center;
+    }
+
+    .social-media a {
+        border: 1px solid #6B2B00;
+    }
+
+    .mobileContacts .Time,
+    .mobileContacts .phoneAndEmail {
+        height: 125px;
+        border: 1px solid #6B2B00;
+        border-radius: 16px;
+        padding: 20px;
+    }
+
+    .mobileContacts .Address h4,
+    .mobileContacts .Time h4,
+    .mobileContacts .phoneAndEmail h4 {
+        font-family: "AA Stetica Regular";
+        font-weight: 700;
+        font-size: calc(20px + (40 - 20) * ((100vw - 350px) / (1920 - 350)));
+        line-height: 130%;
+        letter-spacing: 1%;
+        color: #6B2B00;
+        margin-bottom: 20px;
+    }
+
+    .mobileContacts .Address p,
+    .mobileContacts .Time p,
+    .mobileContacts .phoneAndEmail p {
+        font-family: "AA Stetica Regular";
+        font-weight: 400;
+        font-size: calc(16px + (30 - 16) * ((100vw - 350px) / (1920 - 350)));
+        line-height: 130%;
+        letter-spacing: 1%;
+        color: #6B2B00;
+        max-width: 300px;
+    }
+
+    .eventsLocations h2 {
+        text-align: center;
+        justify-content: center;
+        text-indent: 0;
+    }
+
+    .sliderLocations {
+        flex-direction: column-reverse;
+
+    }
+
+    .locationsswiper-text {
+        flex: 1;
+        flex-direction: column-reverse;
+        width: 100%;
+        text-align: center;
+        border: none;
+        padding: 0;
+        height: 100%;
+        background: none;
+    }
+
+    .locationsswiper-text .swiper-nav-buttons {
+        justify-content: center;
+        margin-top: 24px;
+    }
+
+    .locationsswiper-image {
+        flex: 1;
+        width: 100%;
+        padding: 0;
+        height: 100%;
+
+    }
+
+    .rentplace {
+        display: none;
+    }
+
+    .rentplace_mobile button {
+        display: block;
+        padding: 16px 56px;
+        width: 100%;
+        background-color: #6B2B00;
+        border-radius: 16px;
+        color: #FFFDF9;
+        font-family: "AA Stetica Regular";
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 130%;
+        letter-spacing: 1%;
+        margin-top: 24px;
+        cursor: pointer;
+    }
+
+    .All_events-gallery {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: auto;
+        /* auto высота — уберет дырки */
+    }
+
+    .gallery-item,
+    .gallery-item.medium,
+    .gallery-item.medium-vertical {
+        grid-column: span 1;
+        grid-row: span 1;
+        /* отключаем span, чтобы не ломалось */
+    }
+
+    .gallery-item img {
+        height: auto;
+        aspect-ratio: 16 / 9;
+        /* или убери */
+    }
+
+    .form-row {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .contactsInfo {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /*Возможности */
+
+    .conditions-header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .conditions-header h2 {
+        display: flex;
+        text-indent: 0;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .conditions-header .swiper-button-next-conditions,
+    .conditions-header .swiper-button-prev-conditions {
+        display: flex;
+    }
+
+    .swiper-nav-buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 16px;
+    }
+
+    .swiper-button-prev-conditions,
+    .swiper-button-next-conditions {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 53px;
+        height: 53px;
+        background-color: #fff;
+        border: 2px solid #6B2B00;
+        border-radius: 16px;
+        cursor: pointer;
+        color: #6B2B00;
+    }
+
+
+    .swiper-button-prev-conditions:hover {
+        color: #fff;
+        background-color: #6B2B00;
+
+    }
+
+    .swiper-button-next-conditions:hover {
+        color: #fff;
+        background-color: #6B2B00;
+
+    }
+
+    .video-gallery-swiper .swiper-nav-buttons button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+        background-color: white;
+        color: #6B2B00;
+        border: 1px solid #6B2B00;
+        border-radius: 16px;
+        width: 56px;
+        height: 56px;
+        cursor: pointer;
+
+    }
+
+    /*----- Как арендовать----- */
+
+    .agreement_text h2 {
+        text-indent: 0;
+        text-align: center;
+    }
+
+    .agreement_paragraphs {
+        border: none;
+    }
+
+    /*----- Вопросы ----- */
+    .faq-block h2 {
+        text-align: center;
+    }
+
+
+    footer {
+        background-image: url('/images/starsfooterRightCorner.png');
+        background-repeat: no-repeat;
+        background-position: right top;
+    }
+
+    .lowerFooter {
+        gap: 16px 140px;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .upperFooter {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 40px 0;
+    }
+
+    .SocialMedia {
+        display: none;
+    }
+
+    .SocialMediaIcons {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .iconsNav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .iconsNav a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        padding: 6px;
+        background-color: #FFFDF9;
+        border-radius: 100%;
+    }
+}
+
+@media (max-width: 680px) {
+    .busineses {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .events-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 24px;
+    }
+
+    .uniquePark-header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 24px;
+    }
+
+    .contact-data {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .All_events-gallery {
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+    }
+
+    .gallery-item,
+    .gallery-item.medium,
+    .gallery-item.medium-vertical {
+        grid-column: span 1;
+        grid-row: span 1;
+        height: auto;
+    }
+
+    .gallery-item img {
+        height: auto;
+        aspect-ratio: 16 / 9;
+    }
+}

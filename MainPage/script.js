@@ -155,7 +155,8 @@ const swiperImage = new Swiper('.cornerswiper-image', {
             swiperText.slideToLoop(this.realIndex);
         }
     }
-});// ======================= //
+});
+// ======================= //
 // Ремесла свайпер 
 // ======================= //
 const crafts = [

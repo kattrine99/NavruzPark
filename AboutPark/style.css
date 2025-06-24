@@ -77,7 +77,6 @@ body {
     justify-content: center;
     background-color: #6B2B00;
     font-family: "AA Stetica Regular";
-
 }
 
 .lower_header nav {
@@ -1067,6 +1066,10 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 40px 0;
+}
+
+.ContactsAndAddress a {
+    text-decoration: none;
 }
 
 .lowerFooter {
