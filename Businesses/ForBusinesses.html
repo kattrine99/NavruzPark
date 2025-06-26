@@ -473,12 +473,12 @@
             </div>
         </div>
         <div class="video-gallery">
-            <h2 class="gallery-title">Видеогалерея</h2>
-
-            <div class="swiper video-gallery-swiper">
-                <div class="swiper-nav-buttons">
-                    <button class="swiper-button-prev-video"> <svg width="24" height="24" viewBox="0 0 24 24"
-                            fill="none" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(180deg);">
+            <div class="video-headerAndButtons">
+                <h2 class="gallery-title">Видеогалерея</h2>
+                <div class="swiper-video-nav-buttons">
+                    <button class="swiper-button-prev-video">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            style="transform: rotate(180deg);">
                             <path d="M14.4297 5.92969L20.4997 11.9997L14.4297 18.0697" stroke="currentColor"
                                 stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
                                 stroke-linejoin="round" />
@@ -486,8 +486,8 @@
                                 stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </button>
-                    <button class="swiper-button-next-video"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
+                    <button class="swiper-button-next-video">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M14.4297 5.92969L20.4997 11.9997L14.4297 18.0697" stroke="currentColor"
                                 stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
                                 stroke-linejoin="round" />
@@ -496,44 +496,137 @@
                         </svg>
                     </button>
                 </div>
+            </div>
+            <div class="swiper video-gallery-swiper" id="video-gallery-swiper">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide video-card" data-video="https://www.youtube.com/embed/Zbwu_1c1b2Y">
-                        <img src="/images/videoPhoto1.jpg" alt="Видео превью">
-                        <div class="video-play-button">
-                            <img src="/images/icons/logos_youtube-icon.png" alt="Play">
+                    <div class="swiper-slide video-card" data-youtube-id="QB7vyUelzjA">
+                        <div class="video-thumbnail-container">
+                            <img class="video-thumbnail" src="" alt="Видео превью">
+                            <div class="video-overlay"></div>
+                            <div class="video-play-button">
+                                <svg width="68" height="48" viewBox="0 0 68 48">
+                                    <path class="ytp-large-play-button-bg"
+                                        d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"
+                                        fill="#f00"></path>
+                                    <path d="M 45,24 27,14 27,34" fill="#fff"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="video-player-container">
+                            <iframe src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                         </div>
                     </div>
 
-                    <div class="swiper-slide video-card" data-video="https://www.youtube.com/embed/Zbwu_1c1b2Y">
-                        <img src="/images/videoPhoto1.jpg" alt="Видео превью">
-                        <div class="video-play-button">
-                            <img src="/images/icons/logos_youtube-icon.png" alt="Play">
+                    <div class="swiper-slide video-card" data-youtube-id="cU16MvN2XH8">
+                        <div class="video-thumbnail-container">
+                            <img class="video-thumbnail" src="" alt="Видео превью">
+                            <div class="video-overlay"></div>
+                            <div class="video-play-button">
+                                <svg width="68" height="48" viewBox="0 0 68 48">
+                                    <path class="ytp-large-play-button-bg"
+                                        d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"
+                                        fill="#f00"></path>
+                                    <path d="M 45,24 27,14 27,34" fill="#fff"></path>
+                                </svg>
+                            </div>
                         </div>
-                    </div>
-                    <div class="swiper-slide video-card" data-video="https://www.youtube.com/embed/Zbwu_1c1b2Y">
-                        <img src="/images/videoPhoto1.jpg" alt="Видео превью">
-                        <div class="video-play-button">
-                            <img src="/images/icons/logos_youtube-icon.png" alt="Play">
-                        </div>
-                    </div>
-                    <div class="swiper-slide video-card" data-video="https://www.youtube.com/embed/Zbwu_1c1b2Y">
-                        <img src="/images/videoPhoto1.jpg" alt="Видео превью">
-                        <div class="video-play-button">
-                            <img src="/images/icons/logos_youtube-icon.png" alt="Play">
+                        <div class="video-player-container">
+                            <iframe src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                         </div>
                     </div>
 
+                    <div class="swiper-slide video-card" data-youtube-id="3Cze7F6YvzE">
+                        <div class="video-thumbnail-container">
+                            <img class="video-thumbnail" src="" alt="Видео превью">
+                            <div class="video-overlay"></div>
+                            <div class="video-play-button">
+                                <svg width="68" height="48" viewBox="0 0 68 48">
+                                    <path class="ytp-large-play-button-bg"
+                                        d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42-6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"
+                                        fill="#f00"></path>
+                                    <path d="M 45,24 27,14 27,34" fill="#fff"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="video-player-container">
+                            <iframe src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide video-card" data-youtube-id="QB7vyUelzjA">
+                        <div class="video-thumbnail-container">
+                            <img class="video-thumbnail" src="" alt="Видео превью">
+                            <div class="video-overlay"></div>
+                            <div class="video-play-button">
+                                <svg width="68" height="48" viewBox="0 0 68 48">
+                                    <path class="ytp-large-play-button-bg"
+                                        d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"
+                                        fill="#f00"></path>
+                                    <path d="M 45,24 27,14 27,34" fill="#fff"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="video-player-container">
+                            <iframe src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide video-card" data-youtube-id="cU16MvN2XH8">
+                        <div class="video-thumbnail-container">
+                            <img class="video-thumbnail" src="" alt="Видео превью">
+                            <div class="video-overlay"></div>
+                            <div class="video-play-button">
+                                <svg width="68" height="48" viewBox="0 0 68 48">
+                                    <path class="ytp-large-play-button-bg"
+                                        d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42-6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"
+                                        fill="#f00"></path>
+                                    <path d="M 45,24 27,14 27,34" fill="#fff"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="video-player-container">
+                            <iframe src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide video-card" data-youtube-id="3Cze7F6YvzE">
+                        <div class="video-thumbnail-container">
+                            <img class="video-thumbnail" src="" alt="Видео превью">
+                            <div class="video-overlay"></div>
+                            <div class="video-play-button">
+                                <svg width="68" height="48" viewBox="0 0 68 48">
+                                    <path class="ytp-large-play-button-bg"
+                                        d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42-6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"
+                                        fill="#f00"></path>
+                                    <path d="M 45,24 27,14 27,34" fill="#fff"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="video-player-container">
+                            <iframe src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide video-card" data-youtube-id="QB7vyUelzjA">
+                        <div class="video-thumbnail-container">
+                            <img class="video-thumbnail" src="" alt="Видео превью">
+                            <div class="video-overlay"></div>
+                            <div class="video-play-button">
+                                <svg width="68" height="48" viewBox="0 0 68 48">
+                                    <path class="ytp-large-play-button-bg"
+                                        d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42-6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"
+                                        fill="#f00"></path>
+                                    <path d="M 45,24 27,14 27,34" fill="#fff"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="video-player-container">
+                            <iframe src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="swiper-pagination"></div>
-            </div>
-
-            <!-- Popup -->
-            <div class="video-popup-overlay" id="video-popup">
-                <div class="video-popup-content">
-                    <button class="video-popup-close" id="video-popup-close">&times;</button>
-                    <iframe id="video-frame" src="" frameborder="0" allowfullscreen></iframe>
-                </div>
             </div>
         </div>
         <div class="agreement">
@@ -679,8 +772,8 @@
                             данных
                         </p>
                     </div>
+                </form>
             </div>
-            </form>
 
         </div>
         <div class="contactsInfo">

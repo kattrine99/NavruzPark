@@ -3,6 +3,12 @@
 // ======================= //
 
 const mainSlidesCount = 4;
+const mainImages = [
+    "/images/Navruz_main.png",
+    "/images/uniquecorner.jpg",
+    "/images/circleTower.jpg",
+    "/images/forvisitors.jpg"
+]
 const mainWrapper = document.getElementById('swiper-wrapper');
 mainWrapper.innerHTML = '';
 
@@ -11,22 +17,22 @@ for (let i = 1; i <= mainSlidesCount; i++) {
     slide.className = 'swiper-slide';
     slide.id = `slide-${i}`;
     slide.innerHTML = `
-        <div class="slide-container" style="
-            background-image: 
-                linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-                url('/images/Navruz_main.png');
-            background-size: cover; 
-            background-position: center;">
-            <div class="Swiper_text">
-                <h1>Navruz Park</h1>
-                <p class="Swiper_subtitle">12 регионов Узбекистана в сердце Ташкента</p>
-            </div>
+        <div class="slide-container">
+           <img src=${mainImages[i - 1]}>
+           <div class="slide-gradient"></div>
         </div>`;
     mainWrapper.appendChild(slide);
 }
 
 const mainSwiper = new Swiper('.Main_Heading_Swiper', {
     loop: true,
+    speed: 1500,
+    effect: "fade",
+    fadeEffect: { crossFade: true },
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+    },
     pagination: {
         el: '.swiper-pagination',
         clickable: true,

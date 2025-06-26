@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="style.css">
     <title>Navruz park</title>
@@ -163,6 +164,42 @@
             <div class="swiper Main_Heading_Swiper">
                 <div class="swiper-wrapper" id="swiper-wrapper"></div>
                 <div class="swiper-pagination"></div>
+            </div>
+            <div class="Swiper_text">
+                <div class="weather_text">
+                    <h1>Navruz <span>park</span></h1>
+                    <div class="mini_text">
+                        <h3>18 июня, тёплый и комфортный день</h3>
+                        <p>Умеренная температура и ясная погода — хороший повод провести день в парке вместе с семьей и
+                            друзьями</p>
+                    </div>
+                </div>
+                <div class="Weather">
+                    <!-- iframe для десктопа -->
+                    <iframe class="iframe-desktop"
+                        src="https://www.meteoblue.com/en/weather/widget/three/tashkent_uzbekistan_1512569?geoloc=fixed&nocurrent=0&noforecast=0&days=7&tempunit=CELSIUS&windunit=KILOMETER_PER_HOUR&layout=dark"
+                        frameborder="0" scrolling="NO" allowtransparency="true"
+                        sandbox="allow-same-origin allow-scripts allow-popups allow-popups-to-escape-sandbox"
+                        style="width: calc(710px + (830 - 710) * ((100vw - 350px) / (1920 - 350))); height: 613px"></iframe>
+                    <div><a href="https://www.meteoblue.com/en/weather/week/tashkent_uzbekistan_1512569" target="_blank"
+                            rel="noopener"></a></div>
+                    <iframe class="iframe-desktop_medium"
+                        src="https://www.meteoblue.com/en/weather/widget/three/tashkent_uzbekistan_1512569?geoloc=fixed&nocurrent=0&noforecast=0&days=4&tempunit=CELSIUS&windunit=KILOMETER_PER_HOUR&layout=dark"
+                        frameborder="0" scrolling="NO" allowtransparency="true"
+                        sandbox="allow-same-origin allow-scripts allow-popups allow-popups-to-escape-sandbox"
+                        style="width: calc(440px + (453 - 440) * ((100vw - 350px) / (1920 - 350))); height: 613px"></iframe>
+                    <div><a href="https://www.meteoblue.com/en/weather/week/tashkent_uzbekistan_1512569" target="_blank"
+                            rel="noopener"></a></div>
+
+                    <!-- iframe для мобилки -->
+                    <iframe class="iframe-mobile"
+                        src="https://www.meteoblue.com/en/weather/widget/three/tashkent_uzbekistan_1512569?geoloc=fixed&nocurrent=0&noforecast=1&days=1&tempunit=CELSIUS&windunit=KILOMETER_PER_HOUR&layout=dark"
+                        frameborder="0" scrolling="NO" allowtransparency="true"
+                        sandbox="allow-same-origin allow-scripts allow-popups allow-popups-to-escape-sandbox"
+                        style="width: calc(340px + (455 - 340) * ((100vw - 350px) / (1920 - 350))); height: 320px;">
+                    </iframe>
+                </div>
+
             </div>
         </div>
         <div class="aboutPark">
