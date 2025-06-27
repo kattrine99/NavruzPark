@@ -1,0 +1,897 @@
+    @font-face {
+        font-family: "AA Stetica Regular";
+        src: url(/fonts/AA-Stetica-Regular-BF6749235ad0084.otf);
+    }
+
+    @font-face {
+        font-family: "Cormorant SC";
+        src: url(/fonts//Cormorant_SC/CormorantSC-Regular.ttf);
+    }
+
+    @font-face {
+        font-family: "Czizh";
+        src: url(/fonts/czizh/Czizh\ Body.ttf);
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        margin: auto;
+    }
+
+    /*----------Хэдер----------*/
+    .upper_header {
+        padding: 17px calc(20px + (100 - 20) * ((100vw - 350px) / (1920 - 350)));
+        gap: calc(5px + (76 - 5) * ((100vw - 350px) / (1920 - 350)));
+        font-family: "AA Stetica Regular";
+        display: flex;
+        justify-content: center;
+    }
+
+    .Logo img {
+        width: 124px;
+        height: 46px;
+    }
+
+    .Text_nav,
+    .Text_info {
+        display: flex;
+        gap: calc(5px + (76 - 5) * ((100vw - 350px) / (1920 - 350)));
+        color: #6B2B00;
+    }
+
+    .Text_nav h2,
+    .Text_info p {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 130%;
+        letter-spacing: 1%;
+    }
+
+    .Text_nav p,
+    .Text_info h2 {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 130%;
+        letter-spacing: 1%;
+
+    }
+
+    .Text_nav a,
+    .Text_info a {
+        text-decoration: none;
+        color: #6B2B00;
+    }
+
+    .Text_info a {
+        font-weight: 700;
+    }
+
+    .lower_header {
+        padding: 32px calc(20px + (100 - 20) * ((100vw - 350px) / (1920 - 350)));
+        gap: calc(5px + (150 - 5) * ((100vw - 350px) / (1920 - 350)));
+        display: flex;
+        justify-content: center;
+        background-color: #6B2B00;
+        font-family: "AA Stetica Regular";
+    }
+
+    .lower_header nav {
+        display: flex;
+        gap: calc(5px + (140 - 5) * ((100vw - 350px) / (1920 - 350)));
+
+    }
+
+    .lower_header nav a {
+        text-decoration: none;
+        white-space: nowrap;
+        color: white;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 130%;
+        letter-spacing: 1%;
+        transition: all 300ms ease;
+
+    }
+
+    .lower_header nav a:hover {
+        text-shadow: 0 0 4px rgba(255, 255, 255, 0.8);
+        color: #fff;
+    }
+
+    .Language {
+        display: flex;
+        gap: 10px;
+    }
+
+    #Choose_language {
+        background-color: #6B2B00;
+        color: #fff;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 130%;
+        letter-spacing: 1%;
+        outline: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .main_header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .burger_header {
+        display: none;
+    }
+
+    .selectAndBurger {
+        display: flex;
+        gap: 16px;
+    }
+
+
+    /* ------ Главный экран контакты ------ */
+    /* ------ Хлебные крошки ------ */
+    .breadcrumbs {
+        font-family: "AA Stetica Regular";
+        font-size: 18px;
+        color: #6B2B00;
+    }
+
+    .breadcrumbs a {
+        color: #382D2D;
+        text-decoration: none;
+        font-family: "AA Stetica Regular";
+        font-size: 16px;
+        line-height: 130%;
+        letter-spacing: 1%;
+
+    }
+
+    .breadcrumbs span a {
+        color: #382D2D80;
+    }
+
+
+    .HeadingNotice {
+        padding: calc(48px + (80 - 48) * ((100vw - 350px) / (1920 - 350))) calc(17px + (100 - 17) * ((100vw - 350px) / (1920 - 350)));
+    }
+
+    .info_about_notice {
+        margin-top: calc(24px + (64 - 24) * ((100vw - 350px) / (1920 - 350)));
+        display: flex;
+        gap: 20px;
+    }
+
+    .info_notice_text {
+        display: flex;
+        flex-direction: column;
+        gap: calc(32px + (40 - 32) * ((100vw - 350px) / (1920 - 350)));
+    }
+
+    .info_notice_text h1 {
+        font-family: "Cormorant SC";
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 110%;
+        text-transform: uppercase;
+        color: #6B2B00;
+    }
+
+    .heading_and_date {
+        display: flex;
+        flex-direction: column;
+        gap: calc(16px + (24 - 16) * ((100vw - 350px) / (1920 - 350)));
+    }
+
+    .calendarDate {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-family: "AA Stetica Regular";
+        font-size: calc(16px + (20 - 16) * ((100vw - 350px) / (1920 - 350)));
+        line-height: 130%;
+        letter-spacing: 1%;
+        color: #382D2D;
+    }
+
+    .full_paragraph {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        font-family: "AA Stetica Regular";
+        font-size: calc(16px + (20 - 16) * ((100vw - 350px) / (1920 - 350)));
+        line-height: 130%;
+        letter-spacing: 1%;
+    }
+
+    .full_paragraph span {
+        font-weight: 700;
+    }
+
+    .info_image_notice img {
+        flex: 1;
+        width: 100%;
+        border-radius: 16px;
+    }
+
+    .info_image_notice_mobile {
+        display: none;
+    }
+
+    /* ------ Галерея ------ */
+    .notice_photoGallery {
+        margin: calc(64px + (120 - 64) * ((100vw - 350px) / (1920 - 320))) calc(20px + (100 - 20) * ((100vw - 350px) / (1920 - 350)));
+    }
+
+    .photo-gallery-section {
+        background-color: #FFFCF7;
+        padding: 40px 20px;
+    }
+
+    .photo-gallery-swiper {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .photo-gallery-swiper .swiper-slide {
+        width: auto;
+        height: 400px;
+        border-radius: 12px;
+        overflow: hidden;
+    }
+
+    .photo-gallery-swiper .swiper-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+    }
+
+    .photo-gallery-swiper .swiper-slide img:hover {
+        transform: scale(1.02);
+    }
+
+    .notice_photoGallery .swiper-nav-buttons {
+        display: none;
+    }
+
+    .notice-button-prev {
+        position: relative;
+        margin-top: calc(40px + (80 - 40) * ((100vw - 350px) / (1920 - 350)));
+    }
+
+    .notice-button-prev a {
+        display: flex;
+        gap: 10px;
+        text-align: center;
+        align-items: center;
+        text-decoration: none;
+        cursor: pointer;
+        font-family: "AA Stetica Regular";
+        color: #382D2D;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 130%;
+        letter-spacing: 1%;
+
+    }
+
+    .notice-button-prev a:hover {
+        text-decoration: underline;
+    }
+
+    .notice-button-prev img {
+        position: absolute;
+        top: 2%;
+        right: -5%;
+        z-index: 0;
+    }
+
+    /* ------ Мероприятия ------ */
+    .Events {
+        margin: calc(120px + (200 - 120) * ((100vw - 350px) / (1920 - 350))) calc(20px + (100 - 20) * ((100vw - 350px) / (1920 - 320)));
+    }
+
+    .Events h2,
+    .notice_header_and_buttons h2 {
+        font-family: "Cormorant SC";
+        font-weight: 700;
+        font-size: calc(30px + (48 - 30) * ((100vw - 350px) / (1920 - 350)));
+        line-height: 110%;
+        text-transform: uppercase;
+        color: #6B2B00;
+    }
+
+    .events-header,
+    .notice_header_and_buttons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 16px;
+    }
+
+    .swiper-nav-buttons {
+        display: flex;
+        gap: 12px;
+        z-index: 99;
+    }
+
+    .swiper-nav-buttons button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        color: #6B2B00;
+        border: 1px solid #6B2B00;
+        border-radius: 16px;
+        width: 56px;
+        height: 56px;
+        cursor: pointer;
+
+    }
+
+    .swiper-nav-buttons button:hover {
+        background-color: #7a4000;
+        color: white;
+    }
+
+    .eventsSwiper .swiper-slide .card {
+        border: 1px, solid, #6B2B00;
+        padding: calc(16px + (24 - 16) * ((100vw - 350px) / (1920 - 350)));
+        border-radius: 16px;
+
+    }
+
+    .eventsSwiper .swiper-slide .card .cardImg img {
+        width: 100%;
+        border-radius: 16px;
+    }
+
+    .eventsSwiper .swiper-slide .card .cardText {
+        margin-top: calc(16px + (24 - 16) * ((100vw - 350px) / (1920 - 350)));
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .eventsSwiper .swiper-slide .card .cardText h3 {
+        font-family: "AA Stetica Regular";
+        color: #382D2D;
+        font-weight: 700;
+        font-size: calc(18px + (22 - 18) * ((100vw - 350px) / (1920 - 350)));
+        line-height: 130%;
+        letter-spacing: 1%;
+    }
+
+    .eventsSwiper .swiper-slide .card .cardText p {
+        font-family: "AA Stetica Regular";
+        color: #382D2D;
+        font-size: calc(16px + (20 - 16) * ((100vw - 350px) / (1920 - 350)));
+        line-height: 130%;
+        letter-spacing: 1%;
+    }
+
+    .eventsSwiper .swiper-slide .card .cardData p {
+        margin-top: calc(24px + (32 - 24) * ((100vw - 350px) / (1920 - 350)));
+        display: flex;
+        gap: 11px;
+        font-family: "AA Stetica Regular";
+        color: #382D2D;
+        font-size: calc(16px + (20 - 16) * ((100vw - 350px) / (1920 - 350)));
+        line-height: 130%;
+        letter-spacing: 1%;
+    }
+
+    .eventsSwiper .swiper-slide .card .cardButton button {
+        margin-top: calc(24px + (32 - 24) * ((100vw - 350px) / (1920 - 350)));
+        width: 100%;
+        padding: 16px 56px;
+        border-radius: 16px;
+        border: none;
+        background-color: #6B2B00;
+        cursor: pointer;
+        font-family: "AA Stetica Regular";
+        font-size: calc(16px + (20 - 16) * ((100vw - 350px) / (1920 - 350)));
+        line-height: 130%;
+        letter-spacing: 1%;
+        color: #FFFDF9;
+    }
+
+    /* ------ Футер ------ */
+    footer {
+        background-color: #6B2B00;
+        background-image: url('/images/starsforFooter.png');
+        background-repeat: no-repeat;
+        background-position: left bottom;
+        padding: calc(32px + (64 - 32) * ((100vw - 350px) / (1920 - 350))) 100px 0;
+    }
+
+    .upperFooter {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: calc(32px + (64 - 32) * ((100vw - 350px) / (1920 - 350)));
+    }
+
+    .Navigation h4,
+    .SocialMedia h4,
+    .ContactsAndAddress h4,
+    .SocialMediaIcons h4 {
+        font-family: "AA Stetica Regular";
+        font-weight: 700;
+        font-size: calc(16px + (20 - 16) * ((100vw - 350px) / (1920 - 350)));
+        line-height: 130%;
+        letter-spacing: 1%;
+        color: #FFFDF9;
+        margin-bottom: 16px;
+    }
+
+    .Navigation nav,
+    .ContactsAndAddress p {
+        display: flex;
+        flex-direction: column;
+        gap: 8px 0;
+        font-family: "AA Stetica Regular";
+        font-weight: 300;
+        font-size: calc(16px + (20 - 16) * ((100vw - 350px) / (1920 - 350)));
+        line-height: 130%;
+        letter-spacing: 1%;
+        color: #FFFDF9;
+    }
+
+    .Navigation nav a {
+        text-decoration: none;
+        color: #FFFDF9;
+    }
+
+    .SocialMedia {
+        gap: 8px 0;
+        font-family: "AA Stetica Regular";
+        font-weight: 300;
+        font-size: calc(16px + (20 - 16) * ((100vw - 350px) / (1920 - 350)));
+        line-height: 130%;
+        letter-spacing: 1%;
+    }
+
+    .SocialMedia a {
+        text-decoration: underline;
+        color: #FFFDF9;
+    }
+
+    .ContactsAndAddress {
+        display: flex;
+        flex-direction: column;
+        gap: 40px 0;
+    }
+
+    .ContactsAndAddress a {
+        text-decoration: none;
+    }
+
+    .lowerFooter {
+        display: flex;
+        padding: 40px 0;
+        justify-content: space-between;
+        border-top: 1px solid #FFFDF980;
+        font-family: "AA Stetica Regular";
+        font-weight: 400;
+        font-size: calc(16px + (20 - 16) * ((100vw - 350px) / (1920 - 350)));
+        line-height: 130%;
+        letter-spacing: 1%;
+        color: #FFFDF9;
+        flex-wrap: wrap;
+    }
+
+    .lowerFooter a {
+        text-decoration: none;
+        color: #FFFDF9;
+        cursor: pointer;
+    }
+
+
+
+    @media (min-width: 1024px) {
+
+        .SocialMedia {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .SocialMediaIcons {
+            display: none;
+        }
+    }
+
+    @media (max-width:1024px) {
+        .main_header {
+            display: none;
+        }
+
+        .burger_header {
+            display: flex;
+            align-items: center;
+            padding: 16px;
+        }
+
+        .burger_top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .burger-logo {
+            width: 123px;
+            height: 46px;
+        }
+
+        .burger-button {
+            width: 46px;
+            height: 46px;
+            background-color: #6B2B00;
+            border-radius: 8px;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            position: relative;
+        }
+
+        #burger-language {
+            padding: 11px 12px;
+            border-radius: 8px;
+            border: 1px, solid, #6B2B00;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .burgerSelect {
+            border: none;
+            outline: none;
+            font-size: 16px;
+            line-height: 130%;
+            letter-spacing: 1%;
+            color: #6B2B00;
+        }
+
+        .close-button {
+            align-self: flex-end;
+            width: 40px;
+            height: 40px;
+            background-color: white;
+            border-radius: 8px;
+            border: 1px, solid, #6B2B00;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            color: #6B2B00;
+        }
+
+        .mobile-menu {
+            position: fixed;
+            box-sizing: border-box;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: white;
+            display: none;
+            flex-direction: column;
+            padding: 24px;
+            z-index: 999;
+            background-image: url('/images/starsCornerbottom.png');
+            background-repeat: no-repeat;
+            background-position: bottom;
+        }
+
+        .mobile-menu.active {
+            display: flex;
+        }
+
+        .moblebuttonAndText {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .moblebuttonAndText h2 {
+            font-family: "AA Stetica Regular";
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 110%;
+            letter-spacing: 0%;
+            text-align: center;
+            text-transform: uppercase;
+            color: #6B2B00;
+
+        }
+
+        .Navigations {
+            margin-top: 20px;
+            justify-content: center;
+            gap: calc(30px + (140 - 30) * ((100vw - 350px) / (1920 - 350)));
+            display: flex;
+        }
+
+        .mobile-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-top: 20px;
+        }
+
+        .mobile-nav a {
+            display: flex;
+            gap: 8px;
+            justify-content: start;
+            align-items: center;
+            opacity: 0;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+        }
+
+        .mobile-nav a img {
+            max-width: 15px;
+            max-height: 15px;
+            border: 1px solid #6b2b00a2;
+            border-radius: 8px;
+            padding: 5px;
+        }
+
+        .mobile-menu.active .mobile-nav:first-child a {
+            animation-name: slidein-left;
+            animation-duration: 0.8s;
+            animation-fill-mode: forwards;
+        }
+
+        .mobile-menu.active .mobile-nav:last-child a {
+            animation-name: slidein-right;
+            animation-duration: 0.8s;
+            animation-fill-mode: forwards;
+        }
+
+        /* Для всех ссылок по порядку */
+        .mobile-menu.active .mobile-nav a:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+
+        .mobile-menu.active .mobile-nav a:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+
+        .mobile-menu.active .mobile-nav a:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        .mobile-menu.active .mobile-nav a:nth-child(4) {
+            animation-delay: 0.8s;
+        }
+
+        @keyframes slidein-left {
+            from {
+                margin-left: -100%;
+                opacity: 0;
+            }
+
+            to {
+                margin-left: 0;
+                opacity: 1;
+            }
+        }
+
+        @keyframes slidein-right {
+            from {
+                margin-left: 100%;
+                opacity: 0;
+            }
+
+            to {
+                margin-left: 0;
+                opacity: 1;
+            }
+        }
+
+        .mobile-nav a {
+            color: #6B2B00;
+            text-decoration: none;
+            font-family: "AA Stetica Regular";
+            font-weight: 400;
+            font-size: calc(16px + (40 - 16) * ((100vw - 350px) / (1920 - 350)));
+            line-height: 130%;
+            letter-spacing: 1%;
+        }
+
+        .mobileContacts {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            align-items: center;
+            margin-top: 64px;
+            background-color: #fffdf991;
+        }
+
+        .mobileContacts .Address,
+        .social-media {
+            grid-column: 1/3;
+            border: 1px solid #6B2B00;
+            border-radius: 16px;
+            padding: 20px;
+        }
+
+        .social-media {
+            border: none;
+            text-align: center;
+        }
+
+        .social-media a {
+            border: 1px solid #6B2B00;
+        }
+
+        .mobileContacts .Time,
+        .mobileContacts .phoneAndEmail {
+            height: 125px;
+            border: 1px solid #6B2B00;
+            border-radius: 16px;
+            padding: 20px;
+        }
+
+        .mobileContacts .Address h4,
+        .mobileContacts .Time h4,
+        .mobileContacts .phoneAndEmail h4 {
+            font-family: "AA Stetica Regular";
+            font-weight: 700;
+            font-size: calc(20px + (40 - 20) * ((100vw - 350px) / (1920 - 350)));
+            line-height: 130%;
+            letter-spacing: 1%;
+            color: #6B2B00;
+            margin-bottom: 20px;
+        }
+
+        .mobileContacts .Address p,
+        .mobileContacts .Time p,
+        .mobileContacts .phoneAndEmail p {
+            font-family: "AA Stetica Regular";
+            font-weight: 400;
+            font-size: calc(16px + (30 - 16) * ((100vw - 350px) / (1920 - 350)));
+            line-height: 130%;
+            letter-spacing: 1%;
+            color: #6B2B00;
+            max-width: 300px;
+        }
+
+        .phoneAndEmail a {
+            text-decoration: none;
+        }
+
+        .contactsInfo {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        /*----- Главная картинка  -----*/
+        .info_image_notice {
+            display: none;
+        }
+
+        .info_image_notice_mobile {
+            display: flex;
+            width: 100%;
+        }
+
+        .info_notice_text {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 0 16px;
+            max-width: 100%;
+            margin: 0 auto;
+            font-family: "AA Stetica Regular", sans-serif;
+            color: #3A3A3A;
+        }
+
+
+        .info_image_notice_mobile {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .info_image_notice_mobile img {
+            width: 100%;
+            max-height: 350px;
+            border-radius: 12px;
+            object-fit: cover;
+        }
+
+
+        /*----- Галерея -----*/
+        .notice_header_and_buttons,
+        .events-header {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .notice_photoGallery .swiper-nav-buttons {
+            display: flex;
+            margin: 20px 0;
+        }
+
+        .notice-button-prev img {
+            display: none;
+        }
+
+        /*----- Футер -----*/
+
+        footer {
+            background-image: url('/images/starsfooterRightCorner.png');
+            background-repeat: no-repeat;
+            background-position: right top;
+        }
+
+        .lowerFooter {
+            gap: 16px 140px;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .upperFooter {
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            gap: 40px 0;
+        }
+
+        .SocialMedia {
+            display: none;
+        }
+
+        .SocialMediaIcons {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .iconsNav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .iconsNav a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 6px;
+            background-color: #FFFDF9;
+            border-radius: 100%;
+        }
+    }
+
+    @media (max-width:680px) {
+        .socialmedia_email {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .socialmedia_email .socialmedia {
+            width: auto;
+        }
+
+        .socialmedia_email .email {
+            width: auto;
+        }
+    }

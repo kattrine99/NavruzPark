@@ -82,3 +82,20 @@ faqItems.forEach(item => {
         item.classList.toggle('active');
     });
 });
+// ======================= //
+// Активность карты 
+// ======================= //
+const map = document.getElementById("mapContainer");
+const overlay = document.getElementById("mapOverlay");
+
+overlay.addEventListener("click", (e) => {
+    overlay.style.display = "none";
+    map.classList.add("active");
+});
+
+document.addEventListener("click", (e) => {
+    if (!map.contains(e.target)) {
+        overlay.style.display = "block";
+        map.classList.remove("active");
+    }
+});

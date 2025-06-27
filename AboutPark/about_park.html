@@ -15,13 +15,13 @@
             <div class="upper_header">
                 <div class="Text_nav">
                     <div>
-                        <a>
+                        <a href="../Tourists/for_tourists.html">
                             <h2>Туристам:</h2>
                             <p>О парке, сувениры</p>
                         </a>
                     </div>
                     <div>
-                        <a>
+                        <a href="../Businesses/ForBusinesses.html">
                             <h2>Бизнесу:</h2>
                             <p>Аренда, корпоративы</p>
                         </a>
@@ -47,7 +47,9 @@
                     </div>
                     <div>
                         <h2>Телефон:</h2>
-                        <a href="tel:+9989901234567">+9989 (90) 123-45-67</a>
+                        <a href="tel:+9989901234567">
+                            <p>+9989 (90) 123-45-67</p>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -56,11 +58,11 @@
                     <a href="#">Этногородок</a>
                     <a href="#">Мероприятия</a>
                     <a href="#">Новости</a>
-                    <a href="/AboutPark/about_park.html">О парке</a>
-                    <a href="#">Контакты</a>
+                    <a href="../AboutPark/about_park.html">О парке</a>
+                    <a href="../Contacts/Contacts.html">Контакты</a>
                 </nav>
                 <div class="Language">
-                    <img src="/images//Globe.png" alt="Lenguage" id="GlobeIcon">
+                    <img src="/images/Globe.png" alt="Lenguage" id="GlobeIcon">
                     <select id="Choose_language">
                         <option value="russian">RU</option>
                         <option value="uzbek">UZ</option>
@@ -104,16 +106,17 @@
                 </div>
                 <div class="Navigations">
                     <nav class="mobile-nav">
-                        <a href="#"><img src="/images/icons/business_icon.svg"> Бизнесу</a>
-                        <a href="#"><img src="/images/icons/turism_icon.svg"> Туристам</a>
-                        <a href="#"><img src="/images/icons/park_icon.svg">О парке</a>
-                        <a href="#"><img src="/images/icons/contact_icon.svg">Контакты</a>
+                        <a href="../Businesses/ForBusinesses.html"><img src="/images/icons/business_icon.svg">
+                            Бизнесу</a>
+                        <a href="../Tourists/for_tourists.html"><img src="/images/icons/turism_icon.svg"> Туристам</a>
+                        <a href="../AboutPark/about_park.html"><img src="/images/icons/park_icon.svg">О парке</a>
+                        <a href="../Contacts/Contacts.html"><img src="/images/icons/contact_icon.svg">Контакты</a>
                     </nav>
                     <nav class="mobile-nav">
                         <a href="#"><img src="/images/icons/museum_icon.svg">Этногородок</a>
                         <a href="#"><img src="/images/icons/holiday_icon.svg">Мероприятия</a>
                         <a href="#"><img src="/images/icons/news-icon.svg">Новости</a>
-                        <a href="#"><img src="/images/icons/crafts_icon.svg">Ремесленникам</a>
+                        <a href="../Crafts/forCrafts.html"><img src="/images/icons/crafts_icon.svg">Ремесленникам</a>
                     </nav>
 
                 </div>
@@ -129,7 +132,9 @@
                     <div class="phoneAndEmail">
                         <h4>Контакты</h4>
                         <p>info@gmail.com</p>
-                        <p>+998 (90) 123-45-67</p>
+                        <a href="tel:+9989901234567">
+                            <p>+9989 (90) 123-45-67</p>
+                        </a>
                     </div>
                 </div>
                 <div class="social-media">
@@ -465,10 +470,10 @@
                     </div>
                 </div>
             </div>
-            <div class="map">
-                <iframe
+            <div class="map" id="mapContainer">
+                <div class="map-overlay" id="mapOverlay"></div> <iframe
                     src="https://yandex.uz/map-widget/v1/?ll=69.266316%2C41.326013&z=16&pt=69.266316,41.326013,pm2rdl"
-                    width="690" height="600" frameborder="0" allowfullscreen>
+                    width="690" frameborder="0" allowfullscreen>
                 </iframe>
             </div>
         </div>
@@ -484,10 +489,11 @@
                     <a href="#">Этногородок</a>
                     <a href="#">Мероприятия</a>
                     <a href="#">Новости</a>
-                    <a href="/Crafts/forCrafts.html">Ремесленникам</a>
-                    <a href="#">Бизнесу</a>
-                    <a href="/AboutPark/about_park.html">О парке</a>
-                    <a href="#">Контакты</a>
+                    <a href="../Tourists/for_tourists.html">Туристам</a>
+                    <a href="../Crafts/forCrafts.html">Ремесленникам</a>
+                    <a href="../Businesses/ForBusinesses.html">Бизнесу</a>
+                    <a href="../AboutPark/about_park.html">О парке</a>
+                    <a href="../Contacts/Contacts.html">Контакты</a>
                 </nav>
             </div>
             <div class="SocialMedia">
