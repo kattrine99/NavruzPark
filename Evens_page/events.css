@@ -207,6 +207,7 @@ main {
 }
 
 .card {
+    position: relative;
     border: 1px solid #6B2B00;
     border-radius: 16px;
     padding: calc(16px + (24 - 16) * ((100vw - 350px) / (1920 - 350)));
@@ -217,6 +218,33 @@ main {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.card-image-container {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.card-image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.event-ended-label {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background-color: #43CD58;
+    color: white;
+    padding: 6px 12px;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 8px;
+    z-index: 2;
+    font-family: 'AA Stetica Regular', sans-serif;
 }
 
 .card h3 {
@@ -243,6 +271,12 @@ main {
     display: flex;
     align-items: center;
     gap: 10px;
+}
+
+.dataAndlocation {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
 .card button {

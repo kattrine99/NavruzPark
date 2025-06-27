@@ -1,4 +1,20 @@
 // ======================= //
+// Бургер 
+// ======================= //
+const burger = document.getElementById("burger");
+const mobileMenu = document.getElementById("mobileMenu");
+const closeMenu = document.getElementById("closeMenu");
+
+burger.addEventListener("click", () => {
+    burger.classList.toggle("active");
+    mobileMenu.classList.toggle("active");
+});
+
+closeMenu.addEventListener("click", () => {
+    burger.classList.remove("active");
+    mobileMenu.classList.remove("active");
+});
+// ======================= //
 // События свайпер 
 // ======================= //
 const eventCount = 4;

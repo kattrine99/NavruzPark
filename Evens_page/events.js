@@ -1,5 +1,4 @@
 import { cardsData } from "./cardsData.js";
-console.log(cardsData);
 // ======================= //
 // Бургер 
 // ======================= //
@@ -18,7 +17,7 @@ closeMenu.addEventListener("click", () => {
 });
 
 // ======================= //
-// Карточки с новостями
+// Карточки с мероприятиями
 // ======================= //
 const cardsContainer = document.getElementById('cardsContainer');
 const loadMoreBtn = document.getElementById('loadMoreBtn');
@@ -28,10 +27,20 @@ let currentVisible = 0;
 const getInitialCount = () => window.innerWidth < 1024 ? 4 : 6;
 
 const createCard = ({ title = '', text = '', date = '', image = '' }) => {
+
     const card = document.createElement('div');
     card.className = 'card';
+
+    const dateObj = new Date(date);
+    const isPastEvent = !isNaN(dateObj.getTime()) && dateObj < new Date();
+    const formattedDate = formatDate(date);
+    console.log('Card title:', title);
+    console.log('Received date:', date);
     card.innerHTML = `
-    <img src="${image}" alt="card image" />
+    <div class="card-image-container">
+      ${isPastEvent ? '<div class="event-ended-label">Мероприятие завершено</div>' : ''}
+      <img src="${image}" alt="card image" />
+    </div>
     <h3>${title}</h3>
     <p>${text}</p>
     <p class="calendarDate"><svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -44,14 +53,30 @@ const createCard = ({ title = '', text = '', date = '', image = '' }) => {
 <path d="M12.9967 18.0924H13.0064" stroke="#6B2B00" stroke-width="2.16667" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M8.98884 14.8424H8.99857" stroke="#6B2B00" stroke-width="2.16667" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M8.98884 18.0924H8.99857" stroke="#6B2B00" stroke-width="2.16667" stroke-linecap="round" stroke-linejoin="round"/>
-</svg> ${date}</p>
-    <button onclick="window.location.href='../News/Notice/notice.html'" >
-      Узнать подробнее
-    </button>
+</svg> ${formattedDate}</p>
+    <button onclick="window.location.href='./Event/event.html'">Подробнее</button>
   `;
     return card;
 };
+const formatDate = (isoString) => {
+    if (!isoString) return 'Дата не указана';
 
+    const dateObj = new Date(isoString);
+    if (isNaN(dateObj.getTime())) {
+        console.warn("Некорректная дата:", isoString);
+        return 'Дата не указана';
+    }
+
+    const options = {
+        day: '2-digit',
+        month: 'long',
+        hour: '2-digit',
+        minute: '2-digit',
+    };
+
+    return new Intl.DateTimeFormat('ru-RU', options).format(dateObj)
+        .replace(',', ', начало в');
+};
 const renderCards = (count) => {
     const fragment = document.createDocumentFragment();
     const cardsToShow = cardsData.slice(currentVisible, currentVisible + count);
