@@ -66,12 +66,20 @@ const eventsSwiper = new Swiper('.eventsSwiper', {
 // ======================= //
 // Фото галерея свайпер 
 // ======================= //
+const swiperContainer = document.querySelector('.photo-gallery-swiper');
+const modal = document.getElementById("imageModal");
+const modalImg = document.getElementById("modalImage");
+const closeBtn = document.getElementById("closeModal");
+
 const Photoswiper = new Swiper(".photo-gallery-swiper", {
     slidesPerView: 4,
     spaceBetween: 20,
-    speed: 3000,
+    speed: 1000,
     loop: true,
-    autoplay: false,
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false
+    },
     navigation: {
         nextEl: ".swiper-button-next-img",
         prevEl: ".swiper-button-prev-img",
@@ -85,11 +93,27 @@ const Photoswiper = new Swiper(".photo-gallery-swiper", {
         },
         1024: {
             slidesPerView: 4,
-            autoplay: {
-                delay: 0,
-                disableOnInteraction: false,
-                pauseOnMouseEnter: true,
-            },
         },
     },
+});
+
+swiperContainer.querySelectorAll('.swiper-slide img').forEach(img => {
+    img.addEventListener('click', (e) => {
+        e.stopPropagation(); 
+        modal.style.display = 'flex';
+        modalImg.src = img.src;
+        Photoswiper.autoplay?.stop(); 
+    });
+});
+
+closeBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+    Photoswiper.autoplay?.start(); 
+});
+
+window.addEventListener("click", (e) => {
+    if (e.target === modal) {
+        modal.style.display = "none";
+        Photoswiper.autoplay?.start(); 
+    }
 });

@@ -1,16 +1,16 @@
 @font-face {
     font-family: "AA Stetica Regular";
-    src: url(/fonts/AA-Stetica-Regular-BF6749235ad0084.otf);
+    src: url(../fonts/AA-Stetica-Regular-BF6749235ad0084.otf);
 }
 
 @font-face {
     font-family: "Cormorant SC";
-    src: url(/fonts//Cormorant_SC/CormorantSC-Regular.ttf);
+    src: url(../fonts//Cormorant_SC/CormorantSC-Regular.ttf);
 }
 
 @font-face {
     font-family: "Czizh";
-    src: url(/fonts/czizh/Czizh\ Body.ttf);
+    src: url(../fonts/czizh/Czizh\ Body.ttf);
 }
 
 * {
@@ -156,7 +156,7 @@ body {
 }
 
 main {
-    background-image: url('/images/stars_main_aboutPark.png');
+    background-image: url('../images/stars_main_aboutPark.png');
     background-repeat: no-repeat;
     background-position: right top;
 }
@@ -186,7 +186,7 @@ main {
 
 /* ------ Локации для мероприфятий ------ */
 .events {
-    background-image: url('/images/topLeftcorner_star.png');
+    background-image: url('../images/topLeftcorner_star.png');
     background-repeat: no-repeat;
     background-position: top left;
 }
@@ -293,6 +293,7 @@ main {
     padding: 16px 56px;
     width: 100%;
     background-color: #6B2B00;
+    border: 1px solid #6B2B00;
     border-radius: 16px;
     color: #FFFDF9;
     font-family: "AA Stetica Regular";
@@ -302,6 +303,10 @@ main {
     letter-spacing: 1%;
     margin-top: 80px;
     cursor: pointer;
+}
+
+.rentplace button:hover {
+    background-color: #8a3c00;
 }
 
 .rentplace_mobile button {
@@ -332,7 +337,7 @@ main {
 .popup-content {
     position: relative;
     background-color: #fff;
-    background-image: url('/images/about_park_starsText.png');
+    background-image: url('../images/about_park_starsText.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -435,6 +440,7 @@ main {
     padding: 16px 56px;
     width: 100%;
     font-family: "AA Stetica Regular";
+    border: 1px solid #6B2B00;
     border-radius: 16px;
     font-weight: 400;
     font-size: calc(16px + (18 - 16) * ((100vw - 350px) / (1920 - 350)));
@@ -445,6 +451,9 @@ main {
     cursor: pointer;
 }
 
+.contact-form .submit-btn:hover {
+    background-color: #8a3c00;
+}
 
 /* ------ Где побывать галлерея ------ */
 .All_events {
@@ -845,6 +854,10 @@ main {
     color: #FFFDF9;
 }
 
+.happenedEvents .swiper-slide .card .cardButton button:hover {
+    background-color: #8a3c00;
+}
+
 /* ------ Видео галлерея ------ */
 .video-gallery {
     margin: calc(64px + (200 - 64) * ((100vw - 350px) / (1920 - 350))) calc(20px + (100 - 20) * ((100vw - 350px) / (1920 - 350)));
@@ -988,7 +1001,7 @@ main {
 /* ------ договор на проведение мероприятий ------ */
 .agreement {
     background-color: #6B2B00;
-    background-image: url('/images/howtorent_stars.png');
+    background-image: url('../images/howtorent_stars.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -1443,7 +1456,7 @@ main {
 /* ------ Футер ------ */
 footer {
     background-color: #6B2B00;
-    background-image: url('/images/starsforFooter.png');
+    background-image: url('../images/starsforFooter.png');
     background-repeat: no-repeat;
     background-position: left bottom;
     padding: calc(32px + (64 - 32) * ((100vw - 350px) / (1920 - 350))) 100px 0;
@@ -1634,7 +1647,7 @@ footer {
         flex-direction: column;
         padding: 24px;
         z-index: 999;
-        background-image: url('/images/starsCornerbottom.png');
+        background-image: url('../images/starsCornerbottom.png');
         background-repeat: no-repeat;
         background-position: bottom;
     }
@@ -1880,13 +1893,11 @@ footer {
     .gallery-item.medium-vertical {
         grid-column: span 1;
         grid-row: span 1;
-        /* отключаем span, чтобы не ломалось */
     }
 
     .gallery-item img {
         height: auto;
         aspect-ratio: 16 / 9;
-        /* или убери */
     }
 
     .form-row {
@@ -2001,7 +2012,7 @@ footer {
 
 
     footer {
-        background-image: url('/images/starsfooterRightCorner.png');
+        background-image: url('../images/starsfooterRightCorner.png');
         background-repeat: no-repeat;
         background-position: right top;
     }

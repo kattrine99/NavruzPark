@@ -1,16 +1,16 @@
     @font-face {
         font-family: "AA Stetica Regular";
-        src: url(/fonts/AA-Stetica-Regular-BF6749235ad0084.otf);
+        src: url(../fonts/AA-Stetica-Regular-BF6749235ad0084.otf);
     }
 
     @font-face {
         font-family: "Cormorant SC";
-        src: url(/fonts//Cormorant_SC/CormorantSC-Regular.ttf);
+        src: url(../fonts//Cormorant_SC/CormorantSC-Regular.ttf);
     }
 
     @font-face {
         font-family: "Czizh";
-        src: url(/fonts/czizh/Czizh\ Body.ttf);
+        src: url(../fonts/czizh/Czizh\ Body.ttf);
     }
 
     * {
@@ -158,7 +158,7 @@
     }
 
     main {
-        background-image: url('/images/stars_main_aboutPark.png');
+        background-image: url('../images/stars_main_aboutPark.png');
         background-repeat: no-repeat;
         background-position: right top;
     }
@@ -264,9 +264,6 @@
         transform: scale(1.02);
     }
 
-    .notice_photoGallery .swiper-nav-buttons {
-        display: none;
-    }
 
     .notice-button-prev {
         position: relative;
@@ -291,6 +288,35 @@
 
     .notice-button-prev a:hover {
         text-decoration: underline;
+    }
+
+    .image-modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        justify-content: center;
+        align-items: center;
+    }
+
+    .image-modal img {
+        max-width: 90%;
+        max-height: 90%;
+        display: block;
+        border-radius: 8px;
+    }
+
+    .close-modal {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        font-size: 40px;
+        color: white;
+        cursor: pointer;
     }
 
     /* ------ форма  ------ */
@@ -319,7 +345,7 @@
     }
 
     .planningForm {
-        background: url('/images/starsForm.png');
+        background: url('../images/starsForm.png');
         background-repeat: no-repeat;
         background-position: left;
     }
@@ -520,10 +546,15 @@
         color: #FFFDF9;
     }
 
+    .eventsSwiper .swiper-slide .card .cardButton button:hover {
+        background-color: #8a3c00;
+
+    }
+
     /* ------ Футер ------ */
     footer {
         background-color: #6B2B00;
-        background-image: url('/images/starsforFooter.png');
+        background-image: url('../images/starsforFooter.png');
         background-repeat: no-repeat;
         background-position: left bottom;
         padding: calc(32px + (64 - 32) * ((100vw - 350px) / (1920 - 350))) 100px 0;
@@ -704,7 +735,7 @@
             flex-direction: column;
             padding: 24px;
             z-index: 999;
-            background-image: url('/images/starsCornerbottom.png');
+            background-image: url('../images/starsCornerbottom.png');
             background-repeat: no-repeat;
             background-position: bottom;
         }
@@ -953,7 +984,7 @@
         /*----- Футер -----*/
 
         footer {
-            background-image: url('/images/starsfooterRightCorner.png');
+            background-image: url('../images/starsfooterRightCorner.png');
             background-repeat: no-repeat;
             background-position: right top;
         }

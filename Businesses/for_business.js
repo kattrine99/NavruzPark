@@ -99,14 +99,14 @@ for (let i = 1; i <= eventCount; i++) {
     slide.innerHTML = `
        <div class="card">
                             <div class="cardImg">
-                                <img src="/images/event.jpg" />
+                                <img src="../images/event.jpg" />
                             </div>
                             <div class="cardText">
                             <h3>Музыкальный вечер «Жара 2025»</h3>
                             <p>Парк собрал сотни гостей на живой концерт с участием популярных исполнителей. Атмосфера уюта, света ...</p>
                             </div>
                             <div class="cardData">
-                            <p><img src="/images/icons/Calender.svg"/> 19 мая, начало в 10:00</p></div>
+                            <p><img src="../images/icons/Calender.svg"/> 19 мая, начало в 10:00</p></div>
                             <div class="cardButton">
                             <button>Подробнее</button></div>
                         </div>`
@@ -310,14 +310,14 @@ for (let i = 1; i <= newsCount; i++) {
     slide.innerHTML = `
        <div class="card">
                             <div class="cardImg">
-                                <img src="/images/certificate.jpg" />
+                                <img src="../images/certificate.jpg" />
                             </div>
                             <div class="cardText">
                             <h3>Лучший культурный объект года</h3>
                             <p>Получен за вклад и в развитие этнокультурного туризма и популяризацию традиционного наследия Узбекистана</p>
                             </div>
                             <div class="cardData">
-                            <p><img src="/images/icons/Calender.svg"/> от 19.05.2024</p></div>
+                            <p><img src="../images/icons/Calender.svg"/> от 19.05.2024</p></div>
                         </div>`
     certificateWrapper.appendChild(slide);
 }
@@ -356,7 +356,7 @@ for (let i = 1; i <= partnersCount; i++) {
     slide.className = 'swiper-slide';
     slide.innerHTML = `
         <div class="partner-card">
-            <img src="/images/cocacola.png" alt="Partner ${i}">
+            <img src="../images/cocacola.png" alt="Partner ${i}">
         </div>`;
     partnersWrapper.appendChild(slide);
 }

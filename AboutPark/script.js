@@ -42,12 +42,10 @@ markers.forEach(marker => {
         const id = marker.dataset.id;
 
         if (currentZoomId === id) {
-            // zoom out
             parkMap.style.transform = 'scale(1)';
             markers.forEach(m => m.classList.remove('active'));
             currentZoomId = null;
         } else {
-            // zoom in + sync slide
             swiper.slideTo(id - 1);
             zoomToMarker(id);
             currentZoomId = id;
@@ -170,22 +168,22 @@ function applyFilter(filterValue) {
 document.addEventListener('DOMContentLoaded', function () {
 
     const photosData = [
-        { src: '/images/uniquecorner.jpg', title: 'ДИЗАЙНЕРСКАЯ СТУДИЯ «AZUKAR MORENO»', category: 'shops' },
-        { src: '/images/uniquecorner.jpg', title: 'МАСТЕРСКАЯ КЕРАМИКИ', category: 'workshops' },
-        { src: '/images/uniquecorner.jpg', title: 'Колесо обозрения', category: 'wheel' },
-        { src: '/images/uniquecorner.jpg', title: 'Колесо обозрения', category: 'ethno' },
-        { src: '/images/uniquecorner.jpg', title: 'Колесо обозрения', category: 'workshops' },
-        { src: '/images/uniquecorner.jpg', title: 'Колесо обозрения', category: 'amphitheater' },
-        { src: '/images/uniquecorner.jpg', title: 'Колесо обозрения', category: 'wheel' },
-        { src: '/images/uniquecorner.jpg', title: 'Колесо обозрения', category: 'ethno' },
-        { src: '/images/uniquecorner.jpg', title: 'Колесо обозрения', category: 'wheel' },
-        { src: '/images/uniquecorner.jpg', title: 'Колесо обозрения', category: 'ethno' },
-        { src: '/images/uniquecorner.jpg', title: 'Колесо обозрения', category: 'amphitheater' },
-        { src: '/images/uniquecorner.jpg', title: 'Колесо обозрения', category: 'wheel' },
-        { src: '/images/uniquecorner.jpg', title: 'Колесо обозрения', category: 'amphitheater' },
-        { src: '/images/uniquecorner.jpg', title: 'Колесо обозрения', category: 'wheel' },
-        { src: '/images/uniquecorner.jpg', title: 'Колесо обозрения', category: 'ethno' },
-        { src: '/images/uniquecorner.jpg', title: 'Колесо обозрения', category: 'workshops' },
+        { src: '../images/uniquecorner.jpg', title: 'ДИЗАЙНЕРСКАЯ СТУДИЯ «AZUKAR MORENO»', category: 'shops' },
+        { src: '../images/uniquecorner.jpg', title: 'МАСТЕРСКАЯ КЕРАМИКИ', category: 'workshops' },
+        { src: '../images/uniquecorner.jpg', title: 'Колесо обозрения', category: 'wheel' },
+        { src: '../images/uniquecorner.jpg', title: 'Колесо обозрения', category: 'ethno' },
+        { src: '../images/uniquecorner.jpg', title: 'Колесо обозрения', category: 'workshops' },
+        { src: '../images/uniquecorner.jpg', title: 'Колесо обозрения', category: 'amphitheater' },
+        { src: '../images/uniquecorner.jpg', title: 'Колесо обозрения', category: 'wheel' },
+        { src: '../images/uniquecorner.jpg', title: 'Колесо обозрения', category: 'ethno' },
+        { src: '../images/uniquecorner.jpg', title: 'Колесо обозрения', category: 'wheel' },
+        { src: '../images/uniquecorner.jpg', title: 'Колесо обозрения', category: 'ethno' },
+        { src: '../images/uniquecorner.jpg', title: 'Колесо обозрения', category: 'amphitheater' },
+        { src: '../images/uniquecorner.jpg', title: 'Колесо обозрения', category: 'wheel' },
+        { src: '../images/uniquecorner.jpg', title: 'Колесо обозрения', category: 'amphitheater' },
+        { src: '../images/uniquecorner.jpg', title: 'Колесо обозрения', category: 'wheel' },
+        { src: '../images/uniquecorner.jpg', title: 'Колесо обозрения', category: 'ethno' },
+        { src: '../images/uniquecorner.jpg', title: 'Колесо обозрения', category: 'workshops' },
     ];
 
     const photoGallery = document.querySelector('.photoGallery');
@@ -195,6 +193,8 @@ document.addEventListener('DOMContentLoaded', function () {
     let currentIndex = 0;
     const batchSize = 8;
 
+
+    let isAllPhotosShown = false;
     // Генерация одной фотки
     function createPhotoItem(photo, index) {
         const item = document.createElement('div');
@@ -202,7 +202,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const patternIndex = (index % 12) + 1;
 
-        if (patternIndex === 1 || patternIndex === 4 || patternIndex === 9 || patternIndex === 12) {
+        if ([1, 4, 9, 12].includes(patternIndex)) {
             item.classList.add('wide-2');
         }
         if (patternIndex === 5) {
@@ -211,12 +211,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
         item.setAttribute('data-filter', photo.category);
         item.innerHTML = `
-        <img src="${photo.src}" alt="${photo.title}">
-         <div class="photo-gradient"></div>
+        <img src="${photo.src}" alt="${photo.title}" class="gallery-img">
+        <div class="photo-gradient"></div>
         <div class="photo-title">${photo.title}</div>
     `;
+
+        const img = item.querySelector('img');
+        img.addEventListener('click', () => {
+            modal.style.display = 'flex';
+            modalImg.src = img.src;
+        });
+
         return item;
     }
+
     function renderPhotos() {
         const filteredPhotos = photosData.filter(photo => {
             return currentFilter === 'all' || photo.category === currentFilter;
@@ -232,12 +240,30 @@ document.addEventListener('DOMContentLoaded', function () {
         currentIndex += batchSize;
 
         if (currentIndex >= filteredPhotos.length) {
-            showMoreBtn.style.display = 'none';
+            showMoreBtn.textContent = 'Скрыть';
+            isAllPhotosShown = true;
         } else {
-            showMoreBtn.style.display = 'block';
+            showMoreBtn.textContent = 'Показать ещё';
         }
     }
+    function resetGallery() {
+        const allPhotos = photoGallery.querySelectorAll('.gallery-grid-item');
 
+        allPhotos.forEach((photo, i) => {
+            setTimeout(() => {
+                photo.classList.remove('show');
+                setTimeout(() => {
+                    if (i === allPhotos.length - 1) {
+                        photoGallery.innerHTML = '';
+                        currentIndex = 0;
+                        isAllPhotosShown = false;
+                        renderPhotos();
+                        showMoreBtn.textContent = 'Показать ещё';
+                    }
+                }, 300);
+            }, i * 50);
+        });
+    }
     function applyFilter(filterValue) {
         console.log('APPLY FILTER:', filterValue);
 
@@ -249,9 +275,26 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     showMoreBtn.addEventListener('click', function () {
-        renderPhotos();
+        if (isAllPhotosShown) {
+            resetGallery();
+        } else {
+            renderPhotos();
+        }
     });
     applyFilter('all');
+});
+const modal = document.getElementById("imageModal");
+const modalImg = document.getElementById("modalImage");
+const closeBtn = document.getElementById("closeModal");
+
+closeBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+});
+
+window.addEventListener("click", (e) => {
+    if (e.target === modal) {
+        modal.style.display = "none";
+    }
 });
 // ======================= //
 // Сертификаты свайпер 

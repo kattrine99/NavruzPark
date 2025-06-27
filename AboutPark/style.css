@@ -399,6 +399,18 @@ main {
     text-align: center;
 }
 
+.Gallery h2 {
+    max-width: 1132px;
+    font-family: "Cormorant SC";
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 110%;
+    text-indent: 167.5px;
+    text-transform: uppercase;
+    color: #6B2B00;
+
+}
+
 .what-to-watch-gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -567,19 +579,18 @@ main {
     width: 100%;
     height: calc(53px + (70 - 53) * ((100vw - 350px) / (1920 - 350)));
     margin-top: calc(40px + (54 - 40) * ((100vw - 350px) / (1920 - 350)));
-    background-color: #FFFDF9;
+    background-color: #6B2B00;
     border: 1px solid #6B2B00;
     border-radius: 16px;
     font-family: "AA Stetica Regular";
     font-size: 20px;
     line-height: 130%;
-    color: #6B2B00;
+    color: #FFFDF9;
     cursor: pointer;
 }
 
 .show-more-btn:hover {
-    background-color: #6B2B00;
-    color: #fff;
+    background-color: #8a3c00;
 }
 
 .photoGallery {
@@ -595,7 +606,12 @@ main {
     border-radius: 12px;
     object-fit: cover;
     background-color: linear-gradient(180deg, rgba(0, 0, 0, 0) 45.4%, rgba(0, 0, 0, 0.5) 100%);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
 
+.gallery-grid-item img:hover {
+    transform: scale(1.03);
 }
 
 .gallery-grid-item .photo-gradient {
@@ -642,6 +658,43 @@ main {
 
 .gallery-grid-item.wide-3 {
     grid-column: span 3;
+}
+
+.gallery-img:hover {
+    transform: scale(1.03);
+}
+
+/* Модалка */
+.image-modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+.image-modal img {
+    max-width: 90%;
+    max-height: 90%;
+    margin: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+.close-modal {
+    position: absolute;
+    top: 32px;
+    right: 32px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 /*сертификаты*/

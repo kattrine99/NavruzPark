@@ -1,16 +1,16 @@
 @font-face {
     font-family: "AA Stetica Regular";
-    src: url(/fonts/AA-Stetica-Regular-BF6749235ad0084.otf);
+    src: url(../fonts/AA-Stetica-Regular-BF6749235ad0084.otf);
 }
 
 @font-face {
     font-family: "Cormorant SC";
-    src: url(/fonts//Cormorant_SC/CormorantSC-Regular.ttf);
+    src: url(../fonts//Cormorant_SC/CormorantSC-Regular.ttf);
 }
 
 @font-face {
     font-family: "Czizh";
-    src: url(/fonts/czizh/Czizh\ Body.ttf);
+    src: url(../fonts/czizh/Czizh\ Body.ttf);
 }
 
 * {
@@ -296,8 +296,7 @@ main {
 
 .card button:hover {
 
-    background-color: #FFFDF9;
-    color: #6B2B00;
+    background-color: #8a3c00;
     border: 1px solid #6B2B00;
 }
 
@@ -316,7 +315,7 @@ main {
     display: block;
     width: 100%;
     padding: 16px 56px;
-    background-color: #FFFDF9;
+    background-color: #6B2B00;
     border: 1px solid #6B2B00;
     border-radius: 16px;
     cursor: pointer;
@@ -325,12 +324,11 @@ main {
     font-size: calc(16px + (20 - 16) * ((100vw - 350px) / (1920 - 350)));
     line-height: 130%;
     letter-spacing: 1%;
-    color: #6B2B00;
+    color: #FFFDF9;
 }
 
 .load-more:hover {
-    color: #FFFDF9;
-    background-color: #6B2B00;
+    background-color: #8a3c00;
 }
 
 main {
@@ -343,7 +341,7 @@ main {
 /* ------ Футер ------ */
 footer {
     background-color: #6B2B00;
-    background-image: url('/images/starsforFooter.png');
+    background-image: url('../images/starsforFooter.png');
     background-repeat: no-repeat;
     background-position: left bottom;
     padding: calc(32px + (64 - 32) * ((100vw - 350px) / (1920 - 350))) 100px 0;
@@ -717,7 +715,7 @@ footer {
     /*----- Футер -----*/
 
     footer {
-        background-image: url('/images/starsfooterRightCorner.png');
+        background-image: url('../images/starsfooterRightCorner.png');
         background-repeat: no-repeat;
         background-position: right top;
     }

@@ -1,16 +1,16 @@
 @font-face {
     font-family: "AA Stetica Regular";
-    src: url(/fonts/AA-Stetica-Regular-BF6749235ad0084.otf);
+    src: url(../fonts/AA-Stetica-Regular-BF6749235ad0084.otf);
 }
 
 @font-face {
     font-family: "Cormorant SC";
-    src: url(/fonts//Cormorant_SC/CormorantSC-Regular.ttf);
+    src: url(../fonts//Cormorant_SC/CormorantSC-Regular.ttf);
 }
 
 @font-face {
     font-family: "Czizh";
-    src: url(/fonts/czizh/Czizh\ Body.ttf);
+    src: url(../fonts/czizh/Czizh\ Body.ttf);
 }
 
 * {
@@ -357,6 +357,8 @@ main {
     display: block;
     object-fit: cover;
     flex-grow: 1;
+    transition: transform 0.3s ease;
+
 }
 
 .choosing_photo_card .photo-gradient {

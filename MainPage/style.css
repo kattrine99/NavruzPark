@@ -1,16 +1,16 @@
 @font-face {
     font-family: "AA Stetica Regular";
-    src: url(/fonts/AA-Stetica-Regular-BF6749235ad0084.otf);
+    src: url(../fonts/AA-Stetica-Regular-BF6749235ad0084.otf);
 }
 
 @font-face {
     font-family: "Cormorant SC";
-    src: url(/fonts//Cormorant_SC/CormorantSC-Regular.ttf);
+    src: url(../fonts//Cormorant_SC/CormorantSC-Regular.ttf);
 }
 
 @font-face {
     font-family: "Czizh";
-    src: url(/fonts/czizh/Czizh\ Body.ttf);
+    src: url(../fonts/czizh/Czizh\ Body.ttf);
 }
 
 * {
@@ -164,7 +164,7 @@ body {
 
 .Swiper_text {
     position: absolute;
-    top: 55%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
@@ -177,7 +177,7 @@ body {
 .Swiper_text h1 {
     font-family: "Cormorant SC";
     font-weight: 700;
-    font-size: calc(80px + (180 - 80) * ((100vw - 350px) / (1920 - 350)));
+    font-size: calc(60px + (180 - 60) * ((100vw - 350px) / (1920 - 350)));
     line-height: 100%;
     letter-spacing: 1%;
     text-align: center;
@@ -188,7 +188,7 @@ body {
 .Swiper_text h1 span {
     display: block;
     font-weight: 700;
-    font-size: calc(100px + (277 - 100) * ((100vw - 350px) / (1920 - 350)));
+    font-size: calc(60px + (277 - 60) * ((100vw - 350px) / (1920 - 350)));
     line-height: 80%;
     text-transform: uppercase;
 
@@ -197,7 +197,7 @@ body {
 .weather_text {
     display: flex;
     flex-direction: column;
-    gap: 50px 40px;
+    gap: calc(10px + (50 - 10) * ((100vw - 350px) / (1920 - 350))) calc(20px + (40 - 20) * ((100vw - 350px) / (1920 - 350)));
     color: #FFFDF9;
 }
 
@@ -261,7 +261,7 @@ body {
 
 /*----------Главная о парке ----------*/
 .aboutPark {
-    background: url('/images/starsCorner.png');
+    background: url('../images/starsCorner.png');
     background-repeat: no-repeat;
     padding: calc(64px + (200 - 64) * ((100vw - 350px) / (1920 - 350))) calc(20px + (100 - 20) * ((100vw - 350px) / (1920 - 320)));
 }
@@ -293,7 +293,7 @@ body {
 .aboutParkGallery {
     display: grid;
     font-family: "AA Stetica Regular";
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     margin-top: calc(40px + (46 - 40) * ((100vw - 350px) / (1920 - 350)));
 }
@@ -309,10 +309,11 @@ body {
     height: calc(200px + (250 - 200) * ((100vw - 350px) / (1920 - 350)));
     background-image:
         linear-gradient(180deg, rgba(0, 0, 0, 0) 45.4%, rgba(0, 0, 0, 0.5) 100%),
-        url('/images/forbusiness.jpg');
+        url('../images/forbusiness.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 16px;
+    grid-column: 1;
 }
 
 #forBusiness a,
@@ -340,10 +341,11 @@ body {
     width: 100%;
     height: calc(200px + (250 - 200) * ((100vw - 350px) / (1920 - 350)));
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 45.4%, rgba(0, 0, 0, 0.5) 100%),
-        url('/images/forartisans.jpg');
+        url('../images/forartisans.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 16px;
+    grid-column: 2;
 }
 
 #forOrganizators {
@@ -352,23 +354,25 @@ body {
     height: calc(200px + (250 - 200) * ((100vw - 350px) / (1920 - 350)));
     grid-column: 1/3;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 45.4%, rgba(0, 0, 0, 0.5) 100%),
-        url('/images/fororganizators.jpg');
+        url('../images/fororganizators.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     border-radius: 16px;
-
+    grid-column: 1 / 3;
 }
 
 #forVisitors {
     position: relative;
     width: 100%;
-    height: calc(200px + (520 - 200) * ((100vw - 350px) / (1920 - 350)));
+    height: calc(250px + (520 - 250) * ((100vw - 350px) / (1920 - 350)));
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 45.4%, rgba(0, 0, 0, 0.5) 100%),
-        url('/images/forvisitors.jpg');
+        url('../images/forvisitors.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 16px;
+    grid-column: 2;
+    grid-row: 1 / 4;
 }
 
 .upcomingEvents,
@@ -487,6 +491,11 @@ body {
     color: #FFFDF9;
 }
 
+.eventsSwiper .swiper-slide .card .cardButton button:hover,
+.newsSwiper .swiper-slide .card .cardButton button:hover {
+    background-color: #8a3c00;
+}
+
 /*Особенный парк навруз */
 .UniquePark,
 .parkCorners {
@@ -595,7 +604,7 @@ body {
     border-radius: 16px;
     padding: 24px;
     background-color: #fff;
-    background-image: url('/images/stars_leftbottom.png');
+    background-image: url('../images/stars_leftbottom.png');
     background-repeat: no-repeat;
     background-position: left bottom;
 }
@@ -668,11 +677,10 @@ body {
     overflow: hidden;
     cursor: pointer;
     position: relative;
-    transition: transform 0.3s;
 }
 
-.crafts-slider1 .craft-slide:hover,
-.crafts-slider2 .craft-slide:hover {
+.crafts-slider1 .craft-slide img:hover,
+.crafts-slider2 .craft-slide img:hover {
     transform: scale(1.05);
 }
 
@@ -681,6 +689,7 @@ body {
     width: 100%;
     height: auto;
     display: block;
+    transition: transform 0.3s;
 }
 
 .craft-photo-gradient {
@@ -817,19 +826,18 @@ body {
     width: 100%;
     height: calc(53px + (70 - 53) * ((100vw - 350px) / (1920 - 350)));
     margin-top: calc(40px + (54 - 40) * ((100vw - 350px) / (1920 - 350)));
-    background-color: #FFFDF9;
+    background-color: #6B2B00;
     border: 1px solid #6B2B00;
     border-radius: 16px;
     font-family: "AA Stetica Regular";
     font-size: 20px;
     line-height: 130%;
-    color: #6B2B00;
+    color: #FFFDF9;
     cursor: pointer;
 }
 
 .show-more-btn:hover {
-    background-color: #6B2B00;
-    color: #fff;
+    background-color: #8a3c00;
 }
 
 .photoGallery {
@@ -845,7 +853,12 @@ body {
     border-radius: 12px;
     object-fit: cover;
     background-color: linear-gradient(180deg, rgba(0, 0, 0, 0) 45.4%, rgba(0, 0, 0, 0.5) 100%);
+    transition: transform 0.5s ease;
+    cursor: pointer;
+}
 
+.gallery-grid-item img:hover {
+    transform: scale(1.05);
 }
 
 .gallery-grid-item .photo-gradient {
@@ -892,6 +905,39 @@ body {
 
 .gallery-grid-item.wide-3 {
     grid-column: span 3;
+}
+
+/* Модалка */
+.image-modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+.image-modal img {
+    max-width: 90%;
+    max-height: 90%;
+    margin: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+.close-modal {
+    position: absolute;
+    top: 32px;
+    right: 32px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 /*Спонсоры*/
@@ -946,7 +992,7 @@ body {
 }
 
 .planningForm {
-    background: url('/images/starsForm.png');
+    background: url('../images/starsForm.png');
     background-repeat: no-repeat;
     background-position: left;
 }
@@ -1188,7 +1234,7 @@ body {
 /* Футер*/
 footer {
     background-color: #6B2B00;
-    background-image: url('/images/starsforFooter.png');
+    background-image: url('../images/starsforFooter.png');
     background-repeat: no-repeat;
     background-position: left bottom;
     padding: calc(32px + (64 - 32) * ((100vw - 350px) / (1920 - 350))) 100px 0;
@@ -1590,7 +1636,7 @@ footer {
     }
 
     .mobileContacts .Address p,
-    .mobileContacts.Time p,
+    .mobileContacts .Time p,
     .mobileContacts .phoneAndEmail p {
         font-family: "AA Stetica Regular";
         font-weight: 400;
@@ -1599,6 +1645,10 @@ footer {
         letter-spacing: 1%;
         color: #6B2B00;
         max-width: 300px;
+    }
+
+    .phoneAndEmail a {
+        text-decoration: none;
     }
 
     .Swiper_text {
@@ -1611,7 +1661,7 @@ footer {
 
     .Swiper_text {
         flex-direction: column;
-        top: 55%;
+        top: 60%;
     }
 
     /*изменения текста о парке */
@@ -1630,6 +1680,7 @@ footer {
     .aboutParkGallery {
         display: flex;
         flex-direction: column;
+
     }
 
     /*Уникальность парка */
