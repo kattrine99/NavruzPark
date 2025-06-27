@@ -1,16 +1,16 @@
 @font-face {
     font-family: "AA Stetica Regular";
-    src: url(/fonts/AA-Stetica-Regular-BF6749235ad0084.otf);
+    src: url(../fonts/AA-Stetica-Regular-BF6749235ad0084.otf);
 }
 
 @font-face {
     font-family: "Cormorant SC";
-    src: url(/fonts//Cormorant_SC/CormorantSC-Regular.ttf);
+    src: url(../fonts//Cormorant_SC/CormorantSC-Regular.ttf);
 }
 
 @font-face {
     font-family: "Czizh";
-    src: url(/fonts/czizh/Czizh\ Body.ttf);
+    src: url(../fonts/czizh/Czizh\ Body.ttf);
 }
 
 * {
@@ -569,19 +569,18 @@ main {
     width: 100%;
     height: calc(53px + (70 - 53) * ((100vw - 350px) / (1920 - 350)));
     margin-top: calc(40px + (54 - 40) * ((100vw - 350px) / (1920 - 350)));
-    background-color: #FFFDF9;
+    background-color: #6B2B00;
     border: 1px solid #6B2B00;
     border-radius: 16px;
     font-family: "AA Stetica Regular";
     font-size: 20px;
     line-height: 130%;
-    color: #6B2B00;
+    color: #FFFDF9;
     cursor: pointer;
 }
 
 .show-more-btn:hover {
-    background-color: #6B2B00;
-    color: #fff;
+    background-color: #8a3c00;
 }
 
 .photoGallery {
@@ -597,7 +596,11 @@ main {
     border-radius: 12px;
     object-fit: cover;
     background-color: linear-gradient(180deg, rgba(0, 0, 0, 0) 45.4%, rgba(0, 0, 0, 0.5) 100%);
+    transition: transform 0.5s ease;
+}
 
+.gallery-grid-item img:hover {
+    transform: scale(1.05);
 }
 
 .gallery-grid-item .photo-gradient {
@@ -646,6 +649,40 @@ main {
     grid-column: span 3;
 }
 
+/* Модалка */
+.image-modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+.image-modal img {
+    max-width: 90%;
+    max-height: 90%;
+    margin: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+.close-modal {
+    position: absolute;
+    top: 32px;
+    right: 32px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
 /*Ремесла слайдеры */
 .crafts {
     margin: calc(64px + (200 - 64) * ((100vw - 350px) / (1920 - 350))) calc(20px + (100 - 20) * ((100vw - 350px) / (1920 - 350)));
@@ -671,11 +708,10 @@ main {
     overflow: hidden;
     cursor: pointer;
     position: relative;
-    transition: transform 0.3s;
 }
 
-.crafts-slider1 .craft-slide:hover,
-.crafts-slider2 .craft-slide:hover {
+.crafts-slider1 .craft-slide img:hover,
+.crafts-slider2 .craft-slide img:hover {
     transform: scale(1.05);
 }
 
@@ -684,6 +720,7 @@ main {
     width: 100%;
     height: auto;
     display: block;
+    transition: transform 0.3s;
 }
 
 .craft-photo-gradient {
@@ -838,6 +875,11 @@ main {
     line-height: 130%;
     letter-spacing: 1%;
     color: #FFFDF9;
+}
+
+.eventsSwiper .swiper-slide .card .cardButton button:hover,
+.newsSwiper .swiper-slide .card .cardButton button:hover {
+    background-color: #8a3c00;
 }
 
 .contactsInfo {
