@@ -195,7 +195,6 @@ main {
 
 .HeadingContacts img {
     object-fit: cover;
-    object-position: 100% 80%;
     width: 100%;
     max-height: calc(200px + (534 - 200) * ((100vw - 350px) / (1920 - 350)));
     margin-top: calc(24px + (100 - 24) * ((100vw - 350px) / (1920 - 350)));
