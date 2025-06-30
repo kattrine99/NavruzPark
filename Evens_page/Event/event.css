@@ -1,16 +1,16 @@
     @font-face {
         font-family: "AA Stetica Regular";
-        src: url(../fonts/AA-Stetica-Regular-BF6749235ad0084.otf);
+        src: url(../../fonts/AA-Stetica-Regular-BF6749235ad0084.otf);
     }
 
     @font-face {
         font-family: "Cormorant SC";
-        src: url(../fonts//Cormorant_SC/CormorantSC-Regular.ttf);
+        src: url(../../fonts//Cormorant_SC/CormorantSC-Regular.ttf);
     }
 
     @font-face {
         font-family: "Czizh";
-        src: url(../fonts/czizh/Czizh\ Body.ttf);
+        src: url(../../fonts/czizh/Czizh\ Body.ttf);
     }
 
     * {

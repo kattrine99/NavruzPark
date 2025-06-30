@@ -1,16 +1,16 @@
 @font-face {
     font-family: "AA Stetica Regular";
-    src: url(/fonts/AA-Stetica-Regular-BF6749235ad0084.otf);
+    src: url(../fonts/AA-Stetica-Regular-BF6749235ad0084.otf);
 }
 
 @font-face {
     font-family: "Cormorant SC";
-    src: url(/fonts//Cormorant_SC/CormorantSC-Regular.ttf);
+    src: url(../fonts/Cormorant_SC/CormorantSC-Regular.ttf);
 }
 
 @font-face {
     font-family: "Czizh";
-    src: url(/fonts/czizh/Czizh\ Body.ttf);
+    src: url(../fonts/czizh/Czizh\ Body.ttf);
 }
 
 * {
@@ -158,7 +158,7 @@ body {
 }
 
 main {
-    background-image: url('/images/stars_main_aboutPark.png');
+    background-image: url('../images/stars_main_aboutPark.png');
     background-repeat: no-repeat;
     background-position: right top;
 }
@@ -187,7 +187,7 @@ main {
 
 /* ------ Символ единства ------ */
 .Symbol_aboutPark {
-    background-image: url('/images/about_park_starsText.png');
+    background-image: url('../images/about_park_starsText.png');
     background-repeat: no-repeat;
     background-size: contain;
     padding: calc(64px + (200 - 64) * ((100vw - 350px) / (1920 - 350))) calc(20px + (100 - 20) * ((100vw - 350px) / (1920 - 350))) 0;
