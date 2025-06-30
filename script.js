@@ -166,16 +166,14 @@ const swiperImage = new Swiper('.cornerswiper-image', {
 // Ремесла свайпер 
 // ======================= //
 const crafts = [
-    { category: 'embroidery', title: 'Вышивка', img: '/images/craft.jpg' },
-    { category: 'woodwork', title: 'Резьба по дереву', img: '/images/craft1.jpg' },
-    { category: 'ceramics', title: 'Керамика', img: '/images/craft2.jpg' },
-    { category: 'textile', title: 'Ткачество', img: '/images/craft3.jpg' },
-    { category: 'jewelry', title: 'Ювелирные изделия', img: '/images/craft4.jpg' },
-    { category: 'embroidery', title: 'Вышивка', img: '/images/craft.jpg' },
-    { category: 'woodwork', title: 'Резьба по дереву', img: '/images/craft1.jpg' },
-    { category: 'ceramics', title: 'Керамика', img: '/images/craft2.jpg' },
-    { category: 'textile', title: 'Ткачество', img: '/images/craft3.jpg' },
-    { category: 'jewelry', title: 'Ювелирные изделия', img: '/images/craft4.jpg' }
+    { category: 'designers', title: 'Дизайнеры', img: '/images/craft.jpg' },
+    { category: 'pottery', title: 'Гончарка', img: '/images/craft1.jpg' },
+    { category: 'museums', title: 'Музеи', img: '/images/craft2.jpg' },
+    { category: 'restaurants', title: 'Рестораны', img: '/images/craft3.jpg' },
+    { category: 'craftsmen', title: 'Кунорманды (ремесленники)', img: '/images/craft4.jpg' },
+    { category: 'shops', title: 'Магазины', img: '/images/crafts.jpg' },
+    { category: 'souvenirs', title: 'Сувениры', img: '/images/national_shop.png' },
+    { category: 'ceramics', title: 'Керамика', img: '/images/forbusiness.jpg' }
 ];
 
 const craftWrapper1 = document.getElementById('crafts-wrapper1');
@@ -222,7 +220,7 @@ const craftsSwiper1 = new Swiper('.crafts-slider1', {
 const craftsSwiper2 = new Swiper('.crafts-slider2', {
     slidesPerView: 4,
     spaceBetween: 16,
-    speed: 10000,
+    speed: 12000,
     loop: true,
     autoplay: {
         delay: 100,
@@ -237,7 +235,7 @@ const craftsSwiper2 = new Swiper('.crafts-slider2', {
 document.querySelectorAll('.craft-slide').forEach(slide => {
     slide.addEventListener('click', () => {
         const category = slide.getAttribute('data-category');
-        window.location.href = `/catalog.html?category=${category}`;
+        window.location.href = `/Ethno-townPage/ethno.html?category=${category}`;
     });
 
     slide.addEventListener('mouseenter', () => {

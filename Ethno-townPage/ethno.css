@@ -1,0 +1,1440 @@
+@font-face {
+    font-family: "AA Stetica Regular";
+    src: url(../fonts/AA-Stetica-Regular-BF6749235ad0084.otf);
+}
+
+@font-face {
+    font-family: "Cormorant SC";
+    src: url(../fonts//Cormorant_SC/CormorantSC-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Czizh";
+    src: url(../fonts/czizh/Czizh\ Body.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: auto;
+}
+
+/*----------Хэдер----------*/
+.upper_header {
+    padding: 17px calc(20px + (100 - 20) * ((100vw - 350px) / (1920 - 350)));
+    gap: calc(5px + (76 - 5) * ((100vw - 350px) / (1920 - 350)));
+    font-family: "AA Stetica Regular";
+    display: flex;
+    justify-content: center;
+}
+
+.Logo img {
+    width: 124px;
+    height: 46px;
+}
+
+.Text_nav,
+.Text_info {
+    display: flex;
+    gap: calc(5px + (76 - 5) * ((100vw - 350px) / (1920 - 350)));
+    color: #6B2B00;
+}
+
+.Text_nav h2,
+.Text_info p {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 130%;
+    letter-spacing: 1%;
+}
+
+.Text_nav p,
+.Text_info h2 {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 130%;
+    letter-spacing: 1%;
+
+}
+
+.Text_nav a,
+.Text_info a {
+    text-decoration: none;
+    color: #6B2B00;
+}
+
+.Text_info a {
+    font-weight: 700;
+}
+
+.lower_header {
+    padding: 32px calc(20px + (100 - 20) * ((100vw - 350px) / (1920 - 350)));
+    gap: calc(5px + (150 - 5) * ((100vw - 350px) / (1920 - 350)));
+    display: flex;
+    justify-content: center;
+    background-color: #6B2B00;
+    font-family: "AA Stetica Regular";
+}
+
+.lower_header nav {
+    display: flex;
+    gap: calc(5px + (140 - 5) * ((100vw - 350px) / (1920 - 350)));
+
+}
+
+.lower_header nav a {
+    text-decoration: none;
+    white-space: nowrap;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 130%;
+    letter-spacing: 1%;
+    transition: all 300ms ease;
+
+}
+
+.lower_header nav a:hover {
+    text-shadow: 0 0 4px rgba(255, 255, 255, 0.8);
+    color: #fff;
+}
+
+.Language {
+    display: flex;
+    gap: 10px;
+}
+
+#Choose_language {
+    background-color: #6B2B00;
+    color: #fff;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 130%;
+    letter-spacing: 1%;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.main_header {
+    display: flex;
+    flex-direction: column;
+}
+
+.burger_header {
+    display: none;
+}
+
+.selectAndBurger {
+    display: flex;
+    gap: 16px;
+}
+
+
+
+/* ------ Главный экран этногородок ------ */
+/* ------ Хлебные крошки ------ */
+.breadcrumbs a {
+    color: #382D2D;
+    text-decoration: none;
+    font-family: "AA Stetica Regular";
+    font-size: 16px;
+    line-height: 130%;
+    letter-spacing: 1%;
+
+}
+
+.breadcrumbs span a {
+    color: #382D2D80;
+}
+
+main {
+    background-image: url('/images/stars_main_aboutPark.png');
+    background-repeat: no-repeat;
+    background-position: right top;
+}
+
+.HeadingEthno .EthnoText {
+    padding: calc(48px + (80 - 48) * ((100vw - 350px) / (1920 - 350))) calc(17px + (100 - 17) * ((100vw - 350px) / (1920 - 350)));
+}
+
+.HeadingEthno h1 {
+    font-family: "Cormorant SC";
+    font-weight: 700;
+    font-size: calc(64px + (180 - 64) * ((100vw - 350px) / (1920 - 350)));
+    line-height: 100%;
+    text-transform: uppercase;
+    color: #81332F;
+    margin-top: calc(24px + (56 - 24) * ((100vw - 350px) / (1920 - 350)));
+    hyphens: auto;
+    overflow-wrap: break-word;
+}
+
+.HeadingEthno img {
+    object-fit: cover;
+    width: 100%;
+    max-height: calc(200px + (534 - 200) * ((100vw - 350px) / (1920 - 350)));
+    margin-top: calc(24px + (100 - 24) * ((100vw - 350px) / (1920 - 350)));
+}
+
+/*----- поиск и сортировка -----*/
+.ethno-search,
+.ethno-cards {
+    margin: calc(64px + (80 - 64) * ((100vw - 350px) / (1920 - 350))) calc(20px + (100 - 20) * ((100vw - 350px) / (1920 - 350)));
+}
+
+.ethnoSearch-desktop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #6B2B00;
+    padding: calc(28px + (34 - 28) * ((100vw - 350px) / (1920 - 350))) calc(20px + (48 - 20) * ((100vw - 350px) / (1920 - 350)));
+    border-radius: 16px;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.search_category {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-grow: 1;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    background-color: #FFFDF9;
+    padding: calc(14px + (18 - 14) * ((100vw - 350px) / (1920 - 350))) calc(16px + (32 - 16) * ((100vw - 350px) / (1920 - 350)));
+    border-radius: 16px;
+    flex-grow: 1;
+}
+
+.search input {
+    border: none;
+    outline: none;
+    background: transparent;
+    flex-grow: 1;
+    font-family: "AA Stetica Regular";
+    font-size: calc(16px + (20 - 16) * ((100vw - 350px) / (1920 - 350)));
+    line-height: 130%;
+    letter-spacing: 1%;
+    color: #382D2D;
+}
+
+.search button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.search button svg {
+    flex-shrink: 0;
+}
+
+.category select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    height: 62px;
+    border-radius: 16px;
+    padding: calc(14px + (18 - 14) * ((100vw - 350px) / (1920 - 350))) calc(16px + (32 - 16) * ((100vw - 350px) / (1920 - 350)));
+    border: none;
+    background-color: #FFFDF9;
+    font-size: 14px;
+    color: #382D2D;
+    cursor: pointer;
+    width: 20rem;
+    font-family: "AA Stetica Regular";
+    font-size: calc(16px + (20 - 16) * ((100vw - 350px) / (1920 - 350)));
+    line-height: 130%;
+    letter-spacing: 1%;
+    color: #382D2D;
+    background-image: url("/images/icons/arrow-down.svg");
+    background-repeat: no-repeat;
+    background-position: right 5% top 50%;
+    background-size: 12px;
+    outline: none;
+}
+
+.sort svg {
+    stroke: currentColor;
+}
+
+.sort button,
+.filter-button {
+    border: 1px solid #FFFDF9;
+    border-radius: 16px;
+    padding: calc(14px + (18 - 14) * ((100vw - 350px) / (1920 - 350))) calc(16px + (32 - 16) * ((100vw - 350px) / (1920 - 350)));
+    background-color: #6B2B00;
+    color: #FFFDF9;
+    display: flex;
+    text-align: center;
+    gap: calc(16px + (24 - 16) * ((100vw - 350px) / (1920 - 350)));
+    text-wrap: nowrap;
+    align-items: center;
+    font-family: "AA Stetica Regular";
+    font-size: 20px;
+    line-height: 130%;
+    letter-spacing: 1%;
+    cursor: pointer;
+}
+
+.sort button:hover {
+    background-color: #8a3c00;
+
+}
+
+.filter-button {
+    display: none;
+}
+
+/* картоки */
+
+#cardsContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    gap: 24px;
+}
+
+.card {
+    border: 1px solid #6B2B00;
+    border-radius: 16px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+}
+
+.card-image-container img {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.card h3 {
+    margin-top: calc(12px + (24 - 12) * ((100vw - 350px) / (1920 - 350)));
+    font-family: "AA Stetica Regular";
+    font-weight: 700;
+    font-size: calc(16px + (22 - 16) * ((100vw - 350px) / (1920 - 350)));
+    line-height: 130%;
+    letter-spacing: 1%;
+    color: #382D2D;
+}
+
+.card p {
+    font-family: "AA Stetica Regular";
+    font-size: calc(14px + (20 - 14) * ((100vw - 350px) / (1920 - 350)));
+    line-height: 130%;
+    letter-spacing: 1%;
+    color: #382D2D;
+    margin: 8px 0 calc(24px + (40 - 24) * ((100vw - 350px) / (1920 - 350))) 0;
+    flex-grow: 1;
+}
+
+
+.card button {
+    background-color: #6B2B00;
+    color: #FFFDF9;
+    padding: 16px 56px;
+    border: none;
+    border-radius: 8px;
+    font-family: "AA Stetica Regular";
+    font-size: calc(14px + (20 - 14) * ((100vw - 350px) / (1920 - 350)));
+    line-height: 130%;
+    letter-spacing: 1%;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.card button:hover {
+    background-color: #8a3c00;
+}
+
+.load-more {
+    margin-top: calc(20px + (64 - 20) * ((100vw - 350px) / (1920 - 350)));
+    width: 100%;
+    padding: 16px 0;
+    border-radius: 16px;
+    outline: none;
+    background-color: #6B2B00;
+    color: #FFFDF9;
+    font-family: "AA Stetica Regular";
+    font-size: calc(14px + (20 - 14) * ((100vw - 350px) / (1920 - 350)));
+    line-height: 130%;
+    letter-spacing: 1%;
+    cursor: pointer;
+    border: 1px solid #6B2B00;
+}
+
+.load-more:hover {
+    background-color: #8a3c00;
+
+}
+
+/*Форма для отправки*/
+.ethno-form h2 {
+    font-family: "Cormorant SC";
+    font-weight: 700;
+    font-size: calc(30px + (48 - 30) * ((100vw - 350px) / (1920 - 350)));
+    line-height: 110%;
+    text-transform: uppercase;
+    text-align: center;
+    color: #6B2B00;
+
+}
+
+.ethno-form p {
+    font-family: "AA Stetica Regular";
+    font-size: 20px;
+    line-height: 130%;
+    letter-spacing: 1%;
+    text-align: center;
+    margin: 16px 0 48px 0;
+}
+
+.ethno-form {
+    margin: calc(64px + (200 - 64) * ((100vw - 350px) / (1920 - 350))) calc(20px + (100 - 20)* ((100vw - 350px) / (1920 - 350)));
+    background: url('/images/starsForm.png');
+    background-repeat: no-repeat;
+    background-position: top left;
+}
+
+
+.ethno-form .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.ethno-form .form-row {
+    display: flex;
+    gap: 16px;
+    width: 100%;
+}
+
+.ethno-form .form-group {
+    position: relative;
+    width: 100%;
+}
+
+.ethno-form .form-group input {
+    width: 100%;
+    padding: 16px;
+    border: 1px solid #6B2B00;
+    border-radius: 16px;
+    font-family: "AA Stetica Regular";
+    font-size: 20px;
+    line-height: 130%;
+    letter-spacing: 1%;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.ethno-form .form-group textarea {
+    width: 100%;
+    height: 180px;
+    padding: 16px;
+    border: 1px solid #6B2B00;
+    border-radius: 16px;
+    font-family: "AA Stetica Regular";
+    font-size: 20px;
+    line-height: 130%;
+    letter-spacing: 1%;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.form-group svg {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.comments svg {
+    position: absolute;
+    top: 8%;
+    right: 20px;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.planningFormForAreaRent .submit-btn,
+.ethno-form .submit-btn {
+    display: block;
+    width: 100%;
+    background-color: #6B2B00;
+    color: #fff;
+    font-size: 16px;
+    padding: 16px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 8px;
+    transition: background 0.3s;
+}
+
+.ethno-form .submit-btn:hover {
+    background-color: #8a3c00;
+}
+
+.ethno-form .form-policy {
+    font-family: "AA Stetica Regular";
+    font-weight: 400;
+    font-size: calc(12px + (16 - 12) * ((100vw - 350px) / (1920 - 350)));
+    line-height: 130%;
+    letter-spacing: 1%;
+
+}
+
+/* ------ Контакты ------ */
+
+.contactsInfo {
+    position: relative;
+    margin: calc(64px + (200 - 64) * ((100vw - 350px) / (1920 - 350))) calc(20px + (100 - 20) * ((100vw - 350px) / (1920 - 350)));
+    display: flex;
+    gap: 20px;
+}
+
+.contactsInfo img {
+    position: absolute;
+    object-fit: contain;
+    top: 70%;
+    right: -5.6%;
+}
+
+.contacts {
+    flex: 1;
+}
+
+.address {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    background-color: #6B2B00;
+    color: #fff;
+    border-radius: 16px;
+}
+
+.address h4 {
+    margin-bottom: calc(24px + (40 - 24) * ((100vw - 350px) / (1920 - 350)));
+    font-family: "AA Stetica Regular";
+    font-weight: 400;
+    font-size: calc(16px + (20 - 16) * ((100vw - 350px) / (1920 - 350)));
+    line-height: 130%;
+    letter-spacing: 1%;
+
+}
+
+.address p {
+    font-family: "AA Stetica Regular";
+    font-weight: 700;
+    font-size: calc(18px + (22 - 18) * ((100vw - 350px) / (1920 - 350)));
+    line-height: 130%;
+}
+
+.map {
+    position: relative;
+    width: 690px;
+}
+
+.map iframe {
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.map.active iframe {
+    pointer-events: auto;
+}
+
+.map-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+    z-index: 2;
+    background: transparent;
+}
+
+.contact-data {
+    display: flex;
+    margin-top: 20px;
+    gap: calc(16px + (20 - 16) * ((100vw - 350px) / (1920 - 350)));
+}
+
+.contact-data .phone {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: calc(24px + (40 - 24) * ((100vw - 350px) / (1920 - 350)));
+    border: 1px solid #6B2B00;
+    border-radius: 16px;
+    width: 100%;
+}
+
+.contact-data .phone h4,
+.time h4,
+.howToReach h4 {
+    font-family: "AA Stetica Regular";
+    font-weight: 300;
+    font-size: calc(16px + (20 - 16) * ((100vw - 350px) / (1920 - 350)));
+    line-height: 130%;
+    letter-spacing: 1%;
+    color: #382D2D;
+}
+
+.contact-data .phone p,
+.time p {
+    font-family: "AA Stetica Regular";
+    font-weight: 700;
+    font-size: calc(18px + (22 - 18) * ((100vw - 350px) / (1920 - 350)));
+    line-height: 130%;
+    letter-spacing: 1%;
+
+    color: #382D2D;
+}
+
+.contact-data .time {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: calc(24px + (40 - 24) * ((100vw - 350px) / (1920 - 350)));
+
+    border: 1px solid #6B2B00;
+    border-radius: 16px;
+    width: 100%;
+}
+
+.howToReach {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #6B2B00;
+    border-radius: 16px;
+    padding: 24px;
+    margin-top: calc(16px + (24 - 16) * ((100vw - 350px) / (1920 - 350)));
+    gap: calc(24px + (40 - 24) * ((100vw - 350px) / (1920 - 350)));
+}
+
+.howToReach .Bus h4,
+.subway h4 {
+    font-weight: 700;
+    font-size: calc(16px + (20 - 16) * ((100vw - 350px) / (1920 - 350)));
+    line-height: 130%;
+    letter-spacing: 1%;
+    margin-bottom: 8px;
+}
+
+.howToReach .Bus p {
+    font-family: "AA Stetica Regular";
+    font-weight: 300;
+    font-size: calc(16px + (20 - 16) * ((100vw - 350px) / (1920 - 350)));
+    line-height: 130%;
+    letter-spacing: 1%;
+
+}
+
+.subway-stations {
+    display: flex;
+    gap: 8px 24px;
+    flex-wrap: wrap;
+}
+
+.metro {
+    display: flex;
+    gap: 10px;
+    font-family: "AA Stetica Regular";
+    font-weight: 300;
+    font-size: calc(16px + (20 - 16) * ((100vw - 350px) / (1920 - 350)));
+    line-height: 130%;
+    letter-spacing: 1%;
+
+}
+
+/* ------ Мероприятия ------ */
+.ethno-news {
+    margin: calc(120px + (200 - 120) * ((100vw - 350px) / (1920 - 320))) calc(20px + (100 - 20) * ((100vw - 350px) / (1920 - 320)));
+}
+
+.ethno-news h2 {
+    font-family: "Cormorant SC";
+    font-weight: 700;
+    font-size: calc(30px + (48 - 30) * ((100vw - 350px) / (1920 - 350)));
+    line-height: 110%;
+    text-transform: uppercase;
+    color: #6B2B00;
+}
+
+.ethno-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: calc(33px + (48 - 32) * ((100vw - 350px) / (1920 - 350)))
+}
+
+.swiper-nav-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.swiper-nav-buttons button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: #6B2B00;
+    border: 1px solid #6B2B00;
+    border-radius: 16px;
+    width: 56px;
+    height: 56px;
+    cursor: pointer;
+
+}
+
+.swiper-nav-buttons button:hover {
+    background-color: #7a4000;
+    color: white;
+}
+
+.ethno-newsSwiper .swiper-slide .card {
+    border: 1px, solid, #6B2B00;
+    padding: calc(16px + (24 - 16) * ((100vw - 350px) / (1920 - 350)));
+    border-radius: 16px;
+
+}
+
+.ethno-newsSwiper .swiper-slide .card .cardImg img {
+    width: 100%;
+    border-radius: 16px;
+}
+
+.ethno-newsSwiper .swiper-slide .card .cardText {
+    margin-top: calc(16px + (24 - 16) * ((100vw - 350px) / (1920 - 350)));
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.ethno-newsSwiper .swiper-slide .card .cardText h3 {
+    font-family: "AA Stetica Regular";
+    color: #382D2D;
+    font-weight: 700;
+    font-size: calc(18px + (22 - 18) * ((100vw - 350px) / (1920 - 350)));
+    line-height: 130%;
+    letter-spacing: 1%;
+}
+
+.ethno-newsSwiper .swiper-slide .card .cardText p {
+    font-family: "AA Stetica Regular";
+    color: #382D2D;
+    font-size: calc(16px + (20 - 16) * ((100vw - 350px) / (1920 - 350)));
+    line-height: 130%;
+    letter-spacing: 1%;
+}
+
+.ethno-newsSwiper .swiper-slide .card .cardData p {
+    margin-top: calc(24px + (32 - 24) * ((100vw - 350px) / (1920 - 350)));
+    display: flex;
+    gap: 11px;
+    font-family: "AA Stetica Regular";
+    color: #382D2D;
+    font-size: calc(16px + (20 - 16) * ((100vw - 350px) / (1920 - 350)));
+    line-height: 130%;
+    letter-spacing: 1%;
+}
+
+.ethno-newsSwiper .swiper-slide .card .cardButton button {
+    margin-top: calc(24px + (32 - 24) * ((100vw - 350px) / (1920 - 350)));
+    width: 100%;
+    padding: 16px 56px;
+    border-radius: 16px;
+    border: none;
+    background-color: #6B2B00;
+    cursor: pointer;
+    font-family: "AA Stetica Regular";
+    font-size: calc(16px + (20 - 16) * ((100vw - 350px) / (1920 - 350)));
+    line-height: 130%;
+    letter-spacing: 1%;
+    color: #FFFDF9;
+}
+
+.ethno-newsSwiper .swiper-slide .card .cardButton button:hover {
+    background-color: #8a3c00;
+
+}
+
+/* ------ Футер ------ */
+footer {
+    background-color: #6B2B00;
+    background-image: url('../images/starsforFooter.png');
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    padding: calc(32px + (64 - 32) * ((100vw - 350px) / (1920 - 350))) 100px 0;
+}
+
+.upperFooter {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: calc(32px + (64 - 32) * ((100vw - 350px) / (1920 - 350)));
+}
+
+.Navigation h4,
+.SocialMedia h4,
+.ContactsAndAddress h4,
+.SocialMediaIcons h4 {
+    font-family: "AA Stetica Regular";
+    font-weight: 700;
+    font-size: calc(16px + (20 - 16) * ((100vw - 350px) / (1920 - 350)));
+    line-height: 130%;
+    letter-spacing: 1%;
+    color: #FFFDF9;
+    margin-bottom: 16px;
+}
+
+.Navigation nav,
+.ContactsAndAddress p {
+    display: flex;
+    flex-direction: column;
+    gap: 8px 0;
+    font-family: "AA Stetica Regular";
+    font-weight: 300;
+    font-size: calc(16px + (20 - 16) * ((100vw - 350px) / (1920 - 350)));
+    line-height: 130%;
+    letter-spacing: 1%;
+    color: #FFFDF9;
+}
+
+.Navigation nav a {
+    text-decoration: none;
+    color: #FFFDF9;
+}
+
+.SocialMedia {
+    gap: 8px 0;
+    font-family: "AA Stetica Regular";
+    font-weight: 300;
+    font-size: calc(16px + (20 - 16) * ((100vw - 350px) / (1920 - 350)));
+    line-height: 130%;
+    letter-spacing: 1%;
+}
+
+.SocialMedia a {
+    text-decoration: underline;
+    color: #FFFDF9;
+}
+
+.ContactsAndAddress {
+    display: flex;
+    flex-direction: column;
+    gap: 40px 0;
+}
+
+.ContactsAndAddress a {
+    text-decoration: none;
+}
+
+.lowerFooter {
+    display: flex;
+    padding: 40px 0;
+    justify-content: space-between;
+    border-top: 1px solid #FFFDF980;
+    font-family: "AA Stetica Regular";
+    font-weight: 400;
+    font-size: calc(16px + (20 - 16) * ((100vw - 350px) / (1920 - 350)));
+    line-height: 130%;
+    letter-spacing: 1%;
+    color: #FFFDF9;
+    flex-wrap: wrap;
+}
+
+.lowerFooter a {
+    text-decoration: none;
+    color: #FFFDF9;
+    cursor: pointer;
+}
+
+
+@media (max-width:1030px) {
+
+    /*----- Карточки -----*/
+    #cardsContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (min-width: 1024px) {
+
+    .SocialMedia {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .SocialMediaIcons {
+        display: none;
+    }
+
+    .ethnoSearch-mobile {
+        display: none;
+    }
+
+    .popup-content {
+        display: none;
+    }
+}
+
+@media (max-width:1024px) {
+    .main_header {
+        display: none;
+    }
+
+    .burger_header {
+        display: flex;
+        align-items: center;
+        padding: 16px;
+    }
+
+    .burger_top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .burger-logo {
+        width: 123px;
+        height: 46px;
+    }
+
+    .burger-button {
+        width: 46px;
+        height: 46px;
+        background-color: #6B2B00;
+        border-radius: 8px;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        position: relative;
+    }
+
+    #burger-language {
+        padding: 11px 12px;
+        border-radius: 8px;
+        border: 1px, solid, #6B2B00;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .burgerSelect {
+        border: none;
+        outline: none;
+        font-size: 16px;
+        line-height: 130%;
+        letter-spacing: 1%;
+        color: #6B2B00;
+    }
+
+    .close-button {
+        align-self: flex-end;
+        width: 40px;
+        height: 40px;
+        background-color: white;
+        border-radius: 8px;
+        border: 1px, solid, #6B2B00;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        color: #6B2B00;
+    }
+
+    .mobile-menu {
+        position: fixed;
+        box-sizing: border-box;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: white;
+        display: none;
+        flex-direction: column;
+        padding: 24px;
+        z-index: 999;
+        background-image: url('/images/starsCornerbottom.png');
+        background-repeat: no-repeat;
+        background-position: bottom;
+    }
+
+    .mobile-menu.active {
+        display: flex;
+    }
+
+    .moblebuttonAndText {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .moblebuttonAndText h2 {
+        font-family: "AA Stetica Regular";
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 110%;
+        letter-spacing: 0%;
+        text-align: center;
+        text-transform: uppercase;
+        color: #6B2B00;
+
+    }
+
+    .Navigations {
+        margin-top: 20px;
+        justify-content: center;
+        gap: calc(30px + (140 - 30) * ((100vw - 350px) / (1920 - 350)));
+        display: flex;
+    }
+
+    .mobile-nav {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-top: 20px;
+    }
+
+    .mobile-nav a {
+        display: flex;
+        gap: 8px;
+        justify-content: start;
+        align-items: center;
+        opacity: 0;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+    }
+
+    .mobile-nav a img {
+        max-width: 15px;
+        max-height: 15px;
+        border: 1px solid #6b2b00a2;
+        border-radius: 8px;
+        padding: 5px;
+    }
+
+    .mobile-menu.active .mobile-nav:first-child a {
+        animation-name: slidein-left;
+        animation-duration: 0.8s;
+        animation-fill-mode: forwards;
+    }
+
+    .mobile-menu.active .mobile-nav:last-child a {
+        animation-name: slidein-right;
+        animation-duration: 0.8s;
+        animation-fill-mode: forwards;
+    }
+
+    /* Для всех ссылок по порядку */
+    .mobile-menu.active .mobile-nav a:nth-child(1) {
+        animation-delay: 0.2s;
+    }
+
+    .mobile-menu.active .mobile-nav a:nth-child(2) {
+        animation-delay: 0.4s;
+    }
+
+    .mobile-menu.active .mobile-nav a:nth-child(3) {
+        animation-delay: 0.6s;
+    }
+
+    .mobile-menu.active .mobile-nav a:nth-child(4) {
+        animation-delay: 0.8s;
+    }
+
+    @keyframes slidein-left {
+        from {
+            margin-left: -100%;
+            opacity: 0;
+        }
+
+        to {
+            margin-left: 0;
+            opacity: 1;
+        }
+    }
+
+    @keyframes slidein-right {
+        from {
+            margin-left: 100%;
+            opacity: 0;
+        }
+
+        to {
+            margin-left: 0;
+            opacity: 1;
+        }
+    }
+
+    .mobile-nav a {
+        color: #6B2B00;
+        text-decoration: none;
+        font-family: "AA Stetica Regular";
+        font-weight: 400;
+        font-size: calc(16px + (40 - 16) * ((100vw - 350px) / (1920 - 350)));
+        line-height: 130%;
+        letter-spacing: 1%;
+    }
+
+    .mobileContacts {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        align-items: center;
+        margin-top: 64px;
+        background-color: #fffdf991;
+    }
+
+    .mobileContacts .Address,
+    .social-media {
+        grid-column: 1/3;
+        border: 1px solid #6B2B00;
+        border-radius: 16px;
+        padding: 20px;
+    }
+
+    .social-media {
+        border: none;
+        text-align: center;
+    }
+
+    .social-media a {
+        border: 1px solid #6B2B00;
+    }
+
+    .mobileContacts .Time,
+    .mobileContacts .phoneAndEmail {
+        height: 125px;
+        border: 1px solid #6B2B00;
+        border-radius: 16px;
+        padding: 20px;
+    }
+
+    .mobileContacts .Address h4,
+    .mobileContacts .Time h4,
+    .mobileContacts .phoneAndEmail h4 {
+        font-family: "AA Stetica Regular";
+        font-weight: 700;
+        font-size: calc(20px + (40 - 20) * ((100vw - 350px) / (1920 - 350)));
+        line-height: 130%;
+        letter-spacing: 1%;
+        color: #6B2B00;
+        margin-bottom: 20px;
+    }
+
+    .mobileContacts .Address p,
+    .mobileContacts .Time p,
+    .mobileContacts .phoneAndEmail p {
+        font-family: "AA Stetica Regular";
+        font-weight: 400;
+        font-size: calc(16px + (30 - 16) * ((100vw - 350px) / (1920 - 350)));
+        line-height: 130%;
+        letter-spacing: 1%;
+        color: #6B2B00;
+        max-width: 300px;
+    }
+
+    .phoneAndEmail a {
+        text-decoration: none;
+    }
+
+    .contactsInfo {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /*----- поиск мобилка -----*/
+    .ethno-search {
+        margin: calc(64px + (80 - 64) * ((100vw - 350px) / (1920 - 350))) 0;
+    }
+
+    .ethnoSearch-desktop {
+        display: none;
+        border-radius: 0;
+
+    }
+
+    .ethnoSearch-mobile {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #6B2B00;
+        padding: calc(28px + (34 - 28) * ((100vw - 350px) / (1920 - 350))) calc(20px + (48 - 20) * ((100vw - 350px) / (1920 - 350)));
+        gap: 16px;
+        flex-wrap: wrap;
+    }
+
+    .search-mobile {
+        display: none;
+    }
+
+    .mobile-filter-popup {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 999;
+    }
+
+
+
+    .popup-content.open {
+        padding: calc(28px + (34 - 28) * ((100vw - 350px) / (1920 - 350))) calc(20px + (48 - 20) * ((100vw - 350px) / (1920 - 350)));
+        display: flex;
+        flex-direction: column;
+        background-color: #6B2B00;
+        max-height: 600px;
+        opacity: 1;
+    }
+
+    .popup-content.open .category {
+        display: flex;
+        gap: 10px;
+    }
+
+    .popup-content.open #categoryMobileSelect {
+        width: 100%;
+    }
+
+    .popup-content.open .category .sort svg {
+        stroke: currentColor;
+    }
+
+    .popup-content.open .sort {
+        display: flex;
+    }
+
+    .popup-content.open .sort button {
+        border: 1px solid #FFFDF9;
+        border-radius: 16px;
+        padding: calc(14px + (18 - 14) * ((100vw - 350px) / (1920 - 350))) calc(16px + (32 - 16) * ((100vw - 350px) / (1920 - 350)));
+        background-color: #6B2B00;
+        color: #FFFDF9;
+        display: flex;
+        text-align: center;
+        gap: calc(16px + (24 - 16) * ((100vw - 350px) / (1920 - 350)));
+        text-wrap: nowrap;
+        align-items: center;
+        font-family: "AA Stetica Regular";
+        font-size: 20px;
+        line-height: 130%;
+        letter-spacing: 1%;
+        cursor: pointer;
+    }
+
+    .popup-content.open .sort button:hover {
+        background-color: #8a3c00;
+
+    }
+
+    .filter-button {
+        display: flex;
+    }
+
+    .category,
+    .sort {
+        display: none;
+    }
+
+    /*----- Форма для заполнения -----*/
+    .ethno-form .form-row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /*----- контакты -----*/
+    .map {
+        width: 100%;
+        height: 300px;
+    }
+
+    .contactsInfo img {
+        display: none;
+    }
+
+    /*----- Новости -----*/
+    .ethno-header {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    /*----- Футер -----*/
+
+    footer {
+        background-image: url('../images/starsfooterRightCorner.png');
+        background-repeat: no-repeat;
+        background-position: right top;
+    }
+
+    .lowerFooter {
+        gap: 16px 140px;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .upperFooter {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 40px 0;
+    }
+
+    .SocialMedia {
+        display: none;
+    }
+
+    .SocialMediaIcons {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .iconsNav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .iconsNav a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 6px;
+        background-color: #FFFDF9;
+        border-radius: 100%;
+    }
+}
+
+@media (max-width:680px) {
+    .socialmedia_email {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .socialmedia_email .socialmedia {
+        width: auto;
+    }
+
+    .socialmedia_email .email {
+        width: auto;
+    }
+
+    /*----- Карточки -----*/
+    #cardsContainer {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (max-width:430px) {
+    .search {
+        display: none;
+    }
+
+    .popup-content.open .search-mobile {
+        display: flex;
+        align-items: center;
+        background-color: #FFFDF9;
+        padding: calc(14px + (18 - 14) * ((100vw - 350px) / (1920 - 350))) calc(16px + (32 - 16) * ((100vw - 350px) / (1920 - 350)));
+        border-radius: 16px;
+        flex-grow: 1;
+    }
+
+    .popup-content.open .search-mobile input {
+        border: none;
+        outline: none;
+        background: transparent;
+        flex-grow: 1;
+        font-family: "AA Stetica Regular";
+        font-size: calc(16px + (20 - 16) * ((100vw - 350px) / (1920 - 350)));
+        line-height: 130%;
+        letter-spacing: 1%;
+        color: #382D2D;
+    }
+
+    .popup-content.open .category {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+
+    .popup-content.open #categoryMobileSelect {
+        width: 100%;
+    }
+
+    .popup-content.open .category .sort svg {
+        stroke: currentColor;
+    }
+
+    .popup-content.open .sort button {
+        width: 100%;
+        border: 1px solid #FFFDF9;
+        border-radius: 16px;
+        padding: calc(14px + (18 - 14) * ((100vw - 350px) / (1920 - 350))) calc(16px + (32 - 16) * ((100vw - 350px) / (1920 - 350)));
+        background-color: #6B2B00;
+        color: #FFFDF9;
+        display: flex;
+        text-align: center;
+        gap: calc(16px + (24 - 16) * ((100vw - 350px) / (1920 - 350)));
+        text-wrap: nowrap;
+        align-items: center;
+        font-family: "AA Stetica Regular";
+        font-size: 20px;
+        line-height: 130%;
+        letter-spacing: 1%;
+        cursor: pointer;
+    }
+
+    .popup-content.open .sort button:hover {
+        background-color: #8a3c00;
+
+    }
+
+    .search-mobile button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    .search-mobile button svg {
+        flex-shrink: 0;
+    }
+
+    .search_category {
+        display: flex;
+        justify-content: end;
+    }
+}

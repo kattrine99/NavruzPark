@@ -673,23 +673,27 @@ body {
 
 .crafts-slider1 .craft-slide,
 .crafts-slider2 .craft-slide {
-    border-radius: 8px;
-    overflow: hidden;
-    cursor: pointer;
+    aspect-ratio: 1 / 0.7;
     position: relative;
-}
-
-.crafts-slider1 .craft-slide img:hover,
-.crafts-slider2 .craft-slide img:hover {
-    transform: scale(1.05);
+    overflow: hidden;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
 .crafts-slider1 .craft-slide img,
 .crafts-slider2 .craft-slide img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
     display: block;
     transition: transform 0.3s;
+}
+
+.crafts-slider1 .craft-slide img:hover,
+.crafts-slider2 .craft-slide img:hover {
+    transform: scale(1.05);
 }
 
 .craft-photo-gradient {

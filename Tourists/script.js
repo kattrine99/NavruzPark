@@ -42,12 +42,10 @@ markers.forEach(marker => {
         const id = marker.dataset.id;
 
         if (currentZoomId === id) {
-            // zoom out
             parkMap.style.transform = 'scale(1)';
             markers.forEach(m => m.classList.remove('active'));
             currentZoomId = null;
         } else {
-            // zoom in + sync slide
             swiper.slideTo(id - 1);
             zoomToMarker(id);
             currentZoomId = id;
@@ -313,16 +311,16 @@ const eventsSwiper = new Swiper('.eventsSwiper', {
 // Ремесла свайпер 
 // ======================= //
 const crafts = [
-    { category: 'embroidery', title: 'Вышивка', img: '/images/craft.jpg' },
-    { category: 'woodwork', title: 'Резьба по дереву', img: '/images/craft1.jpg' },
+    { category: 'pottery', title: 'Вышивка', img: '/images/craft.jpg' },
+    { category: 'souvenirs', title: 'Резьба по дереву', img: '/images/craft1.jpg' },
     { category: 'ceramics', title: 'Керамика', img: '/images/craft2.jpg' },
-    { category: 'textile', title: 'Ткачество', img: '/images/craft3.jpg' },
-    { category: 'jewelry', title: 'Ювелирные изделия', img: '/images/craft4.jpg' },
-    { category: 'embroidery', title: 'Вышивка', img: '/images/craft.jpg' },
-    { category: 'woodwork', title: 'Резьба по дереву', img: '/images/craft1.jpg' },
+    { category: 'designers', title: 'Ткачество', img: '/images/craft3.jpg' },
+    { category: 'souvenirs', title: 'Ювелирные изделия', img: '/images/craft4.jpg' },
+    { category: 'designers', title: 'Вышивка', img: '/images/craft.jpg' },
+    { category: 'souvenirs', title: 'Резьба по дереву', img: '/images/craft1.jpg' },
     { category: 'ceramics', title: 'Керамика', img: '/images/craft2.jpg' },
-    { category: 'textile', title: 'Ткачество', img: '/images/craft3.jpg' },
-    { category: 'jewelry', title: 'Ювелирные изделия', img: '/images/craft4.jpg' }
+    { category: 'pottery', title: 'Ткачество', img: '/images/craft3.jpg' },
+    { category: 'souvenirs', title: 'Ювелирные изделия', img: '/images/craft4.jpg' }
 ];
 
 const craftWrapper1 = document.getElementById('crafts-wrapper1');
@@ -384,7 +382,7 @@ const craftsSwiper2 = new Swiper('.crafts-slider2', {
 document.querySelectorAll('.craft-slide').forEach(slide => {
     slide.addEventListener('click', () => {
         const category = slide.getAttribute('data-category');
-        window.location.href = `/catalog.html?category=${category}`;
+        window.location.href = `/Ethno-townPage/ethno.html?category=${category}`;
     });
 
     slide.addEventListener('mouseenter', () => {
@@ -396,7 +394,7 @@ document.querySelectorAll('.craft-slide').forEach(slide => {
         craftsSwiper1.autoplay.start();
         craftsSwiper2.autoplay.start();
     });
-})
+});
 // ======================= //
 // Активность карты 
 // ======================= //
