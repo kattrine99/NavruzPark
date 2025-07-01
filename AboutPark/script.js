@@ -28,47 +28,89 @@ const swiperText = new Swiper('.cornerswiper-text', {
     },
     on: {
         slideChange: function () {
-            const activeId = swiper.slides[swiper.activeIndex].dataset.id;
+            const activeSlide = swiperText.slides[swiperText.activeIndex];
+            const activeId = activeSlide.dataset.id;
+
             zoomToMarker(activeId);
+            activateMarker(activeId);
         }
     }
 });
+
 const markers = document.querySelectorAll('.map-marker');
-const parkMap = document.getElementById('parkMap');
+const parkMap = document.getElementById('parkMap'); // .ParkMap
+const mapInner = parkMap.querySelector('.map-inner');
 let currentZoomId = null;
 
+// При клике по маркеру
 markers.forEach(marker => {
-    marker.addEventListener('click', () => {
+    marker.addEventListener('click', (e) => {
+        e.stopPropagation(); // предотвращает клик по карте
+
         const id = marker.dataset.id;
 
         if (currentZoomId === id) {
-            parkMap.style.transform = 'scale(1)';
-            markers.forEach(m => m.classList.remove('active'));
-            currentZoomId = null;
+            resetZoom();
         } else {
-            swiper.slideTo(id - 1);
+            // Перейти к слайду
+            const targetIndex = Array.from(swiperText.slides).findIndex(
+                slide => slide.dataset.id === id
+            );
+            if (targetIndex !== -1) {
+                swiperText.slideTo(targetIndex);
+            }
+
             zoomToMarker(id);
+            activateMarker(id);
             currentZoomId = id;
         }
     });
 });
 
+// Клик вне маркера по карте — сбрасывает зум
+mapInner.addEventListener('click', () => {
+    if (currentZoomId !== null) {
+        resetZoom();
+    }
+});
+
+// Активировать маркер (и снять у других)
+function activateMarker(id) {
+    markers.forEach(m => m.classList.remove('active'));
+    const activeMarker = document.querySelector(`.map-marker[data-id="${id}"]`);
+    if (activeMarker) {
+        activeMarker.classList.add('active');
+    }
+}
+
+// Зум на маркер
 function zoomToMarker(id) {
     const marker = document.querySelector(`.map-marker[data-id="${id}"]`);
-    const mapRect = parkMap.getBoundingClientRect();
+    if (!marker) return;
+
     const markerRect = marker.getBoundingClientRect();
+    const mapRect = mapInner.getBoundingClientRect();
 
-    const offsetX = (markerRect.left + markerRect.width / 2) - (mapRect.left + mapRect.width / 2);
-    const offsetY = (markerRect.top + markerRect.height / 2) - (mapRect.top + mapRect.height / 2);
+    const offsetX = markerRect.left + markerRect.width / 2 - mapRect.left;
+    const offsetY = markerRect.top + markerRect.height / 2 - mapRect.top;
 
-    const translateX = -offsetX;
-    const translateY = -offsetY;
+    const originX = (offsetX / mapRect.width) * 100;
+    const originY = (offsetY / mapRect.height) * 100;
 
-    parkMap.style.transform = `scale(1.5) translate(${translateX}px, ${translateY}px)`;
-
-    markers.forEach(m => m.classList.remove('active'));
-    marker.classList.add('active');
+    mapInner.style.transformOrigin = `${originX}% ${originY}%`;
+    mapInner.style.transform = 'scale(2)';
 }
+
+// Сброс зума
+function resetZoom() {
+    mapInner.style.transformOrigin = 'center center';
+    requestAnimationFrame(() => {
+        mapInner.style.transform = 'scale(1)';
+    });
+    markers.forEach(m => m.classList.remove('active'));
+    currentZoomId = null;
+}
+
 // ======================= //
 // Галлерея
 // ======================= //
@@ -369,6 +411,25 @@ const partnersSwiper = new Swiper('.partnersSwiper', {
         delay: 0,
         disableOnInteraction: false
     },
+    breakpoints: {
+        320: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+        },
+        420: {
+            slidesPerView: 2,
+            spaceBetween: 15,
+        },
+        720: {
+            slidesPerView: 3,
+            spaceBetween: 15,
+        },
+        1024: {
+            slidesPerView: 'auto',
+            spaceBetween: 15,
+        },
+    }
+
 });
 
 // ======================= //
