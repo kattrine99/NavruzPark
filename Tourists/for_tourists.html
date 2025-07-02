@@ -35,7 +35,7 @@
                     </div>
                 </div>
                 <div class="Logo">
-                    <a href="../index.html"><img src="/images/Navruz.png" alt="Navruz_logo"></a>
+                    <a href="../index.html"><img src="../images/Navruz.png" alt="Navruz_logo"></a>
                 </div>
                 <div class="Text_info">
                     <div>
@@ -107,17 +107,18 @@
                 </div>
                 <div class="Navigations">
                     <nav class="mobile-nav">
-                        <a href="../Businesses/ForBusinesses.html"><img src="/images/icons/business_icon.svg">
+                        <a href="../Businesses/ForBusinesses.html"><img src="../images/icons/business_icon.svg">
                             Бизнесу</a>
-                        <a href="../Tourists/for_tourists.html"><img src="/images/icons/turism_icon.svg"> Туристам</a>
-                        <a href="../AboutPark/about_park.html"><img src="/images/icons/park_icon.svg">О парке</a>
-                        <a href="../Contacts/Contacts.html"><img src="/images/icons/contact_icon.svg">Контакты</a>
+                        <a href="../Tourists/for_tourists.html"><img src="../images/icons/turism_icon.svg"> Туристам</a>
+                        <a href="../AboutPark/about_park.html"><img src="../images/icons/park_icon.svg">О парке</a>
+                        <a href="../Contacts/Contacts.html"><img src="../images/icons/contact_icon.svg">Контакты</a>
                     </nav>
                     <nav class="mobile-nav">
-                        <a href="#"><img src="/images/icons/museum_icon.svg">Этногородок</a>
-                        <a href="../Evens_page/events.html"><img src="/images/icons/holiday_icon.svg">Мероприятия</a>
-                        <a href="../News/News.html"><img src="/images/icons/news-icon.svg">Новости</a>
-                        <a href="../Crafts/forCrafts.html"><img src="/images/icons/crafts_icon.svg">Ремесленникам</a>
+                        <a href="../Ethno-townPage/ethno.html"><img
+                                src="../images/icons/museum_icon.svg">Этногородок</a>
+                        <a href="../Evens_page/events.html"><img src="../images/icons/holiday_icon.svg">Мероприятия</a>
+                        <a href="../News/News.html"><img src="../images/icons/news-icon.svg">Новости</a>
+                        <a href="../Crafts/forCrafts.html"><img src="../images/icons/crafts_icon.svg">Ремесленникам</a>
                     </nav>
 
                 </div>
@@ -212,13 +213,23 @@
             <h2>уникальные уголки парка «Навруз»</h2>
             <div class="parkCorners-swiper">
                 <div class="ParkMap" id="parkMap">
-                    <img src="../images/map.png">
-                    <!-- markers -->
-                    <div class="map-marker" data-id="1" style="top: 30%; left: 21%;"></div>
-                    <div class="map-marker" data-id="2" style="top: 30%; left: 42%;"></div>
-                    <div class="map-marker" data-id="3" style="top: 40%; left: 70%;"></div>
-                    <div class="map-marker" data-id="4" style="top: 60%; left: 40%;"></div>
-                    <div class="map-marker" data-id="5" style="top: 65%; left: 60%;"></div>
+                    <div class="map-inner">
+
+                        <img src="../images/map.png">
+                        <!-- markers -->
+                        <div class="map-marker" data-id="1" style=" top: 30.5%; left: 25.5%;">
+                        </div>
+                        <div class="map-marker" data-id="2" style=" top: 30.5%; left:
+                            50%;"></div>
+                        <div class=" map-marker" data-id="3" style=" top: 34%; left: 74.5%;">
+                        </div>
+                        <div class="map-marker" data-id="4" style=" top: 66.5%; left: 22%;">
+                        </div>
+                        <div class="map-marker" data-id="5" style=" top: 69%; left: 52%;"></div>
+                        <div class="map-marker" data-id="6" style=" top: 66.5%; left: 77%;">
+                        </div>
+
+                    </div>
                 </div>
                 <!-- Слайдер с текстом -->
                 <div class="swiper cornerswiper-text">
@@ -329,7 +340,7 @@
             </div>
             <div class="filters-buttons-swiper swiper">
                 <div class="swiper-wrapper"></div>
-                <div class="swiper-button-filter-prev">
+                <button class="swiper-button-filter-prev">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
                         style="transform: rotate(180deg);">
                         <path d="M14.4297 5.92969L20.4997 11.9997L14.4297 18.0697" stroke="currentColor"
@@ -337,15 +348,15 @@
                         <path d="M3.5 12L20.33 12" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"
                             stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
-                </div>
-                <div class="swiper-button-filter-next">
+                </button>
+                <button class="swiper-button-filter-next">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M14.4297 5.92969L20.4997 11.9997L14.4297 18.0697" stroke="currentColor"
                             stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
                         <path d="M3.5 12L20.33 12" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"
                             stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
-                </div>
+                </button>
             </div>
             <div class="photoGallery">
 
@@ -409,7 +420,9 @@
                 <div class="contact-data">
                     <div class="phone">
                         <h4>Телефон</h4>
-                        <p>+998 (90) 123-45-67</p>
+                        <a href="tel:+9989901234567">
+                            <p>+9989 (90) 123-45-67</p>
+                        </a>
                     </div>
                     <div class="time">
                         <h4>Часы работы</h4>

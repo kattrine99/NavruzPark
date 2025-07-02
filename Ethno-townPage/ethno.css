@@ -159,7 +159,7 @@ main {
 }
 
 .HeadingEthno .EthnoText {
-    padding: calc(48px + (80 - 48) * ((100vw - 350px) / (1920 - 350))) calc(17px + (100 - 17) * ((100vw - 350px) / (1920 - 350)));
+    padding: calc(48px + (80 - 48) * ((100vw - 350px) / (1920 - 350))) calc(17px + (100 - 17) * ((100vw - 350px) / (1920 - 350))) 0;
 }
 
 .HeadingEthno h1 {
@@ -398,7 +398,7 @@ main {
     line-height: 130%;
     letter-spacing: 1%;
     text-align: center;
-    margin: 16px 0 48px 0;
+    margin: 16px 0;
 }
 
 .ethno-form {
@@ -666,7 +666,7 @@ main {
 
 /* ------ Мероприятия ------ */
 .ethno-news {
-    margin: calc(120px + (200 - 120) * ((100vw - 350px) / (1920 - 320))) calc(20px + (100 - 20) * ((100vw - 350px) / (1920 - 320)));
+    margin: 0 calc(20px + (100 - 20) * ((100vw - 350px) / (1920 - 320)));
 }
 
 .ethno-news h2 {
@@ -754,6 +754,8 @@ main {
     font-size: calc(16px + (20 - 16) * ((100vw - 350px) / (1920 - 350)));
     line-height: 130%;
     letter-spacing: 1%;
+    justify-content: baseline;
+    align-items: center;
 }
 
 .ethno-newsSwiper .swiper-slide .card .cardButton button {
@@ -934,20 +936,33 @@ footer {
 
     #burger-language {
         padding: 11px 12px;
+        width: 8 0px;
         border-radius: 8px;
+        position: relative;
         border: 1px, solid, #6B2B00;
         display: flex;
         justify-content: center;
         gap: 10px;
     }
 
+    #burger-language img {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        pointer-events: none;
+    }
+
     .burgerSelect {
+        width: 100%;
+        padding-left: 30px;
         border: none;
         outline: none;
         font-size: 16px;
         line-height: 130%;
         letter-spacing: 1%;
         color: #6B2B00;
+        width: 100%;
     }
 
     .close-button {
@@ -964,6 +979,9 @@ footer {
         color: #6B2B00;
     }
 
+
+
+    /* Мобильное меню */
     .mobile-menu {
         position: fixed;
         box-sizing: border-box;
@@ -1017,75 +1035,12 @@ footer {
         margin-top: 20px;
     }
 
-    .mobile-nav a {
-        display: flex;
-        gap: 8px;
-        justify-content: start;
-        align-items: center;
-        opacity: 0;
-        animation-duration: 1s;
-        animation-fill-mode: forwards;
-    }
-
     .mobile-nav a img {
         max-width: 15px;
         max-height: 15px;
         border: 1px solid #6b2b00a2;
         border-radius: 8px;
         padding: 5px;
-    }
-
-    .mobile-menu.active .mobile-nav:first-child a {
-        animation-name: slidein-left;
-        animation-duration: 0.8s;
-        animation-fill-mode: forwards;
-    }
-
-    .mobile-menu.active .mobile-nav:last-child a {
-        animation-name: slidein-right;
-        animation-duration: 0.8s;
-        animation-fill-mode: forwards;
-    }
-
-    /* Для всех ссылок по порядку */
-    .mobile-menu.active .mobile-nav a:nth-child(1) {
-        animation-delay: 0.2s;
-    }
-
-    .mobile-menu.active .mobile-nav a:nth-child(2) {
-        animation-delay: 0.4s;
-    }
-
-    .mobile-menu.active .mobile-nav a:nth-child(3) {
-        animation-delay: 0.6s;
-    }
-
-    .mobile-menu.active .mobile-nav a:nth-child(4) {
-        animation-delay: 0.8s;
-    }
-
-    @keyframes slidein-left {
-        from {
-            margin-left: -100%;
-            opacity: 0;
-        }
-
-        to {
-            margin-left: 0;
-            opacity: 1;
-        }
-    }
-
-    @keyframes slidein-right {
-        from {
-            margin-left: 100%;
-            opacity: 0;
-        }
-
-        to {
-            margin-left: 0;
-            opacity: 1;
-        }
     }
 
     .mobile-nav a {
@@ -1096,7 +1051,16 @@ footer {
         font-size: calc(16px + (40 - 16) * ((100vw - 350px) / (1920 - 350)));
         line-height: 130%;
         letter-spacing: 1%;
+        display: flex;
+        gap: 8px;
+        justify-content: start;
+        align-items: center;
     }
+
+    .mobile-nav a:hover {
+        text-decoration: underline;
+    }
+
 
     .mobileContacts {
         display: grid;
@@ -1168,7 +1132,7 @@ footer {
 
     /*----- поиск мобилка -----*/
     .ethno-search {
-        margin: calc(64px + (80 - 64) * ((100vw - 350px) / (1920 - 350))) 0;
+        margin: 20px 0 calc(64px + (80 - 64) * ((100vw - 350px) / (1920 - 350))) 0;
     }
 
     .ethnoSearch-desktop {

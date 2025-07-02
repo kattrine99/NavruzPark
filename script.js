@@ -128,12 +128,12 @@ const uniqueParkSwiper = new Swiper('.uniqueParkSwiper', {
         },
         560: {
             slidesPerView: 2,
-            spaceBetween: 15,
+            spaceBetween: 20,
             loop: true,
         },
         320: {
             slidesPerView: 1,
-            spaceBetween: 10,
+            spaceBetween: 20,
             loop: true,
         },
     }
@@ -460,7 +460,7 @@ for (let i = 1; i <= newsCount; i++) {
                             <div class="cardData">
                             <p><img src="/images/icons/Calender.svg"/> 19 мая, начало в 10:00</p></div>
                             <div class="cardButton">
-                            <button>Подробнее</button></div>
+                            <button onclick="window.location.href='../News/Notice/notice.html'">Подробнее</button></div>
                         </div>`
     newsWrapper.appendChild(slide);
 }

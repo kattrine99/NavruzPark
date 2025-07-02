@@ -147,7 +147,7 @@ body {
 
 }
 
-.breadcrumbs span {
+.breadcrumbs span a{
     color: #382D2D80;
 }
 
@@ -158,13 +158,13 @@ main {
 }
 
 .for_crafts_textsAndNav {
-    padding: calc(48px + (80 - 48) * ((100vw - 350px) / (1920 - 350))) calc(17px + (100 - 17) * ((100vw - 350px) / (1920 - 350)));
+    padding: calc(48px + (80 - 48) * ((100vw - 350px) / (1920 - 350))) calc(17px + (100 - 17) * ((100vw - 350px) / (1920 - 350)))0;
 }
 
 .for_crafts_textsAndNav h1 {
     font-family: "Cormorant SC";
     font-weight: 700;
-    font-size: calc(64px + (155 - 64) * ((100vw - 350px) / (1920 - 350)));
+    font-size: calc(56px + (155 - 56) * ((100vw - 350px) / (1920 - 350)));
     line-height: 100%;
     text-transform: uppercase;
     color: #81332F;
@@ -320,7 +320,7 @@ main {
     line-height: 110%;
     text-transform: uppercase;
     color: #6B2B00;
-    margin: calc(24px + (56 - 24) * ((100vw - 350px) / (1920 - 350)));
+    margin-bottom: calc(24px + (56 - 24) * ((100vw - 350px) / (1920 - 350)));
     text-align: center;
 }
 
@@ -513,7 +513,13 @@ main {
 }
 
 /*Форма для отправки*/
+.planningForm {
+    margin: calc(64px + (200 - 64) * ((100vw - 350px) / (1920 - 350))) calc(20px + (100 - 20) * ((100vw - 350px) / (1920 - 350)));
+
+}
+
 .planningForm h2 {
+
     font-family: "Cormorant SC";
     font-weight: 700;
     font-size: calc(30px + (48 - 30) * ((100vw - 350px) / (1920 - 350)));
@@ -539,23 +545,37 @@ main {
     background-position: left;
 }
 
-.Form {
-    margin: 0 calc(20px + (100 - 20) * ((100vw - 350px) / (1920 - 350)));
-}
-
 .contact-form {
     width: 100%;
 }
 
 .form-row {
     display: flex;
-    gap: 0 16px;
+    gap: 16px;
     width: 100%;
 }
 
 .form-group {
+    position: relative;
     width: 100%;
 }
+
+.form-group svg {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.comments svg {
+    position: absolute;
+    top: 20%;
+    right: 20px;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
 
 .form-group input {
     width: 100%;
@@ -571,6 +591,7 @@ main {
 }
 
 .form-group textarea {
+    margin: 16px 0;
     width: 100%;
     height: 180px;
     padding: 16px;
@@ -602,8 +623,8 @@ main {
     background-color: #8a3c00;
 }
 
-.form-policy {
-    font-size: 12px;
+.contact-form .form-policy {
+    font-size: 16px;
     color: #333;
     text-align: center;
 }
@@ -699,6 +720,10 @@ main {
     color: #382D2D;
 }
 
+.contact-data .phone a {
+    text-decoration: none;
+}
+
 .contact-data .phone p,
 .time p {
     font-family: "AA Stetica Regular";
@@ -768,7 +793,7 @@ main {
 
 /* Вопросы*/
 .faq-block {
-    padding: calc(20px + (100 - 20) * ((100vw - 350px) / (1920 - 350)));
+    padding: 0 calc(20px + (100 - 20) * ((100vw - 350px) / (1920 - 350)));
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -977,20 +1002,33 @@ footer {
 
     #burger-language {
         padding: 11px 12px;
+        width: 8 0px;
         border-radius: 8px;
+        position: relative;
         border: 1px, solid, #6B2B00;
         display: flex;
         justify-content: center;
         gap: 10px;
     }
 
+    #burger-language img {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        pointer-events: none;
+    }
+
     .burgerSelect {
+        width: 100%;
+        padding-left: 30px;
         border: none;
         outline: none;
         font-size: 16px;
         line-height: 130%;
         letter-spacing: 1%;
         color: #6B2B00;
+        width: 100%;
     }
 
     .close-button {
@@ -1063,75 +1101,12 @@ footer {
         margin-top: 20px;
     }
 
-    .mobile-nav a {
-        display: flex;
-        gap: 8px;
-        justify-content: start;
-        align-items: center;
-        opacity: 0;
-        animation-duration: 1s;
-        animation-fill-mode: forwards;
-    }
-
     .mobile-nav a img {
         max-width: 15px;
         max-height: 15px;
         border: 1px solid #6b2b00a2;
         border-radius: 8px;
         padding: 5px;
-    }
-
-    .mobile-menu.active .mobile-nav:first-child a {
-        animation-name: slidein-left;
-        animation-duration: 0.8s;
-        animation-fill-mode: forwards;
-    }
-
-    .mobile-menu.active .mobile-nav:last-child a {
-        animation-name: slidein-right;
-        animation-duration: 0.8s;
-        animation-fill-mode: forwards;
-    }
-
-    /* Для всех ссылок по порядку */
-    .mobile-menu.active .mobile-nav a:nth-child(1) {
-        animation-delay: 0.2s;
-    }
-
-    .mobile-menu.active .mobile-nav a:nth-child(2) {
-        animation-delay: 0.4s;
-    }
-
-    .mobile-menu.active .mobile-nav a:nth-child(3) {
-        animation-delay: 0.6s;
-    }
-
-    .mobile-menu.active .mobile-nav a:nth-child(4) {
-        animation-delay: 0.8s;
-    }
-
-    @keyframes slidein-left {
-        from {
-            margin-left: -100%;
-            opacity: 0;
-        }
-
-        to {
-            margin-left: 0;
-            opacity: 1;
-        }
-    }
-
-    @keyframes slidein-right {
-        from {
-            margin-left: 100%;
-            opacity: 0;
-        }
-
-        to {
-            margin-left: 0;
-            opacity: 1;
-        }
     }
 
     .mobile-nav a {
@@ -1142,6 +1117,14 @@ footer {
         font-size: calc(16px + (40 - 16) * ((100vw - 350px) / (1920 - 350)));
         line-height: 130%;
         letter-spacing: 1%;
+        display: flex;
+        gap: 8px;
+        justify-content: start;
+        align-items: center;
+    }
+
+    .mobile-nav a:hover {
+        text-decoration: underline;
     }
 
 
@@ -1192,7 +1175,7 @@ footer {
     }
 
     .mobileContacts .Address p,
-    .mobileContacts.Time p,
+    .mobileContacts .Time p,
     .mobileContacts .phoneAndEmail p {
         font-family: "AA Stetica Regular";
         font-weight: 400;
@@ -1201,6 +1184,10 @@ footer {
         letter-spacing: 1%;
         color: #6B2B00;
         max-width: 300px;
+    }
+
+    .phoneAndEmail a {
+        text-decoration: none;
     }
 
     /*----- Ремесленникам ----- */
@@ -1214,10 +1201,16 @@ footer {
         display: none;
     }
 
+    .crafts_paragraphs {
+        align-items: center;
+        text-align: center;
+    }
+
     /*Возможности */
 
     .facilities-header {
         display: flex;
+        text-align: center;
         flex-direction: column;
     }
 
@@ -1343,8 +1336,8 @@ footer {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 40px;
-        height: 40px;
+        width: 30px;
+        height: 30px;
         padding: 6px;
         background-color: #FFFDF9;
         border-radius: 100%;

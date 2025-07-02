@@ -325,14 +325,13 @@ body {
     bottom: 24px;
     left: 24px;
     text-decoration: none;
-    font-size: 22px;
+    font-size: calc(16px + (22 - 16) * ((100vw - 350px) / (1920 - 350)));
     line-height: 130%;
     letter-spacing: 1%;
     text-transform: uppercase;
     border-bottom: 1px solid #fff;
     color: #fff;
-    display: flex;
-    align-items: center;
+    align-items: start;
 }
 
 
@@ -790,6 +789,7 @@ body {
     border-radius: 16px;
     cursor: pointer;
     color: #6B2B00;
+    z-index: 10;
 }
 
 
@@ -801,17 +801,24 @@ body {
 
 .swiper-button-filter-prev {
     left: 10px;
+
 }
 
 .swiper-button-filter-next {
     right: 10px;
+
 }
 
 .swiper-button-filter-next:hover {
     color: #fff;
     background-color: #6B2B00;
-
 }
+
+.swiper-button-filter-next svg,
+.swiper-button-filter-prev svg {
+    pointer-events: none;
+}
+
 
 .filter-text {
     font-family: "AA Stetica Regular";
@@ -1001,7 +1008,8 @@ body {
     background-position: left;
 }
 
-.Form {
+.Form,
+.formText {
     margin: 0 calc(20px + (100 - 20) * ((100vw - 350px) / (1920 - 350)));
 }
 
@@ -1011,13 +1019,31 @@ body {
 
 .form-row {
     display: flex;
-    gap: 0 16px;
+    gap: 16px;
     width: 100%;
 }
 
 .form-group {
+    position: relative;
     width: 100%;
 }
+
+.form-group svg {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.comments svg {
+    position: absolute;
+    top: 20%;
+    right: 20px;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
 
 .form-group input {
     width: 100%;
@@ -1033,6 +1059,7 @@ body {
 }
 
 .form-group textarea {
+    margin: 16px 0;
     width: 100%;
     height: 180px;
     padding: 16px;
@@ -1064,8 +1091,8 @@ body {
     background-color: #8a3c00;
 }
 
-.form-policy {
-    font-size: 12px;
+.planningForm .form-policy {
+    font-size: 16px;
     color: #333;
     text-align: center;
 }
@@ -1122,6 +1149,7 @@ body {
 }
 
 .contact-data .phone {
+
     padding: 24px;
     display: flex;
     flex-direction: column;
@@ -1149,8 +1177,11 @@ body {
     font-size: calc(18px + (22 - 18) * ((100vw - 350px) / (1920 - 350)));
     line-height: 130%;
     letter-spacing: 1%;
-
     color: #382D2D;
+}
+
+.contact-data .phone a {
+    text-decoration: none;
 }
 
 .contact-data .time {
@@ -1354,7 +1385,7 @@ footer {
     .Swiper_text {
         flex-direction: column;
         gap: 35px;
-        top: 68%;
+        top: 63%;
     }
 
     .weather_text {
@@ -1425,20 +1456,33 @@ footer {
 
     #burger-language {
         padding: 11px 12px;
+        width: 8 0px;
         border-radius: 8px;
+        position: relative;
         border: 1px, solid, #6B2B00;
         display: flex;
         justify-content: center;
         gap: 10px;
     }
 
+    #burger-language img {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        pointer-events: none;
+    }
+
     .burgerSelect {
+        width: 100%;
+        padding-left: 30px;
         border: none;
         outline: none;
         font-size: 16px;
         line-height: 130%;
         letter-spacing: 1%;
         color: #6B2B00;
+        width: 100%;
     }
 
     .close-button {
@@ -1511,75 +1555,12 @@ footer {
         margin-top: 20px;
     }
 
-    .mobile-nav a {
-        display: flex;
-        gap: 8px;
-        justify-content: start;
-        align-items: center;
-        opacity: 0;
-        animation-duration: 1s;
-        animation-fill-mode: forwards;
-    }
-
     .mobile-nav a img {
         max-width: 15px;
         max-height: 15px;
         border: 1px solid #6b2b00a2;
         border-radius: 8px;
         padding: 5px;
-    }
-
-    .mobile-menu.active .mobile-nav:first-child a {
-        animation-name: slidein-left;
-        animation-duration: 0.8s;
-        animation-fill-mode: forwards;
-    }
-
-    .mobile-menu.active .mobile-nav:last-child a {
-        animation-name: slidein-right;
-        animation-duration: 0.8s;
-        animation-fill-mode: forwards;
-    }
-
-    /* Для всех ссылок по порядку */
-    .mobile-menu.active .mobile-nav a:nth-child(1) {
-        animation-delay: 0.2s;
-    }
-
-    .mobile-menu.active .mobile-nav a:nth-child(2) {
-        animation-delay: 0.4s;
-    }
-
-    .mobile-menu.active .mobile-nav a:nth-child(3) {
-        animation-delay: 0.6s;
-    }
-
-    .mobile-menu.active .mobile-nav a:nth-child(4) {
-        animation-delay: 0.8s;
-    }
-
-    @keyframes slidein-left {
-        from {
-            margin-left: -100%;
-            opacity: 0;
-        }
-
-        to {
-            margin-left: 0;
-            opacity: 1;
-        }
-    }
-
-    @keyframes slidein-right {
-        from {
-            margin-left: 100%;
-            opacity: 0;
-        }
-
-        to {
-            margin-left: 0;
-            opacity: 1;
-        }
     }
 
     .mobile-nav a {
@@ -1590,6 +1571,14 @@ footer {
         font-size: calc(16px + (40 - 16) * ((100vw - 350px) / (1920 - 350)));
         line-height: 130%;
         letter-spacing: 1%;
+        display: flex;
+        gap: 8px;
+        justify-content: start;
+        align-items: center;
+    }
+
+    .mobile-nav a:hover {
+        text-decoration: underline;
     }
 
 
@@ -1659,13 +1648,18 @@ footer {
         justify-content: center;
     }
 
+    .Swiper_text h1 {
+        margin-bottom: 40px;
+    }
+
     .Swiper_text p {
+
         text-align: center;
     }
 
     .Swiper_text {
         flex-direction: column;
-        top: 60%;
+        top: 50%;
     }
 
     /*изменения текста о парке */
@@ -1748,6 +1742,14 @@ footer {
         gap: 16px;
     }
 
+    .news-header {
+        flex-direction: column;
+        gap: 24px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
     .form-row {
         display: flex;
         flex-direction: column;
@@ -1814,8 +1816,8 @@ footer {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 40px;
-        height: 40px;
+        width: 30px;
+        height: 30px;
         padding: 6px;
         background-color: #FFFDF9;
         border-radius: 100%;

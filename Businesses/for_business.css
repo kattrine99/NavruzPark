@@ -151,7 +151,7 @@ body {
 
 }
 
-.breadcrumbs span {
+.breadcrumbs span a {
     color: #382D2D80;
 }
 
@@ -162,7 +162,7 @@ main {
 }
 
 .HeadingforBusiness .for_businessText {
-    padding: calc(48px + (80 - 48) * ((100vw - 350px) / (1920 - 350))) calc(17px + (100 - 17) * ((100vw - 350px) / (1920 - 350)));
+    padding: calc(48px + (80 - 48) * ((100vw - 350px) / (1920 - 350))) calc(17px + (100 - 17) * ((100vw - 350px) / (1920 - 350))) 0;
 }
 
 .HeadingforBusiness h1 {
@@ -638,20 +638,15 @@ main {
     line-height: 130%;
     letter-spacing: 1%;
     text-align: center;
-    margin: 16px 0 48px 0;
+    margin: 16px 0;
 }
 
 .planningFormForAreaRent,
 .planningFormForEvent {
-    margin: calc(64px + (200 - 64) * ((100vw - 350px) / (1920 - 350))) 0;
+    margin: calc(64px + (200 - 64) * ((100vw - 350px) / (1920 - 350))) calc(20px + (100 - 20) * ((100vw - 350px) / (1920 - 350)));
     background: url('/images/starsForm.png');
     background-repeat: no-repeat;
     background-position: left;
-}
-
-.planningFormForAreaRent .Form,
-.planningFormForEvent .Form {
-    margin: 0 calc(20px + (100 - 20) * ((100vw - 350px) / (1920 - 350)));
 }
 
 .planningFormForAreaRent .contact-form,
@@ -1371,6 +1366,10 @@ main {
     color: #382D2D;
 }
 
+.contact-data .phone a {
+    text-decoration: none;
+}
+
 .contact-data .time {
     padding: 24px;
     display: flex;
@@ -1605,20 +1604,33 @@ footer {
 
     #burger-language {
         padding: 11px 12px;
+        width: 8 0px;
         border-radius: 8px;
+        position: relative;
         border: 1px, solid, #6B2B00;
         display: flex;
         justify-content: center;
         gap: 10px;
     }
 
+    #burger-language img {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        pointer-events: none;
+    }
+
     .burgerSelect {
+        width: 100%;
+        padding-left: 30px;
         border: none;
         outline: none;
         font-size: 16px;
         line-height: 130%;
         letter-spacing: 1%;
         color: #6B2B00;
+        width: 100%;
     }
 
     .close-button {
@@ -1635,6 +1647,9 @@ footer {
         color: #6B2B00;
     }
 
+
+
+    /* Мобильное меню */
     .mobile-menu {
         position: fixed;
         box-sizing: border-box;
@@ -1647,7 +1662,7 @@ footer {
         flex-direction: column;
         padding: 24px;
         z-index: 999;
-        background-image: url('../images/starsCornerbottom.png');
+        background-image: url('/images/starsCornerbottom.png');
         background-repeat: no-repeat;
         background-position: bottom;
     }
@@ -1688,75 +1703,12 @@ footer {
         margin-top: 20px;
     }
 
-    .mobile-nav a {
-        display: flex;
-        gap: 8px;
-        justify-content: start;
-        align-items: center;
-        opacity: 0;
-        animation-duration: 1s;
-        animation-fill-mode: forwards;
-    }
-
     .mobile-nav a img {
         max-width: 15px;
         max-height: 15px;
         border: 1px solid #6b2b00a2;
         border-radius: 8px;
         padding: 5px;
-    }
-
-    .mobile-menu.active .mobile-nav:first-child a {
-        animation-name: slidein-left;
-        animation-duration: 0.8s;
-        animation-fill-mode: forwards;
-    }
-
-    .mobile-menu.active .mobile-nav:last-child a {
-        animation-name: slidein-right;
-        animation-duration: 0.8s;
-        animation-fill-mode: forwards;
-    }
-
-    /* Для всех ссылок по порядку */
-    .mobile-menu.active .mobile-nav a:nth-child(1) {
-        animation-delay: 0.2s;
-    }
-
-    .mobile-menu.active .mobile-nav a:nth-child(2) {
-        animation-delay: 0.4s;
-    }
-
-    .mobile-menu.active .mobile-nav a:nth-child(3) {
-        animation-delay: 0.6s;
-    }
-
-    .mobile-menu.active .mobile-nav a:nth-child(4) {
-        animation-delay: 0.8s;
-    }
-
-    @keyframes slidein-left {
-        from {
-            margin-left: -100%;
-            opacity: 0;
-        }
-
-        to {
-            margin-left: 0;
-            opacity: 1;
-        }
-    }
-
-    @keyframes slidein-right {
-        from {
-            margin-left: 100%;
-            opacity: 0;
-        }
-
-        to {
-            margin-left: 0;
-            opacity: 1;
-        }
     }
 
     .mobile-nav a {
@@ -1767,7 +1719,16 @@ footer {
         font-size: calc(16px + (40 - 16) * ((100vw - 350px) / (1920 - 350)));
         line-height: 130%;
         letter-spacing: 1%;
+        display: flex;
+        gap: 8px;
+        justify-content: start;
+        align-items: center;
     }
+
+    .mobile-nav a:hover {
+        text-decoration: underline;
+    }
+
 
     .mobileContacts {
         display: grid;
@@ -1825,6 +1786,10 @@ footer {
         letter-spacing: 1%;
         color: #6B2B00;
         max-width: 300px;
+    }
+
+    .phoneAndEmail a {
+        text-decoration: none;
     }
 
     .eventsLocations h2 {
@@ -1906,6 +1871,12 @@ footer {
         width: 100%;
     }
 
+    .map {
+        position: relative;
+        width: 100%;
+        height: 500px;
+    }
+
     .contactsInfo {
         display: flex;
         flex-direction: column;
@@ -1932,6 +1903,14 @@ footer {
     }
 
     .gallery-title .swiper-nav-buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 16px;
+    }
+
+    .swiper-nav-buttons {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -1981,6 +1960,12 @@ footer {
 
     }
 
+    .locationsswiper-text .swiper-nav-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+    }
+
     .video-headerAndButtons {
         display: flex;
         flex-direction: column;
@@ -2002,7 +1987,15 @@ footer {
     }
 
     .agreement_paragraphs {
+        text-align: center;
         border: none;
+    }
+
+    .Certificates-heading {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        margin-bottom: 16px;
     }
 
     /*----- Вопросы ----- */
@@ -2010,6 +2003,13 @@ footer {
         text-align: center;
     }
 
+    .happenedEvents-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 16px;
+    }
 
     footer {
         background-image: url('../images/starsfooterRightCorner.png');
@@ -2052,8 +2052,8 @@ footer {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 40px;
-        height: 40px;
+        width: 30px;
+        height: 30px;
         padding: 6px;
         background-color: #FFFDF9;
         border-radius: 100%;

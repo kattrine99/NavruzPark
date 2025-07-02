@@ -35,7 +35,7 @@ for (let i = 1; i <= eventCount; i++) {
                             <div class="cardData">
                             <p><img src="/images/icons/Calender.svg"/> 19 мая, начало в 10:00</p></div>
                             <div class="cardButton">
-                            <button>Подробнее</button></div>
+                            <button onclick="window.location.href='../../News/Notice/notice.html'">Подробнее</button></div>
                         </div>`
     eventWrapper.appendChild(slide);
 }
@@ -99,21 +99,21 @@ const Photoswiper = new Swiper(".photo-gallery-swiper", {
 
 swiperContainer.querySelectorAll('.swiper-slide img').forEach(img => {
     img.addEventListener('click', (e) => {
-        e.stopPropagation(); 
+        e.stopPropagation();
         modal.style.display = 'flex';
         modalImg.src = img.src;
-        Photoswiper.autoplay?.stop(); 
+        Photoswiper.autoplay?.stop();
     });
 });
 
 closeBtn.addEventListener("click", () => {
     modal.style.display = "none";
-    Photoswiper.autoplay?.start(); 
+    Photoswiper.autoplay?.start();
 });
 
 window.addEventListener("click", (e) => {
     if (e.target === modal) {
         modal.style.display = "none";
-        Photoswiper.autoplay?.start(); 
+        Photoswiper.autoplay?.start();
     }
 });
