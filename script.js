@@ -4,10 +4,10 @@
 
 const mainSlidesCount = 4;
 const mainImages = [
-    "/images/Navruz_main.png",
+    "/images/Navruz_main.webp",
     "/images/uniquecorner.jpg",
-    "/images/circleTower.jpg",
-    "/images/forvisitors.jpg"
+    "/images/circleTower.webp",
+    "/images/aboutPark_main.webp"
 ]
 const mainWrapper = document.getElementById('swiper-wrapper');
 mainWrapper.innerHTML = '';
@@ -270,23 +270,28 @@ document.addEventListener('DOMContentLoaded', function () {
     const closeBtn = document.getElementById("closeModal");
 
     const photosData = [
-        { src: '/images/uniquecorner.jpg', title: 'ДИЗАЙНЕРСКАЯ СТУДИЯ «AZUKAR MORENO»', category: 'shops' },
-        { src: '/images/uniquecorner.jpg', title: 'МАСТЕРСКАЯ КЕРАМИКИ', category: 'workshops' },
-        { src: '/images/uniquecorner.jpg', title: 'Колесо обозрения', category: 'wheel' },
-        { src: '/images/uniquecorner.jpg', title: 'Этногородок', category: 'ethno' },
-        { src: '/images/uniquecorner.jpg', title: 'Амфитеатр', category: 'amphitheater' },
-        { src: '/images/uniquecorner.jpg', title: 'Магазин сувениров', category: 'shops' },
-        { src: '/images/uniquecorner.jpg', title: 'Мастерская', category: 'workshops' },
-        { src: '/images/uniquecorner.jpg', title: 'Колесо обозрения ночью', category: 'wheel' },
-        { src: '/images/uniquecorner.jpg', title: 'Колесо обозрения ночью', category: 'wheel' },
-        { src: '/images/uniquecorner.jpg', title: 'Колесо обозрения ночью', category: 'wheel' },
-        { src: '/images/uniquecorner.jpg', title: 'Колесо обозрения ночью', category: 'wheel' },
-        { src: '/images/uniquecorner.jpg', title: 'Колесо обозрения ночью', category: 'wheel' },
-        { src: '/images/uniquecorner.jpg', title: 'Колесо обозрения ночью', category: 'wheel' },
-        { src: '/images/uniquecorner.jpg', title: 'Колесо обозрения ночью', category: 'wheel' },
-        { src: '/images/uniquecorner.jpg', title: 'Колесо обозрения ночью', category: 'wheel' },
-        { src: '/images/uniquecorner.jpg', title: 'Колесо обозрения ночью', category: 'wheel' },
-        { src: '/images/uniquecorner.jpg', title: 'Колесо обозрения ночью', category: 'wheel' },
+        { src: '/images/Azukar.webp', title: 'ДИЗАЙНЕРСКАЯ СТУДИЯ «AZUKAR MORENO»', category: 'shops' },
+        { src: '/images/ceramics.jpg', title: 'МАСТЕРСКАЯ КЕРАМИКИ', category: 'workshops' },
+        { src: '/images/circle.jpg', title: 'Колесо обозрения', category: 'wheel' },
+        { src: '/images/ethno-town-gallery.jpg', title: 'Этногородок', category: 'ethno' },
+        { src: '/images/amfitheatre.jpg', title: 'Амфитеатр', category: 'amphitheater' },
+        { src: '/images/souvenirs.jpg', title: 'Магазин сувениров', category: 'shops' },
+        { src: '/images/masters.jpg', title: 'Мастерская', category: 'workshops' },
+        { src: '/images/Azukar.webp', title: 'ДИЗАЙНЕРСКАЯ СТУДИЯ «AZUKAR MORENO»', category: 'shops' },
+        { src: '/images/ceramics.jpg', title: 'МАСТЕРСКАЯ КЕРАМИКИ', category: 'workshops' },
+        { src: '/images/circle.jpg', title: 'Колесо обозрения', category: 'wheel' },
+        { src: '/images/ethno-town-gallery.jpg', title: 'Этногородок', category: 'ethno' },
+        { src: '/images/amfitheatre.jpg', title: 'Амфитеатр', category: 'amphitheater' },
+        { src: '/images/souvenirs.jpg', title: 'Магазин сувениров', category: 'shops' },
+        { src: '/images/masters.jpg', title: 'Мастерская', category: 'workshops' },
+        { src: '/images/Azukar.webp', title: 'ДИЗАЙНЕРСКАЯ СТУДИЯ «AZUKAR MORENO»', category: 'shops' },
+        { src: '/images/ceramics.jpg', title: 'МАСТЕРСКАЯ КЕРАМИКИ', category: 'workshops' },
+        { src: '/images/circle.jpg', title: 'Колесо обозрения', category: 'wheel' },
+        { src: '/images/ethno-town-gallery.jpg', title: 'Этногородок', category: 'ethno' },
+        { src: '/images/amfitheatre.jpg', title: 'Амфитеатр', category: 'amphitheater' },
+        { src: '/images/souvenirs.jpg', title: 'Магазин сувениров', category: 'shops' },
+        { src: '/images/masters.jpg', title: 'Мастерская', category: 'workshops' },
+
     ];
 
     let currentFilter = 'all';

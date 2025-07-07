@@ -38,23 +38,27 @@ document.addEventListener('DOMContentLoaded', function () {
     const closeBtn = document.getElementById("closeModal");
 
     const photosData = [
-        { src: '/images/uniquecorner.jpg', title: 'ДИЗАЙНЕРСКАЯ СТУДИЯ «AZUKAR MORENO»', category: 'shops' },
-        { src: '/images/uniquecorner.jpg', title: 'МАСТЕРСКАЯ КЕРАМИКИ', category: 'workshops' },
-        { src: '/images/uniquecorner.jpg', title: 'Колесо обозрения', category: 'wheel' },
-        { src: '/images/uniquecorner.jpg', title: 'Этногородок', category: 'ethno' },
-        { src: '/images/uniquecorner.jpg', title: 'Амфитеатр', category: 'amphitheater' },
-        { src: '/images/uniquecorner.jpg', title: 'Магазин сувениров', category: 'shops' },
-        { src: '/images/uniquecorner.jpg', title: 'Мастерская', category: 'workshops' },
-        { src: '/images/uniquecorner.jpg', title: 'Колесо обозрения ночью', category: 'wheel' },
-        { src: '/images/uniquecorner.jpg', title: 'Колесо обозрения ночью', category: 'wheel' },
-        { src: '/images/uniquecorner.jpg', title: 'Колесо обозрения ночью', category: 'wheel' },
-        { src: '/images/uniquecorner.jpg', title: 'Колесо обозрения ночью', category: 'wheel' },
-        { src: '/images/uniquecorner.jpg', title: 'Колесо обозрения ночью', category: 'wheel' },
-        { src: '/images/uniquecorner.jpg', title: 'Колесо обозрения ночью', category: 'wheel' },
-        { src: '/images/uniquecorner.jpg', title: 'Колесо обозрения ночью', category: 'wheel' },
-        { src: '/images/uniquecorner.jpg', title: 'Колесо обозрения ночью', category: 'wheel' },
-        { src: '/images/uniquecorner.jpg', title: 'Колесо обозрения ночью', category: 'wheel' },
-        { src: '/images/uniquecorner.jpg', title: 'Колесо обозрения ночью', category: 'wheel' },
+        { src: '/images/Azukar.webp', title: 'ДИЗАЙНЕРСКАЯ СТУДИЯ «AZUKAR MORENO»', category: 'shops' },
+        { src: '/images/ceramics.jpg', title: 'МАСТЕРСКАЯ КЕРАМИКИ', category: 'workshops' },
+        { src: '/images/circle.jpg', title: 'Колесо обозрения', category: 'wheel' },
+        { src: '/images/ethno-town-gallery.jpg', title: 'Этногородок', category: 'ethno' },
+        { src: '/images/amfitheatre.jpg', title: 'Амфитеатр', category: 'amphitheater' },
+        { src: '/images/souvenirs.jpg', title: 'Магазин сувениров', category: 'shops' },
+        { src: '/images/masters.jpg', title: 'Мастерская', category: 'workshops' },
+        { src: '/images/Azukar.webp', title: 'ДИЗАЙНЕРСКАЯ СТУДИЯ «AZUKAR MORENO»', category: 'shops' },
+        { src: '/images/ceramics.jpg', title: 'МАСТЕРСКАЯ КЕРАМИКИ', category: 'workshops' },
+        { src: '/images/circle.jpg', title: 'Колесо обозрения', category: 'wheel' },
+        { src: '/images/ethno-town-gallery.jpg', title: 'Этногородок', category: 'ethno' },
+        { src: '/images/amfitheatre.jpg', title: 'Амфитеатр', category: 'amphitheater' },
+        { src: '/images/souvenirs.jpg', title: 'Магазин сувениров', category: 'shops' },
+        { src: '/images/masters.jpg', title: 'Мастерская', category: 'workshops' },
+        { src: '/images/Azukar.webp', title: 'ДИЗАЙНЕРСКАЯ СТУДИЯ «AZUKAR MORENO»', category: 'shops' },
+        { src: '/images/ceramics.jpg', title: 'МАСТЕРСКАЯ КЕРАМИКИ', category: 'workshops' },
+        { src: '/images/circle.jpg', title: 'Колесо обозрения', category: 'wheel' },
+        { src: '/images/ethno-town-gallery.jpg', title: 'Этногородок', category: 'ethno' },
+        { src: '/images/amfitheatre.jpg', title: 'Амфитеатр', category: 'amphitheater' },
+        { src: '/images/souvenirs.jpg', title: 'Магазин сувениров', category: 'shops' },
+        { src: '/images/masters.jpg', title: 'Мастерская', category: 'workshops' },
     ];
 
     let currentFilter = 'all';
@@ -262,12 +266,12 @@ const crafts = [
     { category: 'souvenirs', title: 'Резьба по дереву', img: '/images/craft1.jpg' },
     { category: 'ceramics', title: 'Керамика', img: '/images/craft2.jpg' },
     { category: 'designers', title: 'Ткачество', img: '/images/craft3.jpg' },
-    { category: 'souvenirs', title: 'Ювелирные изделия', img: '/images/craft4.jpg' },
+    { category: 'souvenirs', title: 'Ювелирные изделия', img: '/images/jewellery.webp' },
     { category: 'designers', title: 'Вышивка', img: '/images/craft.jpg' },
     { category: 'souvenirs', title: 'Резьба по дереву', img: '/images/craft1.jpg' },
     { category: 'ceramics', title: 'Керамика', img: '/images/craft2.jpg' },
     { category: 'pottery', title: 'Ткачество', img: '/images/craft3.jpg' },
-    { category: 'souvenirs', title: 'Ювелирные изделия', img: '/images/craft4.jpg' }
+    { category: 'souvenirs', title: 'Ювелирные изделия', img: '/images/jewellery.webp' }
 ];
 
 const craftWrapper1 = document.getElementById('crafts-wrapper1');
