@@ -721,6 +721,7 @@ main {
     max-height: 330px;
     border-radius: 12px;
     object-fit: cover;
+    object-position: 100% 70%;
     background-color: linear-gradient(180deg, rgba(0, 0, 0, 0) 45.4%, rgba(0, 0, 0, 0.5) 100%);
     cursor: pointer;
     transition: transform 0.3s ease;

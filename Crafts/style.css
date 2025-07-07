@@ -147,7 +147,7 @@ body {
 
 }
 
-.breadcrumbs span a{
+.breadcrumbs span a {
     color: #382D2D80;
 }
 
@@ -356,6 +356,7 @@ main {
     height: 250px;
     display: block;
     object-fit: cover;
+    object-position: 100% 70%;
     flex-grow: 1;
     transition: transform 0.3s ease;
 
