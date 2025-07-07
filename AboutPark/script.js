@@ -1,3 +1,5 @@
+import { coordinatesofMarkers } from './coordinates.js';
+import { infoData } from './infoData.js';
 // ======================= //
 // Бургер 
 // ======================= //
@@ -356,22 +358,230 @@ document.addEventListener("click", (e) => {
 // ======================= //
 // Яндекс карта 
 // ======================= //
-ymaps3.ready(async () => {
-    const response = await fetch('/styles/customization.json');
-    const styleJson = await response.json();
 
-    const { YMap, YMapDefaultSchemeLayer } = ymaps3;
+initMap();
+
+async function initMap() {
+    await ymaps3.ready;
+
+    const { YMap, YMapDefaultSchemeLayer, YMapDefaultFeaturesLayer, YMapMarker } = ymaps3;
 
     const map = new YMap(document.getElementById('map'), {
         location: {
-            center: [69.279737, 41.311151], // координаты центра, например Ташкент
-            zoom: 12
+            center: [69.26607, 41.32651],
+            zoom: 18
         }
     });
 
-    const schemeLayer = new YMapDefaultSchemeLayer({
-        style: styleJson
+    map.addChild(new YMapDefaultFeaturesLayer());
+
+    map.addChild(new YMapDefaultSchemeLayer({
+        customization: [
+            {
+                "tags": {
+                    "any": [
+                        "transit"
+                    ]
+                },
+                "elements": [
+                    "label.icon",
+                    "label.text"
+                ],
+                "stylers": {
+                    "visibility": "off"
+                }
+            },
+            {
+                "tags": {
+                    "any": [
+                        "outdoor",
+                        "park",
+                        "cemetery",
+                        "medical"
+                    ]
+                },
+                "elements": "label",
+                "stylers": {
+                    "visibility": "off"
+                }
+            },
+            {
+                "tags": {
+                    "any": "poi",
+                    "none": [
+                        "outdoor",
+                        "park",
+                        "cemetery",
+                        "medical"
+                    ]
+                },
+                "stylers": {
+                    "visibility": "off"
+                }
+            },
+            {
+                "tags": {
+                    "any": "road"
+                },
+                "types": "point",
+                "stylers": {
+                    "visibility": "off"
+                }
+            },
+            {
+                "tags": {
+                    "any": [
+                        "food_and_drink",
+                        "shopping",
+                        "commercial_services"
+                    ]
+                },
+                "stylers": {
+                    "visibility": "off"
+                }
+            },
+            {
+                "tags": {
+                    "any": [
+                        "traffic_light"
+                    ]
+                },
+                "stylers": {
+                    "visibility": "off"
+                }
+            },
+            {
+                "tags": {
+                    "any": [
+                        "entrance"
+                    ]
+                },
+                "stylers": {
+                    "visibility": "off"
+                }
+            },
+            {
+                "tags": {
+                    "any": [
+                        "road"
+                    ],
+                    "none": [
+                        "road_1",
+                        "road_2",
+                        "road_3",
+                        "road_4",
+                        "road_5",
+                        "road_6",
+                        "road_7"
+                    ]
+                },
+                "elements": "label.icon",
+                "stylers": {
+                    "visibility": "off"
+                }
+            }
+        ]
+    }));
+
+    let currentZoomId = null;
+    const defaultZoom = 18;
+    const zoomedInZoom = 20;
+    let currentIndex = 0;
+    const markers = [];
+
+
+    function renderInfo(index, zoom = true) {
+        const item = infoData[index];
+        const feature = coordinatesofMarkers.features[index];
+        if (!item || !feature) return;
+
+        const infoContent = document.getElementById('infoContent');
+        infoContent.innerHTML = `
+        <h3>${item.title}</h3>
+        <p>${item.description}</p>
+        <img src="../images/about_park_leftcornerText.png">
+    `;
+
+        const coords = feature.geometry.coordinates;
+
+        if (zoom) {
+            map.setLocation({
+                center: coords,
+                zoom: zoomedInZoom,
+                duration: 500
+            });
+            currentZoomId = item.id;
+        }
+
+        markers.forEach(m => m.el.classList.remove('active-marker'));
+        markers[index].el.classList.add('active-marker');
+    }
+
+
+
+    coordinatesofMarkers.features.forEach((feature, index) => {
+        const coords = feature.geometry.coordinates;
+        const number = feature.properties.iconContent || '';
+        const color = feature.properties['marker-color'] || '#56db40';
+        const id = feature.properties.iconContent;
+
+        const el = document.createElement('div');
+        el.innerHTML = `
+    <div class="custom-marker">${number}</div>
+`;
+
+        el.className = 'marker-wrapper';
+
+        const marker = new YMapMarker({ coordinates: coords }, el);
+        map.addChild(marker);
+
+        markers.push({ id, el });
+
+        el.addEventListener('click', (e) => {
+            e.stopPropagation();
+            if (currentZoomId === id) {
+                map.setLocation({
+                    center: coords,
+                    zoom: defaultZoom,
+                    duration: 500
+                });
+                currentZoomId = null;
+                markers.forEach(m => m.el.classList.remove('active-marker'));
+            } else {
+                currentIndex = index;
+                renderInfo(currentIndex);
+            }
+        });
     });
 
-    map.addChild(schemeLayer);
+    document.getElementById('prevBtn')?.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + infoData.length) % infoData.length;
+        renderInfo(currentIndex);
+    });
+
+    document.getElementById('nextBtn')?.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % infoData.length;
+        renderInfo(currentIndex);
+    });
+    renderInfo(0, false);
+
+}
+const mapWrapper = document.querySelector('.MapWithText');
+const mapContainer = document.querySelector('.map-container');
+const mapOverlay = document.getElementById('mapOverlay');
+
+mapOverlay.addEventListener('click', (e) => {
+    e.stopPropagation();
+    mapOverlay.style.display = 'none';
+    mapWrapper.classList.add('active');
+});
+
+document.addEventListener('click', (e) => {
+    const isClickInsideMap = mapContainer.contains(e.target);
+    const isClickOnMarker = e.target.closest('.marker-wrapper');
+
+    if (!isClickInsideMap && !isClickOnMarker) {
+        mapWrapper.classList.remove('active');
+        mapOverlay.style.display = 'block';
+    }
 });

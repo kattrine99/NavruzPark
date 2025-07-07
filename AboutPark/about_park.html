@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/svg+xml" href="/images/icons/navroz-icon-mini.svg">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://api-maps.yandex.ru/v3/?apikey=8d663b21-7740-4e51-a7db-d592b6f6b1b4&lang=ru_RU"></script>
     <link rel="stylesheet" href="style.css">
     <title>О парке</title>
 </head>
@@ -211,8 +212,36 @@
         </div>
         <div class="parkCorners">
             <h2>уникальные уголки парка «Навруз»</h2>
-            <div class="parkCorners-swiper">
-                <div id="map" style="width: 100%; height: 500px;"></div>
+            <div class="MapWithText">
+                <div class="map-container">
+                    <div id="mapOverlay" class="map-overlay"></div>
+                    <div id="map"></div>
+                </div>
+                <div id="infoPanel">
+                    <div id="infoContent"></div>
+                    <div class="infoNav">
+                        <button id="prevBtn" class="Navbutton">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" style="transform: rotate(180deg);">
+                                <path d="M14.4297 5.92969L20.4997 11.9997L14.4297 18.0697" stroke="currentColor"
+                                    stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M3.5 12L20.33 12" stroke="currentColor" stroke-width="1.5"
+                                    stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <button id="nextBtn" class="Navbutton">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14.4297 5.92969L20.4997 11.9997L14.4297 18.0697" stroke="currentColor"
+                                    stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M3.5 12L20.33 12" stroke="currentColor" stroke-width="1.5"
+                                    stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="What-to-whatch">
@@ -514,9 +543,9 @@
             <p>Designed and Developed by Cooming Soon</p>
         </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
-    <script src="https://api-maps.yandex.ru/v3/?apikey=cb894cb0-fd1c-4c3a-8c45-4116bb201424&lang=ru_RU" defer></script>
-    <script src="./script.js" defer></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script type="module" src="./script.js"></script>
 
 </body>
 

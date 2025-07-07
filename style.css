@@ -231,6 +231,11 @@ body {
     display: none;
 }
 
+.iframe-desktop_small {
+    display: none;
+
+}
+
 .mini_text {
     max-width: 562px;
 }
@@ -1358,7 +1363,7 @@ footer {
     cursor: pointer;
 }
 
-@media (max-width:1460px) {
+@media (max-width:1640px) {
     .iframe-desktop {
         display: none;
     }
@@ -1366,6 +1371,28 @@ footer {
     .iframe-desktop_medium {
         display: block;
         margin-top: 100px;
+    }
+
+    .iframe-desktop_small {
+        display: none;
+
+    }
+}
+
+@media (max-width:1400px) {
+    .iframe-desktop {
+        display: none;
+    }
+
+    .iframe-desktop_medium {
+        display: none;
+
+    }
+
+    .iframe-desktop_small {
+        display: block;
+        margin-top: 100px;
+
     }
 }
 
@@ -1376,6 +1403,11 @@ footer {
 
     .iframe-desktop_medium {
         display: none;
+    }
+
+    .iframe-desktop_small {
+        display: none;
+
     }
 
     .iframe-mobile {
