@@ -212,89 +212,7 @@
         <div class="parkCorners">
             <h2>уникальные уголки парка «Навруз»</h2>
             <div class="parkCorners-swiper">
-                <div class="ParkMap" id="parkMap">
-                    <div class="map-inner">
-
-                        <img src="../images/map.png">
-                        <!-- markers -->
-                        <div class="map-marker" data-id="1" style="background-color:black; top: 30.5%; left: 25.5%;">
-                        </div>
-                        <div class="map-marker" data-id="2" style=" background-color:black; top: 30.5%; left:
-                            50%;"></div>
-                        <div class=" map-marker" data-id="3" style="background-color:black; top: 34%; left: 74.5%;">
-                        </div>
-                        <div class="map-marker" data-id="4" style=" top: 66.5%; left: 22%;">
-                        </div>
-                        <div class="map-marker" data-id="5" style=" top: 69%; left: 52%;"></div>
-                        <div class="map-marker" data-id="6" style=" top: 66.5%; left: 77%;">
-                        </div>
-
-                    </div>
-                </div>
-                <!-- Слайдер с текстом -->
-                <div class="swiper cornerswiper-text">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide" data-id="1">
-                            <h3>Этногородок — культура Узбекистана в миниатюре</h3>
-                            <p>Сердце парка «Навруз», где собраны традиционные дома из 12 регионов Узбекистана. Каждое
-                                строение воссоздано с любовью к деталям, чтобы передать архитектурный стиль, быт и
-                                атмосферу своего региона.</p>
-                            <p>Фасады домов оформлены вручную мастерами из разных областей страны — каждый добавил в
-                                проект частичку своей культуры.</p>
-                        </div>
-                        <div class="swiper-slide" data-id="2">
-                            <h3>Колесо обозрения</h3>
-                            <p>Вечером, когда парк освещается, колесо обозрения становится одной из главных
-                                достопримечательностей, с которой открывается красивый вид на парк. </p>
-                        </div>
-                        <div class="swiper-slide" data-id="3">
-                            <h3>Этногородок — культура Узбекистана в миниатюре</h3>
-                            <p>Сердце парка «Навруз», где собраны традиционные дома из 12 регионов Узбекистана. Каждое
-                                строение воссоздано с любовью к деталям, чтобы передать архитектурный стиль, быт и
-                                атмосферу своего региона.</p>
-                            <p>Фасады домов оформлены вручную мастерами из разных областей страны — каждый добавил в
-                                проект частичку своей культуры.</p>
-                        </div>
-                        <div class="swiper-slide" data-id="4">
-                            <h3>Колесо обозрения</h3>
-                            <p>Вечером, когда парк освещается, колесо обозрения становится одной из главных
-                                достопримечательностей, с которой открывается красивый вид на парк. </p>
-                        </div>
-                        <div class="swiper-slide" data-id="5">
-                            <h3>Этногородок — культура Узбекистана в миниатюре</h3>
-                            <p>Сердце парка «Навруз», где собраны традиционные дома из 12 регионов Узбекистана. Каждое
-                                строение воссоздано с любовью к деталям, чтобы передать архитектурный стиль, быт и
-                                атмосферу своего региона.</p>
-                            <p>Фасады домов оформлены вручную мастерами из разных областей страны — каждый добавил в
-                                проект частичку своей культуры.</p>
-                        </div>
-                        <div class="swiper-slide" data-id="6">
-                            <h3>Колесо обозрения</h3>
-                            <p>Вечером, когда парк освещается, колесо обозрения становится одной из главных
-                                достопримечательностей, с которой открывается красивый вид на парк. </p>
-                        </div>
-                    </div>
-                    <div class="swiper-nav-buttons">
-                        <button class="swiper-button-prev-corner"> <svg width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(180deg);">
-                                <path d="M14.4297 5.92969L20.4997 11.9997L14.4297 18.0697" stroke="currentColor"
-                                    stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                                <path d="M3.5 12L20.33 12" stroke="currentColor" stroke-width="1.5"
-                                    stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </button>
-                        <button class="swiper-button-next-corner"><svg width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M14.4297 5.92969L20.4997 11.9997L14.4297 18.0697" stroke="currentColor"
-                                    stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                                <path d="M3.5 12L20.33 12" stroke="currentColor" stroke-width="1.5"
-                                    stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </button>
-                    </div>
-                </div>
+                <div id="map" style="width: 100%; height: 500px;"></div>
             </div>
         </div>
         <div class="What-to-whatch">
@@ -596,11 +514,10 @@
             <p>Designed and Developed by Cooming Soon</p>
         </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A053bd947d462cc1a45aeba4070defff75501905071c0eaf68436ac9976ec698c&amp;id=map-inner&amp;lang=ru_RU&amp;apikey=<cb894cb0-fd1c-4c3a-8c45-4116bb201424
->"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+    <script src="https://api-maps.yandex.ru/v3/?apikey=cb894cb0-fd1c-4c3a-8c45-4116bb201424&lang=ru_RU" defer></script>
+    <script src="./script.js" defer></script>
 
-    <script src="./script.js"></script>
 </body>
 
 </html>

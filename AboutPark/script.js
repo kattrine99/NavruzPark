@@ -14,102 +14,6 @@ closeMenu.addEventListener("click", () => {
     burger.classList.remove("active");
     mobileMenu.classList.remove("active");
 });
-// ======================= //
-// Уголки парка карта свайпер 
-// ======================= //
-const swiperText = new Swiper('.cornerswiper-text', {
-    slidesPerView: 1,
-    spaceBetween: 30,
-    loop: false,
-    allowTouchMove: false,
-    navigation: {
-        nextEl: '.swiper-button-next-corner',
-        prevEl: '.swiper-button-prev-corner',
-    },
-    on: {
-        slideChange: function () {
-            const activeSlide = swiperText.slides[swiperText.activeIndex];
-            const activeId = activeSlide.dataset.id;
-
-            zoomToMarker(activeId);
-            activateMarker(activeId);
-        }
-    }
-});
-
-const markers = document.querySelectorAll('.map-marker');
-const parkMap = document.getElementById('parkMap'); // .ParkMap
-const mapInner = parkMap.querySelector('.map-inner');
-let currentZoomId = null;
-
-// При клике по маркеру
-markers.forEach(marker => {
-    marker.addEventListener('click', (e) => {
-        e.stopPropagation(); // предотвращает клик по карте
-
-        const id = marker.dataset.id;
-
-        if (currentZoomId === id) {
-            resetZoom();
-        } else {
-            // Перейти к слайду
-            const targetIndex = Array.from(swiperText.slides).findIndex(
-                slide => slide.dataset.id === id
-            );
-            if (targetIndex !== -1) {
-                swiperText.slideTo(targetIndex);
-            }
-
-            zoomToMarker(id);
-            activateMarker(id);
-            currentZoomId = id;
-        }
-    });
-});
-
-// Клик вне маркера по карте — сбрасывает зум
-mapInner.addEventListener('click', () => {
-    if (currentZoomId !== null) {
-        resetZoom();
-    }
-});
-
-// Активировать маркер (и снять у других)
-function activateMarker(id) {
-    markers.forEach(m => m.classList.remove('active'));
-    const activeMarker = document.querySelector(`.map-marker[data-id="${id}"]`);
-    if (activeMarker) {
-        activeMarker.classList.add('active');
-    }
-}
-
-// Зум на маркер
-function zoomToMarker(id) {
-    const marker = document.querySelector(`.map-marker[data-id="${id}"]`);
-    if (!marker) return;
-
-    const markerRect = marker.getBoundingClientRect();
-    const mapRect = mapInner.getBoundingClientRect();
-
-    const offsetX = markerRect.left + markerRect.width / 2 - mapRect.left;
-    const offsetY = markerRect.top + markerRect.height / 2 - mapRect.top;
-
-    const originX = (offsetX / mapRect.width) * 100;
-    const originY = (offsetY / mapRect.height) * 100;
-
-    mapInner.style.transformOrigin = `${originX}% ${originY}%`;
-    mapInner.style.transform = 'scale(2)';
-}
-
-// Сброс зума
-function resetZoom() {
-    mapInner.style.transformOrigin = 'center center';
-    requestAnimationFrame(() => {
-        mapInner.style.transform = 'scale(1)';
-    });
-    markers.forEach(m => m.classList.remove('active'));
-    currentZoomId = null;
-}
 
 // ======================= //
 // Галлерея
@@ -448,4 +352,26 @@ document.addEventListener("click", (e) => {
         overlay.style.display = "block";
         map.classList.remove("active");
     }
+});
+// ======================= //
+// Яндекс карта 
+// ======================= //
+ymaps3.ready(async () => {
+    const response = await fetch('/styles/customization.json');
+    const styleJson = await response.json();
+
+    const { YMap, YMapDefaultSchemeLayer } = ymaps3;
+
+    const map = new YMap(document.getElementById('map'), {
+        location: {
+            center: [69.279737, 41.311151], // координаты центра, например Ташкент
+            zoom: 12
+        }
+    });
+
+    const schemeLayer = new YMapDefaultSchemeLayer({
+        style: styleJson
+    });
+
+    map.addChild(schemeLayer);
 });
